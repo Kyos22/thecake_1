@@ -26,22 +26,19 @@ Route::group(['prefix' => 'login'], function(){
 
 
 Route::group([], function () {
-    
-    Route::get('/',[IndexController::class,'index']);
 
     // Route::get('/',[ProductController::class,'list_category']);
     
     Route::post('/check_login',[TheCakeController::class,'check_session']);
     Route::get('/',[IndexController::class,'index']);
-    Route::get('/user',[TheCakeController::class,'user']); 
+    Route::get('/myaccount',[TheCakeController::class,'user']); 
     Route::get('/users',[TheCakeController::class,'users']);
     Route::get('/admin',[TheCakeController::class,'admin']);
     Route::get('/logoutuser',[IndexController::class,'logout_user']);
+    Route::get('/logoutadmin',[IndexController::class,'logout_admin']);
 });
     
-Route::group(['prefix' => 'logout'], function(){
-    Route::get('/log_out',[TheCakeController::class,'log_out']);
-});
+
 Route::group(['prefix' => 'register'], function(){
     Route::get('/register',[TheCakeController::class,'register']);
     Route::post('/save_account',[TheCakeController::class,'save_account']);
@@ -51,8 +48,8 @@ Route::group(['prefix' => 'register'], function(){
 Route::group(['prefix' => 'allcategories'], function(){
     Route::get('/cateproduct/{name_category}',[ProductController::class,'cateProduct']);
     Route::get('/detailproduct/{name_product}',[ProductController::class,'detailproduct']);
-    
-
+    Route::get('/cateproductuser/{name_category}',[ProductController::class,'cateProductuser']);
+    Route::get('/detailproductuser/{name_product}',[ProductController::class,'detailproductuser']);
 });
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/add', [AdminController::class, 'add']);

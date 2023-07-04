@@ -173,7 +173,7 @@
 
                             @foreach($listcakeevents as $eventcake)
                                 <li class="">
-                                    <a href="/collections/chocolate-bars">{{$eventcake -> name_category}}
+                                    <a href="{{url('/allcategories/cateproduct/'.$eventcake->name_category)}}">{{$eventcake -> name_category}}
                                     </a>
 
                                 </li>

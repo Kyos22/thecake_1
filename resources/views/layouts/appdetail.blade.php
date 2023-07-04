@@ -1058,7 +1058,13 @@
     <main id="MainContent" class="content-for-layout focus-none wrapper wrapper-top" role="main" tabindex="-1">
 
        @yield('main')
+
+      
     </main>
+            
+            @include('layouts.immerse')
+
+        
     <footer id="shopify-section-footer" class="shopify-section site-footer footer-with-img">
         @include('layouts.footer')
     </footer>

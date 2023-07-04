@@ -30,7 +30,11 @@
       </div>
       <div class="mdc-drawer__content">
         <div class="user-info">
-          <p class="name">Clyde Miles</p>
+          <p class="name">      
+        
+          ?>
+        
+        </p>
           <p class="email">clydemiles@elenor.us</p>
         </div>
         <div class="mdc-list-group">
@@ -138,7 +142,7 @@
         <div class="profile-actions">
           <a href="javascript:;">Settings</a>
           <span class="divider"></span>
-          <a href="javascript:;">Logout</a>
+          <a href="{{url('/logoutadmin')}}">Logout</a>
         </div>
         <div class="mdc-card premium-card">
           <div class="d-flex align-items-center">
@@ -185,7 +189,17 @@
                   <span class="figure">
                     <img src="{{asset('images/faces/face1.jpg')}}" alt="user" class="user">
                   </span>
-                  <span class="user-name">Clyde Miles</span>
+                  <span class="user-name">
+
+                  <?php 
+                  $name_admin = Session::get('name_admin') ;
+                  if($name_admin) {
+                    echo $name_admin;
+                  }
+                  ?>
+
+
+                  </span>
                 </span>
               </button>
               <div class="mdc-menu mdc-menu-surface" tabindex="-1">
@@ -203,7 +217,7 @@
                       <i class="mdi mdi-settings-outline text-primary"></i>                      
                     </div>
                     <div class="item-content d-flex align-items-start flex-column justify-content-center">
-                      <h6 class="item-subject font-weight-normal">Logout</h6>
+                      <a href="{{url('/logoutadmin')}}"><h6 class="item-subject font-weight-normal">Logout</h6></a>
                     </div>
                   </li>
                 </ul>
@@ -340,7 +354,7 @@
                       <i class="mdi mdi-logout-variant text-primary"></i>                      
                     </div>
                     <div class="item-content d-flex align-items-start flex-column justify-content-center">
-                      <h6 class="item-subject font-weight-normal">Logout</h6>
+                    <a href="{{url('/logoutadmin')}}"><h6 class="item-subject font-weight-normal">Logout</h6></a>
                     </div>
                   </li>
                 </ul>

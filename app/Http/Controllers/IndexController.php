@@ -21,7 +21,7 @@ class IndexController extends Controller
                 ->select('*')->where('type', 'like', '%cake%')->get();
             $listcakeevents = DB::table('category')
                 ->select('*')->where('type', 'like', '%event%')->get();
-            $topcake = DB::table('product')->select('*')->where('id_category','=', 17);
+            $topcake = DB::table('product')->select('*')->where('id_category','=', 17)->get();
             return view('layouts.body')->with('listcakes', $listcakes)->with('listcakeevents', $listcakeevents)->with('topcake',$topcake);
             
         } elseif ($data_session) {
@@ -29,7 +29,7 @@ class IndexController extends Controller
                 ->select('*')->where('type', 'like', '%cake%')->get();
             $listcakeevents = DB::table('category')
                 ->select('*')->where('type', 'like', '%event%')->get();
-            $topcake = DB::table('product')->select('*')->where('id_category','=', 17);
+            $topcake = DB::table('product')->select('*')->where('id_category','=', 17)->get();
             return view('layoutsuser.bodyuser')->with('listcakes', $listcakes)->with('listcakeevents', $listcakeevents)->with('topcake',$topcake);
         }
 }
@@ -40,7 +40,22 @@ public function logout_user() {
         Session::put('email_user',null);
         Session::put('pass_user',null);
         Session::put('id_user',null);
+
+        
         return redirect('/');
+
     
 }
+public function logout_admin() {
+
+   
+        Session::put('email_admin',null);
+        Session::put('pass_admin',null);
+        Session::put('id_admin',null);
+        Session::put('name_admin',null);
+        return redirect('/');
+
+    
+}
+
 }

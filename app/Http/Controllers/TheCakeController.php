@@ -39,13 +39,19 @@ class TheCakeController extends Controller
         return view('layouts/body');
     }
 
-    // public function user()
-    // {
-    //     $id = session()->get('id_user');
-    //     $data_user = DB::table('account')->select('*')->where('id_account', $id)->get();
-    //     return view('/user/user')->with('data_user', $data_user);
-    // }
-    //c
+    public function user()
+    {
+        $id = session()->get('id_user');
+        $data_user = DB::table('account')->select('*')->where('id_account', $id)->get();
+
+        $listcakes = DB::table('category')
+                ->select('*')->where('type', 'like', '%cake%')->get();
+            $listcakeevents = DB::table('category')
+                ->select('*')->where('type', 'like', '%event%')->get();
+        return view('/user/user')->with('data_user', $data_user)->with('listcakes', $listcakes)->with('listcakeevents', $listcakeevents);
+
+    }
+    
     public function check_session(Request $request)
 {
 
@@ -74,7 +80,8 @@ class TheCakeController extends Controller
         if ($data_account) {
             Session::put('email_admin',$email_session);
             Session::put('pass_admin',$password_session);
-            Session::put('id_admin',$data_user->id_account);
+            Session::put('id_admin',$data_admin->id_account);
+            Session::put('name_admin',$data_admin->id_account);
             return redirect('/admin');
         } 
     } else {
@@ -156,11 +163,13 @@ class TheCakeController extends Controller
         $data_session = session()->get('id_admin');
         if (!$data_session) {
             
-            return view('/login/login');
+            return redirect('/login');
             
         } elseif ($data_session) {
+            $id = session()->get('id_admin');
+            $data_admin = DB::table('account')->select('*')->where('id_account',$id)->get();
             
-            return view('/admin/admin');
+            return view('/admin/admin')->with('data_admin', $data_admin);
         }
     }
     //c hiển thị admin để chỉnh sửa
@@ -220,12 +229,6 @@ class TheCakeController extends Controller
         // $users = Account::all();
         
         // return redirect()->back();
-    }
-    public function log_out()
-    {
-        Session::put('email_user', null);
-        Session::put('pass_user', null);
-        return redirect('login');
     }
 
 

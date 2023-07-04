@@ -134,7 +134,7 @@
 
                                 @foreach($listcakes as $cate)
                                 <li class="">
-                                    <a href="{{url('/allcategories/cateproduct/'.$cate->name_category)}}">{{$cate -> name_category}}
+                                    <a href="{{url('/allcategories/cateproductuser/'.$cate->name_category)}}">{{$cate -> name_category}}
                                     </a>
 
                                 </li>
@@ -173,7 +173,7 @@
 
                                 @foreach($listcakeevents as $eventcake)
                                 <li class="">
-                                    <a href="/collections/chocolate-bars">{{$eventcake -> name_category}}
+                                    <a href="{{url('/allcategories/cateproductuser/'.$eventcake->name_category)}}">{{$eventcake -> name_category}}
                                     </a>
 
                                 </li>
@@ -237,7 +237,7 @@
                                             <a href="{{url('/logoutuser')}}">Log out</a>
                                         </li>
                                         <li>
-                                            <a href="/account/register" title="Create Account">My Account</a>
+                                            <a href="{{url('/myaccount')}}" title="Create Account">My Account</a>
                                         </li>
 
 

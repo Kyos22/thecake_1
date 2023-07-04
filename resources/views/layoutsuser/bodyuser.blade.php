@@ -889,7 +889,7 @@
               <div class="label">Cookie</div>
               <div class="card-title">
                 <h5 id="title--7838553047276" class="product-title">
-                  <a href="/products/salted-caramel-dark-chocolate" tabindex="0"></a>
+                  <a href="/products/salted-caramel-dark-chocolate" tabindex="0">{{$cake -> name_product}}</a>
                 </h5>
               </div>
             </div>
