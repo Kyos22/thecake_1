@@ -17,44 +17,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group([], function () {
-    
-    
-
-    Route::get('/',[ProductController::class,'list_category']);
-    
-    Route::post('/check_login',[TheCakeController::class,'check_session']);
-    Route::get('/user',[TheCakeController::class,'user']);
-    
-    Route::get('/users',[TheCakeController::class,'users']);
-    Route::get('/admin',[TheCakeController::class,'admin']);
-});
-
-Route::group([], function () {
-   
-    Route::get('/check',[IndexController::class,'index']);
-});
-
 
 Route::group(['prefix' => 'login'], function(){
-    Route::get('/login',[TheCakeController::class,'login']);
+    Route::get('/',[TheCakeController::class,'login']);
+});
     
-    
+
+
 
 Route::group([], function () {
     
     Route::get('/',[IndexController::class,'index']);
 
-    Route::get('/',[ProductController::class,'list_category']);
+    // Route::get('/',[ProductController::class,'list_category']);
     
     Route::post('/check_login',[TheCakeController::class,'check_session']);
-    Route::get('/user',[TheCakeController::class,'user']);
-    
+    Route::get('/',[IndexController::class,'index']);
+    Route::get('/user',[TheCakeController::class,'user']); 
     Route::get('/users',[TheCakeController::class,'users']);
     Route::get('/admin',[TheCakeController::class,'admin']);
+    Route::get('/logoutuser',[IndexController::class,'logout_user']);
 });
     
-});
 Route::group(['prefix' => 'logout'], function(){
     Route::get('/log_out',[TheCakeController::class,'log_out']);
 });
@@ -93,4 +77,8 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/editproduct/{id_product}', [AdminController::class, 'edit_product']);
     Route::get('/editproduct/{id_product}', [AdminController::class, 'list_cate_ineditproduct']);
     Route::post('/update_product', [AdminController::class, 'update_product']);
+    Route::get('/formcreateadmin',[AdminController::class,'registeradmin']);
+    Route::post('/create_admin',[AdminController::class,'save_admin']);
+
+
 });

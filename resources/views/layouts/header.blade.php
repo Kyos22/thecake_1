@@ -218,7 +218,7 @@
                         <div class="profile-suport">
                             <span>Call and make an appointment</span>
                             <a href="tel:+00 544-213-615">
-                                <span class="support-span">+00 544-213-615</span>
+                                <span class="support-span">0767.778.778</span>
                             </a>
                         </div>
                     </li>
@@ -234,7 +234,7 @@
                                     <ul class="list-unstyled">
 
                                         <li>
-                                            <a href="{{url('/login/login')}}">Log in</a>
+                                            <a href="{{url('/login')}}">Log in</a>
                                         </li>
                                         <li>
                                             <a href="/account/register" title="Create Account">Create Account</a>
