@@ -20,17 +20,19 @@
 <table class="table table-hover" style="border:1px" style="text-align: left"> <br><br>
 
     <tr style="border:1px">
-        <th >id</th>
+        
         <th>id_product</th>
         <th>name_photo</th>
+        <th>action</th>
         
     </tr>
     @foreach($photos as $photo)
         <tr style="text-align: center" style="border:1px" style="text-align: left">
-            <td>{{$photo -> id_photo}}</td>
+            
             <td>{{$photo -> name_product}}</td>
             
             <td><img src="{{asset('images/' .$photo -> name_photo)}}" width="70" height="100"></td>
+            <td><a class="btn btn-primary" href="/admin/deletephoto/{{$photo->id_photo}}">Delete</a></td>
             
         </tr>
     @endforeach

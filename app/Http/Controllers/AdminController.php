@@ -232,12 +232,28 @@ class AdminController extends Controller
         DB::table('product')->where('id_product', $id_product)->delete();
         return redirect('/admin/showproduct');
     }
+    public function delete_photo($id_photo)
+    {
+
+
+        DB::table('photo')->where('id_photo', $id_photo)->delete();
+        return redirect('/admin/show    photo');
+    }
+    public function delete_category($id_category)
+    {
+
+
+        DB::table('category')->where('id_category', $id_category)->delete();
+        return redirect('/admin/showcategory');
+    }
+
     public function edit_product($id_product)
     {
 
 
         return view('admin/editproduct');
     }
+    
     public function list_cate_ineditproduct($id_product)
     {
         $list_cates = DB::table('category')->select('*')->get();
@@ -245,22 +261,39 @@ class AdminController extends Controller
         $product = DB::table('product')->where('product.id_product', $id_product)->first();
         return view('admin/editproduct')->with('list_cates', $list_cates)->with('product', $product);
     }
-    public function update_product(Request $request)
+    public function edit_category($id_category)
     {
+        $category = DB::table('category')->where('category.id_category', $id_category)->first();
+
+        return view('admin/editcategory')->with('category', $category);
+    }
+    
+    public function update_product(Request $request, $id_product) {
 
         $request->validate([
-            'photo' => 'required|image|mimes:jpeg,jpg,png,gif,svg|max:1048',
+            'photo' => 'image|mimes:jpeg,jpg,png,gif,svg|max:1048',
         ]);
+
+        $product = DB::table('product')->where('product.id_product', $id_product)->first();
+
 
         $photo = $request->input('photo');
         if ($request->hasFile('photo')) {
+
+            // $currentphoto = $request->photo;
 
             $file = $request->file('photo');
 
             $request->photo->move(public_path('images'), $file->getClientOriginalName());
             $photo = $file->getClientOriginalName();
+
+            // if(empty($photo)) {
+            //     $photo = $currentphoto;
+            // }
+        }else {
+            $photo = $product -> photo;
         }
-        $product_inner = [
+        $data = [
             'name_product' => $request->input('name_product'),
             'detail_product' => $request->input('detail_product'),
             'price' => $request->input('price'),
@@ -268,13 +301,45 @@ class AdminController extends Controller
             'id_category' => $request->input('id_category')
         ];
 
-        $id_product = $request->input('id_product');
-        Product::find($id_product)->update($product_inner);
+        DB::table('product') ->select('*')-> where('id_product',$id_product)->update($data);
+        
+        return redirect('/admin/showproduct')->with('success','update product complete')->with('product', $product);
+    }
+    public function update_category(Request $request, $id_category) {
+
+        $request->validate([
+            'photo' => 'image|mimes:jpeg,jpg,png,gif,svg|max:1048',
+        ]);
+
+        $category = DB::table('category')->where('category.id_category', $id_category)->first();
 
 
-        //        DB::table('product')->where('product.id_product', $id)->update($product_inner);
+        $photo = $request->input('photo');
+        if ($request->hasFile('photo')) {
 
-        return view('admin/showproduct');
+            // $currentphoto = $request->photo;
+
+            $file = $request->file('photo');
+
+            $request->photo->move(public_path('images'), $file->getClientOriginalName());
+            $photo = $file->getClientOriginalName();
+
+            // if(empty($photo)) {
+            //     $photo = $currentphoto;
+            // }
+        }else {
+            $photo = $category -> avatar_category;
+        }
+        $data = [
+            'name_category' => $request->input('name_product'),
+            'avatar_category' => $photo,
+            'type' => $request->input('type'),
+            
+        ];
+
+        DB::table('category') ->select('*')-> where('id_category',$id_category)->update($data);
+        
+        return redirect('/admin/showcategory')->with('success','update product complete')->with('category', $category);
     }
     public function registeradmin() {
 

@@ -2,7 +2,7 @@
 <section id="shopify-section-template--16620970705132__df1c8f66-354b-4e03-8359-3dfc1f8c47e8" class="shopify-section pro-base-slider-sec">
 <div class="container" data-section="pdp-slider">
                 <div class="section-title">
-                    <h3>Immerse yourself <br> <b>in the chocolate flavor</b></h3>
+                    <h3>Immerse yourself <br> <b>in The Cake</b></h3>
                 </div>
                 <div class="pro-base-slider-main">
                     <div class="grid__item product-card">

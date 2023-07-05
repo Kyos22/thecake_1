@@ -71,9 +71,13 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/detailproduct/{id_product}', [AdminController::class, 'detail_product']);
     Route::get('/detailcategory/{id_category}', [AdminController::class, 'detail_category']);
     Route::get('/deleteproduct/{id_product}', [AdminController::class, 'delete_product']);
+    Route::get('/deletephoto/{id_photo}', [AdminController::class, 'delete_photo']);
+    Route::get('/deletecategory/{id_category}', [AdminController::class, 'delete_category']);
     Route::get('/editproduct/{id_product}', [AdminController::class, 'edit_product']);
+    Route::get('/editcategory/{id_category}', [AdminController::class, 'edit_category']);
     Route::get('/editproduct/{id_product}', [AdminController::class, 'list_cate_ineditproduct']);
-    Route::post('/update_product', [AdminController::class, 'update_product']);
+    Route::post('/update_product/{id_product}', [AdminController::class, 'update_product']);
+    Route::post('/update_category/{id_category}', [AdminController::class, 'update_category']);
     Route::get('/formcreateadmin',[AdminController::class,'registeradmin']);
     Route::post('/create_admin',[AdminController::class,'save_admin']);
 
