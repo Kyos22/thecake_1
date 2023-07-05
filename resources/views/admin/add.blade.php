@@ -33,13 +33,18 @@
   <div class="form-group">
     <label for="exampleInputID_Category">ID Category</label>
     
-   
+
     <select name="id_category"  class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
         @foreach($list_cates as $list_cate)
         <option value="{{$list_cate -> id_category}}"> {{$list_cate->name_category}}</option>
         @endforeach
     </select>
     
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPrice">fakeprice</label>
+    <input type="Price" class="form-control" id="exampleInputPrice" aria-describedby="fakePrice" placeholder="fakePrice" name="fakeprice">
+    <small id="Price" class="form-text text-muted"></small>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

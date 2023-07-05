@@ -13,7 +13,8 @@ class Product extends Model {
         'detail_product',
         'price',
         'photo',
-        'id_category'
+        'id_category',
+        'fakeprice'
     ]; //mảng chứa tên cột
     
 

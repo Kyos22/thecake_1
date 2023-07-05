@@ -70,6 +70,7 @@ class AdminController extends Controller
             'price' => $request->input('price'),
             'photo' => $photo,
             'id_category' => $request->input('id_category'),
+            'fakeprice' => $request->input('fakeprice')
         ];
         Product::create($product);
         return redirect('/admin/showproduct');

@@ -36,6 +36,7 @@ Route::group([], function () {
     Route::get('/admin',[TheCakeController::class,'admin']);
     Route::get('/logoutuser',[IndexController::class,'logout_user']);
     Route::get('/logoutadmin',[IndexController::class,'logout_admin']);
+    // Route::post('/sortby/{id_category}',[ProductController::class,'sort_by']);
 });
     
 
@@ -80,6 +81,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('/update_category/{id_category}', [AdminController::class, 'update_category']);
     Route::get('/formcreateadmin',[AdminController::class,'registeradmin']);
     Route::post('/create_admin',[AdminController::class,'save_admin']);
+    
 
 
 });

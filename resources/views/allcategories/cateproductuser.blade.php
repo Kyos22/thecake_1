@@ -43,19 +43,19 @@
                                 <div class="filter-select-box d-flex align-items-center justify-content-end">
 
                                     <facet-filters-form>
-                                        <form id="FacetFiltersForm">
+                                        <form method="post" action="{{url('/admin/sortby')}}" id="FacetFiltersForm">
+                                            @csrf
                                             <div class="facet-filters sorting caption">
                                                 <div class="facet-filters__field">
                                                     <span class="sort-lbl"><label for="SortBy">Sort by:</label></span>
-                                                    <div class="select"><select name="sort_by" class="facet-filters__sort select__select caption-large nice-select" id="SortBy" aria-describedby="a11y-refresh-page-message">
-                                                            <option value="manual">Featured</option>
-                                                            <option value="best-selling" selected="selected">Best selling</option>
-                                                            <option value="title-ascending">Alphabetically, A-Z</option>
-                                                            <option value="title-descending">Alphabetically, Z-A</option>
-                                                            <option value="price-ascending">Price, low to high</option>
-                                                            <option value="price-descending">Price, high to low</option>
-                                                            <option value="created-ascending">Date, old to new</option>
-                                                            <option value="created-descending">Date, new to old</option>
+                                                    <div class="select">
+                                                        <select name="filterdash" class="facet-filters__sort select__select caption-large nice-select" id="SortBy" aria-describedby="a11y-refresh-page-message" 
+                                                        onchange="this.form.submit()">
+                                                            <option value="1" {{ request()->input('filterDash') == '1' ? 'selected' : '' }}>Alphabetically, A-Z</option>
+                                                            <option value="2" {{ request()->input('filterDash') == '2' ? 'selected' : '' }}>Alphabetically, Z-A</option>
+                                                            <option value="3" {{ request()->input('filterDash') == '3' ? 'selected' : '' }}>Price, high to low</option>
+                                                            <option value="4" {{ request()->input('filterDash') == '4' ? 'selected' : '' }}>Price, low to high</option>
+                                    
                                                         </select>
                                                     </div>
                                                 </div>

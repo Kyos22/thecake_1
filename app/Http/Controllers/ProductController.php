@@ -63,6 +63,8 @@ class ProductController extends BaseController
     
             $id = session()->get('id_user');
             $data_user = DB::table('account')->select('*')->where('id_account', $id)->get();
+
+            $category = DB::table('category')->select('*')->where('name_category', $name_category)->get(); //biến lấy các sản phẩm trong category
     
             $productsPerPage = DB::table('product')// biến lấy từng sản phẩm 
                 ->join('category','product.id_category','=','category.id_category')
@@ -75,11 +77,12 @@ class ProductController extends BaseController
             $listcakeevents = DB::table('category')// biến sổ danh sách category bánh event
                ->select('*')->where('type', 'like', '%event%')->get();
     
-            return view('allcategories/cateproductuser')->with('productsPerPage', $productsPerPage)
+            return view('allcategories/cateproductuser', compact('category'))->with('productsPerPage', $productsPerPage)
             ->with('name' ,$name_category)
             ->with('listcakes' ,$listcakes)
             ->with('listcakeevents' ,$listcakeevents)
             ->with('data_user', $data_user);
+            
             // ->with('listimg' ,$listimg);
         }
     public function detailproduct($name_product) {
@@ -122,4 +125,24 @@ class ProductController extends BaseController
         ->with('listimg' ,$listimg)
         ->with('data_user', $data_user);
     }
+//     public function sort_by(Request $request, $id_category) {
+//         $filterdash = $request -> input('filterdash');
+//         switch ($filterdash) {
+//             case '1':
+//                 $productsPerPage = DB::table('product')->orderBy('product.name_product', 'DESC')->paginate(25);
+//                 break;
+//             case '2':
+//                 $productsPerPage = DB::table('product')->orderBy('product.name_product', 'ASC')->paginate(25);
+//                 break;
+//             case '3':
+//                 $productsPerPage = DB::table('product')->orderBy('product.price', 'DESC')->paginate(25);
+//                 break;
+//             case '4':
+//                 $productsPerPage = DB::table('product')->orderBy('product.price', 'ASC')->paginate(25);
+//                 break;
+           
+//     }
+//     return view ('/allcategories/cateproductuser')->with('productsPerPage'. $productsPerPage);
+// }
+
 }
