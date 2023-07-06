@@ -72,6 +72,13 @@ class AdminController extends Controller
             'id_category' => $request->input('id_category'),
             'fakeprice' => $request->input('fakeprice')
         ];
+
+         // Lấy giá trị position cao nhất hiện tại
+        // $highestPosition = Product::max('position');
+
+        // Gán giá trị position cho sản phẩm mới
+        //  $product['position'] = $highestPosition + 1;
+
         Product::create($product);
         return redirect('/admin/showproduct');
     }
@@ -90,12 +97,12 @@ class AdminController extends Controller
     }
     public function show_product()
     {
-        $product_inner = DB::table('product')->join('category', 'product.id_category', '=', 'category.id_category')->select('*')->get();
+        $product_inner = DB::table('product')->join('category', 'product.id_category', '=', 'category.id_category')->select('*')->paginate(5);
         return view('/admin/showproduct')->with('product_inner', $product_inner);
     }
     public function show_category()
     {
-        $category_inner = DB::table('category')->select('*')->get();
+        $category_inner = DB::table('category')->select('*')->paginate(4);
         return view('/admin/showcategory')->with('category_inner', $category_inner);
     }
 
@@ -141,20 +148,20 @@ class AdminController extends Controller
     {
         $keyword = $request->get('keyword');
 
-        $product_inner = DB::table('product')->where('name_product', 'like', '%' . $keyword . '%')
-            ->join('category', 'product.id_category', '=', 'category.id_category')->get();
+        $product_inner = DB::table('product')->where('name_product', 'like', '%' . $keyword . '%')->orWhere('name_category', 'like', '%' . $keyword. '%')
+            ->join('category', 'product.id_category', '=', 'category.id_category')->paginate(5);
 
         return view('admin/showproduct')->with('product_inner', $product_inner);
     }
-    public function searchbykeyword_categoryinshowproduct(Request $request)
-    {
-        $keyword_category = $request->get('keyword_category');
+    // public function searchbykeyword_categoryinshowproduct(Request $request)
+    // {
+    //     $keyword_category = $request->get('keyword_category');
 
-        $product_inner = DB::table('product')->where('name_category', 'like', '%' . $keyword_category . '%')
-            ->join('category', 'product.id_category', '=', 'category.id_category')->get();
+    //     $product_inner = DB::table('product')->where('name_category', 'like', '%' . $keyword_category . '%')
+    //         ->join('category', 'product.id_category', '=', 'category.id_category')->paginate(5);
 
-        return view('admin/showproduct')->with('product_inner', $product_inner);
-    }
+    //     return view('admin/showproduct')->with('product_inner', $product_inner);
+    // }
     public function searchbykeyword_product_inphoto(Request $request)
     {
         $keyword_product = $request->get('keyword_product');
@@ -168,7 +175,7 @@ class AdminController extends Controller
     {
         $keyword_category = $request->get('keyword_category');
 
-        $category_inner = DB::table('category')->where('name_category', 'like', '%' . $keyword_category . '%')->get();
+        $category_inner = DB::table('category')->where('name_category', 'like', '%' . $keyword_category . '%')->orWhere('type', 'like', '%' . $keyword_category . '%')->paginate(5);
 
         return view('admin/showcategory')->with('category_inner', $category_inner);
     }
@@ -233,6 +240,24 @@ class AdminController extends Controller
         DB::table('product')->where('id_product', $id_product)->delete();
         return redirect('/admin/showproduct');
     }
+//     public function delete_product($id_product)
+// {
+//     $product = DB::table('product')->where('id_product', $id_product)->first();
+
+    
+   
+//      // Xóa các bản ghi trong bảng 'photo' liên quan đến sản phẩm
+//      DB::table('photo')->where('id_product', $id_product)->delete();
+   
+
+//     // Xóa sản phẩm
+//     DB::table('product')->where('id_product', $id_product)->delete();
+
+//     // Cập nhật position của các sản phẩm còn lại
+    
+
+//     return redirect('/admin/showproduct');
+// }
     public function delete_photo($id_photo)
     {
 

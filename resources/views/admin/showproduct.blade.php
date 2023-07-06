@@ -27,12 +27,12 @@
   </form>
 </div>
 
-<div class="input-group mb-3" style="margin:right">
+<!-- <div class="input-group mb-3" style="margin:right">
   <form method="get" action="{{url('/admin/searchbykeyword_categoryinshowproduct')}}">
     <input type="text" class="form-control" placeholder="search by categories" aria-label="Recipient's username" aria-describedby="button-addon2" name="keyword_category" style="width:300px">
     <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Search</button>
   </form>
-</div>
+</div> -->
 
 
 <a href="{{url('/admin/add')}}" class="btn btn-primary btn-lg"> ADD PRODUCT</a>
@@ -48,9 +48,15 @@
     <th>id_category</th>
     <th>Action</th>
   </tr>
+  <?php
+      $url= $_SERVER['REQUEST_URI'];
+      $string = substr($url,18);
+      $i = $string ? ($string - 1) * 5 + 1 : 1;
+
+  ?>
   @foreach($product_inner as $product)
   <tr style="text-align: center" style="border:1px" style="text-align: left">
-    <td>{{$product -> id_product}}</td>
+    <td>{{$i++}}</td>
     <td> <a href="{{url('/admin/detailproduct/'.$product ->id_product)}}">{{$product -> name_product}}</a></td>
     <td>{{$product -> detail_product}}</td>
     <td>{{$product -> price}}</td>
@@ -73,6 +79,31 @@
   </tr>
   @endforeach
 </table>
+
+<div class="pagination mb-4">
+        {{-- previous --}}
+        @if ($product_inner->onFirstPage())
+            <span>&laquo;</span>
+        @else
+            <a href="{{ $product_inner->previousPageUrl() }}" rel="prev">&laquo;</a>
+        @endif
+        {{-- Hiển thị các số trang --}}
+        @for ($i = 1; $i <= $product_inner->lastPage(); $i++)
+            @if ($i == $product_inner->currentPage())
+                <span class="active">{{ $i }}</span>
+            @else
+                <a href="{{ $product_inner->url($i) }}"
+                    class="{{ Request::fullUrlIs(url('/admin/showproduct') . '?page=' . $i . '*') ? 'active' : '' }}" style="margin: 0 5px;font-size: 20px;">{{ $i }}
+                  </a>
+            @endif
+        @endfor
+        {{-- next --}}
+        @if ($product_inner->hasMorePages())
+            <a href="{{ $product_inner->nextPageUrl() }}" rel="next">&raquo;</a>
+        @else
+            <span>&raquo;</span>
+        @endif
+    </div>
 
 
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">

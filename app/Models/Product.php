@@ -9,6 +9,7 @@ class Product extends Model {
     protected $primarykey = 'id_product';
     public $timestamps = false; //nghĩa là trong bảng của tôi không cần thêm created at và cái 
     protected $fillable = [
+        'position',
         'name_product',
         'detail_product',
         'price',
