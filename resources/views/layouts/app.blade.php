@@ -610,38 +610,6 @@ for (var attr in meta) {
         playSlideshow: `Play slideshow`,
       }
     </script><script src="//chocolate-workdo.myshopify.com/cdn/shop/t/3/assets/predictive-search.js?v=31278710863581584031668502208" defer="defer"></script>
-      
-
-<div class="subscribe-overlay open"></div>
-<div class="subscribe-popup">
-  <h2>Sign up our newsletter</h2> 
-  <button class="close-sub-btn">
-    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.20706 0.707107L6.49995 0L3.60354 2.89641L0.707134 0L2.67029e-05 0.707107L2.89644 3.60352L0 6.49995L0.707107 7.20706L3.60354 4.31062L6.49998 7.20706L7.20708 6.49995L4.31065 3.60352L7.20706 0.707107Z" fill="#30383D"></path>
-    </svg>
-  </button> 
-  <p>Subscribe our newsletters now and stay up-to-date with new collections</p>
-  
-  <form action="https://us18.list-manage.com/contact-form?u=28c97e9fc6b2e6214af7bd19c&form_id=1f1f3185abc040a9c4e1626b43a72353" method="post" class="subscriber-form">
-    <div class="enter-mail form-row">
-      <input type="email" placeholder="Enter Email" required="required">
-      <button class="btn-svg arro-svg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="8" viewBox="0 0 16 8" fill="none">
-          <path d="M15.3536 4.35355C15.5488 4.15829 15.5488 3.84171 15.3536 3.64645L12.1716 0.464467C11.9763 0.269205 11.6597 0.269205 11.4645 0.464467C11.2692 0.659729 11.2692 0.976312 11.4645 1.17157L14.2929 4L11.4645 6.82843C11.2692 7.02369 11.2692 7.34027 11.4645 7.53553C11.6597 7.7308 11.9763 7.7308 12.1716 7.53553L15.3536 4.35355ZM-4.37114e-08 4.5L15 4.5L15 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z" fill="#30383D"></path>
-        </svg>
-      </button>
-    </div>
-    <div class="thank-u-for" style="display: none;">
-      <div class="thanku-note d-flex align-items-center justify-content-center">
-        Thank you for subscribing!
-        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
-          <path d="M14 1L5.0625 11L1 6.45455" stroke="#02c102" stroke-linejoin="round"></path>
-        </svg> 
-      </div>
-    </div>
-  </form>
-  
-</div>
 
     
     <script src="//chocolate-workdo.myshopify.com/cdn/shop/t/3/assets/jquery.fancybox.min.js?v=183759526812225689971668502208" type="text/javascript"></script>

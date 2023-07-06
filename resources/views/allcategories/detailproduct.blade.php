@@ -8,130 +8,16 @@
             <media-gallery id="MediaGallery-template--16620971000044__main" class="slider-wrapper">
                 <div id="GalleryStatus-template--16620971000044__main" class="visually-hidden" role="status"></div>
                 <div id="Slider-Gallery-template--16620971000044__main" class="product-main-slider lightbox ">
-                    <!-- <div id="Slide-template--16620971000044__main-30919033520364" class="product-main-item grid__item is-active product__media-item--variant" data-media-id="template--16620971000044__main-30919033520364">
-
-
-                        <noscript>
-                            <div class="product__media media gradient global-media-settings">
-                                <img src="//chocolate-workdo.myshopify.com/cdn/shop/products/TRFR-Chocolatier-Australia-Dark-Chocolate-Fruits-Of-Passion-Liqueur-Truffle-700-removebg-preview.png?v=1669963054" loading="lazy" alt="">
-                            </div>
-                        </noscript>
-                        <div class="product-item-img product__media media media--transparent gradient global-media-settings"><img src="//chocolate-workdo.myshopify.com/cdn/shop/products/TRFR-Chocolatier-Australia-Dark-Chocolate-Fruits-Of-Passion-Liqueur-Truffle-700-removebg-preview_440x466.png?v=1669963054" loading="lazy" alt="">
-                            <a href="//chocolate-workdo.myshopify.com/cdn/shop/products/TRFR-Chocolatier-Australia-Dark-Chocolate-Fruits-Of-Passion-Liqueur-Truffle-700-removebg-preview_440x466.png?v=1669963054" data-caption="" class="open-lightbox">
-                                <div class="img-prew-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 25 25" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.375C0 14.5527 4.19733 18.75 9.375 18.75C11.5395 18.75 13.5328 18.0164 15.1196 16.7843C15.1794 16.9108 15.2615 17.0293 15.3661 17.1339L22.8661 24.6339C23.3543 25.122 24.1457 25.122 24.6339 24.6339C25.122 24.1457 25.122 23.3543 24.6339 22.8661L17.1339 15.3661C17.0293 15.2615 16.9108 15.1794 16.7844 15.1196C18.0164 13.5328 18.75 11.5395 18.75 9.375C18.75 4.19733 14.5527 0 9.375 0C4.19733 0 0 4.19733 0 9.375ZM2.5 9.375C2.5 5.57804 5.57804 2.5 9.375 2.5C13.172 2.5 16.25 5.57804 16.25 9.375C16.25 13.172 13.172 16.25 9.375 16.25C5.57804 16.25 2.5 13.172 2.5 9.375Z" fill="white"></path>
-                                    </svg>
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-                    <div id="Slide-template--16620971000044__main-30919033389292" class="product-main-item grid__item" data-media-id="template--16620971000044__main-30919033389292">
-
-
-                        <noscript>
-                            <div class="product__media media gradient global-media-settings">
-                                <img src="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_dark_truffle-removebg-preview.png?v=1669963056" loading="lazy" alt="">
-                            </div>
-                        </noscript>
-                        <div class="product-item-img product__media media media--transparent gradient global-media-settings"><img src="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_dark_truffle-removebg-preview_440x466.png?v=1669963056" loading="lazy" alt="">
-                            <a href="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_dark_truffle-removebg-preview_440x466.png?v=1669963056" data-caption="" class="open-lightbox">
-                                <div class="img-prew-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 25 25" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.375C0 14.5527 4.19733 18.75 9.375 18.75C11.5395 18.75 13.5328 18.0164 15.1196 16.7843C15.1794 16.9108 15.2615 17.0293 15.3661 17.1339L22.8661 24.6339C23.3543 25.122 24.1457 25.122 24.6339 24.6339C25.122 24.1457 25.122 23.3543 24.6339 22.8661L17.1339 15.3661C17.0293 15.2615 16.9108 15.1794 16.7844 15.1196C18.0164 13.5328 18.75 11.5395 18.75 9.375C18.75 4.19733 14.5527 0 9.375 0C4.19733 0 0 4.19733 0 9.375ZM2.5 9.375C2.5 5.57804 5.57804 2.5 9.375 2.5C13.172 2.5 16.25 5.57804 16.25 9.375C16.25 13.172 13.172 16.25 9.375 16.25C5.57804 16.25 2.5 13.172 2.5 9.375Z" fill="white"></path>
-                                    </svg>
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-                    <div id="Slide-template--16620971000044__main-30919033422060" class="product-main-item grid__item" data-media-id="template--16620971000044__main-30919033422060">
-
-
-                        <noscript>
-                            <div class="product__media media gradient global-media-settings">
-                                <img src="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_milk_truffle-removebg-preview.png?v=1669963054" loading="lazy" alt="">
-                            </div>
-                        </noscript>
-                        <div class="product-item-img product__media media media--transparent gradient global-media-settings"><img src="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_milk_truffle-removebg-preview_440x466.png?v=1669963054" loading="lazy" alt="">
-                            <a href="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_milk_truffle-removebg-preview_440x466.png?v=1669963054" data-caption="" class="open-lightbox">
-                                <div class="img-prew-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 25 25" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.375C0 14.5527 4.19733 18.75 9.375 18.75C11.5395 18.75 13.5328 18.0164 15.1196 16.7843C15.1794 16.9108 15.2615 17.0293 15.3661 17.1339L22.8661 24.6339C23.3543 25.122 24.1457 25.122 24.6339 24.6339C25.122 24.1457 25.122 23.3543 24.6339 22.8661L17.1339 15.3661C17.0293 15.2615 16.9108 15.1794 16.7844 15.1196C18.0164 13.5328 18.75 11.5395 18.75 9.375C18.75 4.19733 14.5527 0 9.375 0C4.19733 0 0 4.19733 0 9.375ZM2.5 9.375C2.5 5.57804 5.57804 2.5 9.375 2.5C13.172 2.5 16.25 5.57804 16.25 9.375C16.25 13.172 13.172 16.25 9.375 16.25C5.57804 16.25 2.5 13.172 2.5 9.375Z" fill="white"></path>
-                                    </svg>
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-                    <div id="Slide-template--16620971000044__main-30919033454828" class="product-main-item grid__item product__media-item--variant" data-media-id="template--16620971000044__main-30919033454828">
-
-
-                        <noscript>
-                            <div class="product__media media gradient global-media-settings">
-                                <img src="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_white_truffle-removebg-preview.png?v=1669963055" loading="lazy" alt="">
-                            </div>
-                        </noscript>
-                        <div class="product-item-img product__media media media--transparent gradient global-media-settings"><img src="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_white_truffle-removebg-preview_440x466.png?v=1669963055" loading="lazy" alt="">
-                            <a href="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_white_truffle-removebg-preview_440x466.png?v=1669963055" data-caption="" class="open-lightbox">
-                                <div class="img-prew-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 25 25" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.375C0 14.5527 4.19733 18.75 9.375 18.75C11.5395 18.75 13.5328 18.0164 15.1196 16.7843C15.1794 16.9108 15.2615 17.0293 15.3661 17.1339L22.8661 24.6339C23.3543 25.122 24.1457 25.122 24.6339 24.6339C25.122 24.1457 25.122 23.3543 24.6339 22.8661L17.1339 15.3661C17.0293 15.2615 16.9108 15.1794 16.7844 15.1196C18.0164 13.5328 18.75 11.5395 18.75 9.375C18.75 4.19733 14.5527 0 9.375 0C4.19733 0 0 4.19733 0 9.375ZM2.5 9.375C2.5 5.57804 5.57804 2.5 9.375 2.5C13.172 2.5 16.25 5.57804 16.25 9.375C16.25 13.172 13.172 16.25 9.375 16.25C5.57804 16.25 2.5 13.172 2.5 9.375Z" fill="white"></path>
-                                    </svg>
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-                    <div id="Slide-template--16620971000044__main-30919033487596" class="product-main-item grid__item" data-media-id="template--16620971000044__main-30919033487596">
-
-
-                        <noscript>
-                            <div class="product__media media gradient global-media-settings">
-                                <img src="//chocolate-workdo.myshopify.com/cdn/shop/products/TR0025-Milk-Chocolate-Champagne-Truffle-700_copy-removebg-preview.png?v=1669963055" loading="lazy" alt="">
-                            </div>
-                        </noscript>
-                        <div class="product-item-img product__media media media--transparent gradient global-media-settings"><img src="//chocolate-workdo.myshopify.com/cdn/shop/products/TR0025-Milk-Chocolate-Champagne-Truffle-700_copy-removebg-preview_440x466.png?v=1669963055" loading="lazy" alt="">
-                            <a href="//chocolate-workdo.myshopify.com/cdn/shop/products/TR0025-Milk-Chocolate-Champagne-Truffle-700_copy-removebg-preview_440x466.png?v=1669963055" data-caption="" class="open-lightbox">
-                                <div class="img-prew-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 25 25" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.375C0 14.5527 4.19733 18.75 9.375 18.75C11.5395 18.75 13.5328 18.0164 15.1196 16.7843C15.1794 16.9108 15.2615 17.0293 15.3661 17.1339L22.8661 24.6339C23.3543 25.122 24.1457 25.122 24.6339 24.6339C25.122 24.1457 25.122 23.3543 24.6339 22.8661L17.1339 15.3661C17.0293 15.2615 16.9108 15.1794 16.7844 15.1196C18.0164 13.5328 18.75 11.5395 18.75 9.375C18.75 4.19733 14.5527 0 9.375 0C4.19733 0 0 4.19733 0 9.375ZM2.5 9.375C2.5 5.57804 5.57804 2.5 9.375 2.5C13.172 2.5 16.25 5.57804 16.25 9.375C16.25 13.172 13.172 16.25 9.375 16.25C5.57804 16.25 2.5 13.172 2.5 9.375Z" fill="white"></path>
-                                    </svg>
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-                    <div id="Slide-template--16620971000044__main-30919033553132" class="product-main-item grid__item product__media-item--variant" data-media-id="template--16620971000044__main-30919033553132">
-
-
-                        <noscript>
-                            <div class="product__media media gradient global-media-settings">
-                                <img src="//chocolate-workdo.myshopify.com/cdn/shop/products/TRGR-Chocolatier-Australia-Dark-Chocolate-Grand-Marnier-Liqueur-Truffle-700-removebg-preview.png?v=1669963054" loading="lazy" alt="">
-                            </div>
-                        </noscript>
-                        <div class="product-item-img product__media media media--transparent gradient global-media-settings"><img src="//chocolate-workdo.myshopify.com/cdn/shop/products/TRGR-Chocolatier-Australia-Dark-Chocolate-Grand-Marnier-Liqueur-Truffle-700-removebg-preview_440x466.png?v=1669963054" loading="lazy" alt="">
-                            <a href="//chocolate-workdo.myshopify.com/cdn/shop/products/TRGR-Chocolatier-Australia-Dark-Chocolate-Grand-Marnier-Liqueur-Truffle-700-removebg-preview_440x466.png?v=1669963054" data-caption="" class="open-lightbox">
-                                <div class="img-prew-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 25 25" fill="none">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.375C0 14.5527 4.19733 18.75 9.375 18.75C11.5395 18.75 13.5328 18.0164 15.1196 16.7843C15.1794 16.9108 15.2615 17.0293 15.3661 17.1339L22.8661 24.6339C23.3543 25.122 24.1457 25.122 24.6339 24.6339C25.122 24.1457 25.122 23.3543 24.6339 22.8661L17.1339 15.3661C17.0293 15.2615 16.9108 15.1794 16.7844 15.1196C18.0164 13.5328 18.75 11.5395 18.75 9.375C18.75 4.19733 14.5527 0 9.375 0C4.19733 0 0 4.19733 0 9.375ZM2.5 9.375C2.5 5.57804 5.57804 2.5 9.375 2.5C13.172 2.5 16.25 5.57804 16.25 9.375C16.25 13.172 13.172 16.25 9.375 16.25C5.57804 16.25 2.5 13.172 2.5 9.375Z" fill="white"></path>
-                                    </svg>
-                                </div>
-                            </a>
-
-                        </div>
-                    </div> -->
                     @foreach($listimg as $img)
                     <div id="Slide-template--16620971000044__main-30919033389292" class="product-main-item grid__item" data-media-id="template--16620971000044__main-30919033389292">
 
 
                         <noscript>
                             <div class="product__media media gradient global-media-settings">
-                                <img src="{{asset('images/' .$img -> name_photo)}}" loading="lazy" alt="">
+                                <img src="{{asset('images/' .$firstimg-> name_photo)}}" loading="lazy" alt="">
                             </div>
                         </noscript>
-                        <div class="product-item-img product__media media media--transparent gradient global-media-settings"><img src="{{asset('images/' .$img -> name_photo)}}" loading="lazy" alt="">
+                        <div class="product-item-img product__media media media--transparent gradient global-media-settings"><img src="{{asset('images/' .$img-> name_photo)}}" loading="lazy" alt="">
                             <a href="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_dark_truffle-removebg-preview_440x466.png?v=1669963056" data-caption="" class="open-lightbox">
                                 <div class="img-prew-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 25 25" fill="none">
@@ -145,40 +31,11 @@
                     @endforeach
                 </div>
                 <div id="Slider-Thumbnails-template--16620971000044__main" class="product-thumb-slider ">
-                    <!-- <div id="Slide-Thumbnails-template--16620971000044__main-0" class="product-thumb-item  thumbnail-list_item--variant" data-target="template--16620971000044__main-30919033520364" data-media-position="1">
-                        <div class="thumb-img">
-                            <img id="Thumbnail-template--16620971000044__main-0" src="//chocolate-workdo.myshopify.com/cdn/shop/products/TRFR-Chocolatier-Australia-Dark-Chocolate-Fruits-Of-Passion-Liqueur-Truffle-700-removebg-preview_126x126.png?v=1669963054" loading="lazy">
-                        </div>
-                    </div>
-                    <div id="Slide-Thumbnails-template--16620971000044__main-0" class="product-thumb-item  thumbnail-list_item--variant" data-target="template--16620971000044__main-30919033520364" data-media-position="2">
-                        <div class="thumb-img">
-                            <img id="Thumbnail-template--16620971000044__main-1" src="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_dark_truffle-removebg-preview_126x126.png?v=1669963056" loading="lazy">
-                        </div>
-                    </div>
-                    <div id="Slide-Thumbnails-template--16620971000044__main-0" class="product-thumb-item  thumbnail-list_item--variant" data-target="template--16620971000044__main-30919033520364" data-media-position="3">
-                        <div class="thumb-img">
-                            <img id="Thumbnail-template--16620971000044__main-2" src="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_milk_truffle-removebg-preview_126x126.png?v=1669963054" loading="lazy">
-                        </div>
-                    </div>
-                    <div id="Slide-Thumbnails-template--16620971000044__main-0" class="product-thumb-item  thumbnail-list_item--variant" data-target="template--16620971000044__main-30919033520364" data-media-position="4">
-                        <div class="thumb-img">
-                            <img id="Thumbnail-template--16620971000044__main-3" src="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_white_truffle-removebg-preview_126x126.png?v=1669963055" loading="lazy">
-                        </div>
-                    </div>
-                    <div id="Slide-Thumbnails-template--16620971000044__main-0" class="product-thumb-item  thumbnail-list_item--variant" data-target="template--16620971000044__main-30919033520364" data-media-position="5">
-                        <div class="thumb-img">
-                            <img id="Thumbnail-template--16620971000044__main-4" src="//chocolate-workdo.myshopify.com/cdn/shop/products/TR0025-Milk-Chocolate-Champagne-Truffle-700_copy-removebg-preview_126x126.png?v=1669963055" loading="lazy">
-                        </div>
-                    </div>
-                    <div id="Slide-Thumbnails-template--16620971000044__main-0" class="product-thumb-item  thumbnail-list_item--variant" data-target="template--16620971000044__main-30919033520364" data-media-position="6">
-                        <div class="thumb-img">
-                            <img id="Thumbnail-template--16620971000044__main-6" src="//chocolate-workdo.myshopify.com/cdn/shop/products/TRGR-Chocolatier-Australia-Dark-Chocolate-Grand-Marnier-Liqueur-Truffle-700-removebg-preview_126x126.png?v=1669963054" loading="lazy">
-                        </div>
-                    </div> -->
+                   
                     @foreach($listimg as $img)
                     <div id="Slide-Thumbnails-template--16620971000044__main-0" class="product-thumb-item  thumbnail-list_item--variant" data-target="template--16620971000044__main-30919033520364" data-media-position="1">
                         <div class="thumb-img">
-                            <img id="Thumbnail-template--16620971000044__main-0" src="{{asset('images/' .$img -> name_photo)}}" loading="lazy">
+                            <img id="Thumbnail-template--16620971000044__main-0" src="{{asset('images/' .$img-> name_photo)}}" loading="lazy">
                         </div>
                     </div>
                     @endforeach
