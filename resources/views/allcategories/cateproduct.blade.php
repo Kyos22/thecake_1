@@ -1032,13 +1032,13 @@
                                                             <label>Flavour:</label>
                                                             <select id="Option-template--16620970705132__product-grid-7838553047276-0" class="select__select nice-select" name="options[Flavour]" form="product-form-template--16620970705132__product-grid-7838553047276">
                                                                 <option data-val="Red velvet" value="Red velvet" selected="selected">
-                                                                    normal eggs
+                                                                    Normal eggs
                                                                 </option>
                                                                 <option data-val="Venila" value="Venila">
-                                                                    many egg
+                                                                    Many egg
                                                                 </option>
                                                                 <option data-val="Venila" value="Venila">
-                                                                    fews egg
+                                                                    Fews egg
                                                                 </option>
                                                                 
                                                             </select>

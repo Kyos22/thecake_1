@@ -90,7 +90,8 @@ class ProductController extends BaseController
         //hàm liên kết vs bảng photo để truy vấn ảnh 
         $listimg = DB::table('photo')->join('product', 'photo.id_product','=','product.id_product')
         ->select('*')->where('product.name_product','=', $name_product)->get();
-
+$firstimg=DB::table('photo')->join('product', 'photo.id_product','=','product.id_product')
+        ->select('*')->where('product.name_product','=', $name_product)->where('photo.status','=',1)->first();
         $products = DB::table('product')->select('*')->where('name_product','like',$name_product)->first();
         $listcakes = DB::table('category')
             ->select('*')->where('type', 'like', '%cake%')->get();
@@ -102,7 +103,9 @@ class ProductController extends BaseController
         ->with('name' ,$name_product)
         ->with('listcakes' ,$listcakes)
         ->with('listcakeevents' ,$listcakeevents)
-        ->with('listimg' ,$listimg);
+        ->with('listimg' ,$listimg)
+        ->with('firstimg',$firstimg)
+        ;
     }
     public function detailproductuser($name_product) {
         $id = session()->get('id_user');
