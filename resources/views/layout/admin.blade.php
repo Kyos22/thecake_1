@@ -17,6 +17,22 @@
   <link rel="stylesheet" href="{{asset('css/demo/style.css')}}">
   <!-- End layout styles -->
   <link rel="shortcut icon" href="{{asset('images/favicon.png')}}" />
+  <script src="{{asset('/js/ckeditor.js')}}"></script>
+  <script src="{{ asset('ckeditor.js') }}"></script>
+  <script>
+    CKEditor.replace('editor');
+  </script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/38.1.0/classic/ckeditor.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+        $(function() {
+            $("#created").datepicker({
+                dateFormat: 'dd/mm/yy'
+            });
+        });
+    </script>
 </head>
 <body>
 <script src="{{asset('js/preloader.js')}}"></script>
@@ -31,11 +47,21 @@
       <div class="mdc-drawer__content">
         <div class="user-info">
           <p class="name">      
-        
-          ?>
-        
+        <?php
+          $name_admin = Session::get('name_admin') ;
+                  if($name_admin) {
+                    echo $name_admin;
+                  }
+                ?>
         </p>
-          <p class="email">clydemiles@elenor.us</p>
+          <p class="email">
+          <?php
+          $email_admin = Session::get('email_admin') ;
+                  if($email_admin) {
+                    echo $email_admin;
+                  }
+                ?>
+          </p>
         </div>
         <div class="mdc-list-group">
           <nav class="mdc-list mdc-drawer-menu">
@@ -80,9 +106,9 @@
             
             
             <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="pages/charts/chartjs.html">
+              <a class="mdc-drawer-link" href="/admin/showblog">
                 <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">pie_chart_outlined</i>
-                Charts
+                Blog
               </a>
             </div>
             <div class="mdc-list-item mdc-drawer-item">

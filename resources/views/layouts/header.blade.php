@@ -44,8 +44,8 @@
             </div>
             <div class="announcebar-right col-6 d-flex justify-content-end">
                 <ul class="d-flex">
-                    <li><a href="/pages/faqs" class="active">Faq</a></li>
-                    <li><a href="/pages/about-us">About Us</a></li>
+                    <li><a href="/pages/faq" class="active">Faq</a></li>
+                    <li><a href="/pages/aboutus">About Us</a></li>
 
 
                 </ul>
@@ -57,7 +57,7 @@
     <div class="container">
         <div class="navigationbar-row d-flex align-items-center">
             <div class="logo-col">
-                <h1><a href="/"><img src="//chocolate-workdo.myshopify.com/cdn/shop/files/chocolate_100x.png?v=1685430907" loading="lazy" alt="Chocolate WorkDo"></a></h1>
+                <a href="/"><h4>TheCake</h4></a>
             </div>
             <div class="menu-items-col">
                 <ul id="megalevel-1" class="main-nav">
@@ -78,35 +78,35 @@
 
 
                                 <li class="">
-                                    <a href="/pages/about-us">About us
+                                    <a href="/pages/aboutus">About us
                                     </a>
 
                                 </li>
 
 
                                 <li class="">
-                                    <a href="/collections">Collection list
+                                    <a href="/pages/collectionlist">Collection list
                                     </a>
 
                                 </li>
 
 
                                 <li class="">
-                                    <a href="/blogs/news/it-s-more-than-just-a-chocolate-with-heart-shape">Article page
+                                    <a href="/pages/blog">Article page
                                     </a>
 
                                 </li>
 
 
                                 <li class="">
-                                    <a href="/pages/faqs">Faqs
+                                    <a href="/pages/faq">Faqs
                                     </a>
 
                                 </li>
 
 
                                 <li class="">
-                                    <a href="/blogs/news">Blog page
+                                    <a href="/pages/news">News
                                     </a>
 
                                 </li>
@@ -237,7 +237,7 @@
                                             <a href="{{url('/login')}}">Log in</a>
                                         </li>
                                         <li>
-                                            <a href="/account/register" title="Create Account">Create Account</a>
+                                            <a href="/register/register" title="Create Account">Create Account</a>
                                         </li>
 
 

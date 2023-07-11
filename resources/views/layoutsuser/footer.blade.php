@@ -4,7 +4,7 @@
             <div class="footer-widget">
                 <h2>
                     <a href="/">
-                        <img src="//chocolate-workdo.myshopify.com/cdn/shop/files/chocolate.png?v=1685430907">
+                    <h2>TheCake</h2>
                     </a>
                 </h2> 
                 <p>Enjoy delicious chocolate every day with our chocolate website. Our food product made from cocoa beans, consumed as candy and used to make beverages .</p>

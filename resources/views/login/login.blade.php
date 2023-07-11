@@ -57,12 +57,18 @@
                       <div class="field form-group">
                         <label>E-mail<sup aria-hidden="true">*</sup>:</label>
                         <input type="email" name="email" id="CustomerEmail" autocomplete="email" autocorrect="off" autocapitalize="off" placeholder="Email">
+                        @error('email')
+    <span style="color: red;font-weight: bold;">invalid email</span>
+    @enderror
                       </div>
                     </div>
                     <div class="col-md-6 col-12">
                       <div class="form-group field">
                         <label>Password<sup aria-hidden="true">*</sup>:</label>
                         <input type="password" value="" name="password" id="CustomerPassword" autocomplete="current-password" placeholder="Password">
+                        @error('password')
+    <span style="color: red;font-weight: bold;">invalid password</span>
+    @enderror
                       </div>
                     </div>
 

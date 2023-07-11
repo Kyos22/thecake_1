@@ -14,6 +14,8 @@ use Symfony\Component\HttpKernel\Event\RequestEvent;
 use App\Models\Account;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Mail;
+
 
 
 
@@ -55,7 +57,10 @@ class TheCakeController extends Controller
     public function check_session(Request $request)
 {
 
-
+    $request->validate([
+        'password' => 'required|min:6',
+        
+    ]);
 
     $email_session = $request->input('email');
     $password_session = $request->input('password');
@@ -81,7 +86,7 @@ class TheCakeController extends Controller
             Session::put('email_admin',$email_session);
             Session::put('pass_admin',$password_session);
             Session::put('id_admin',$data_admin->id_account);
-            Session::put('name_admin',$data_admin->id_account);
+            Session::put('name_admin',$data_admin->username);
             return redirect('/admin');
         } 
     } else {
@@ -204,7 +209,7 @@ class TheCakeController extends Controller
     //c
     public function save_account(Request $request)
     {
-
+        
 
         $account = [
             'username' => $request->input('username_account'),
@@ -230,8 +235,127 @@ class TheCakeController extends Controller
         
         // return redirect()->back();
     }
+    public function aboutus() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
 
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
 
+        return view ('pages/aboutus')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function aboutususer() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
 
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+
+        return view ('pages/aboutususer')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function news() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+       $bloglist = DB::table('blog')
+       ->select('*')->where('type','like', '%article%')->orderBy('created', 'desc')->get();
+
+        return view ('pages/news')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents)->with('bloglist',$bloglist);
+    }
+    public function newsuser() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+       $bloglist = DB::table('blog')
+       ->select('*')->where('type','like', '%article%')->orderBy('created', 'desc')->get();
+
+        return view ('pages/news')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents)->with('bloglist',$bloglist);
+    }
+    public function collectionlist() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+      
+        return view ('pages/collectionlist')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function collectionlistuser() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+      
+        return view ('pages/collectionlistuser')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function faq() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+      
+        return view ('pages/faq')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function faquser() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+      
+        return view ('pages/faquser')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function contact () {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+        return view ('pages/contact')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function contactuser () {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+        return view ('pages/contactuser')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function postcontact(Request $request) {
+        $data_session = session()->get('id_user');
+            if(!$data_session) {
+                Mail::send('email.contact', [
+                    'name' => $request -> name,
+                    'email'=>$request->email,
+                    'phone'=>$request->phone,
+                    'detail' => $request -> description
+                ], function ($mail) use($request){
+                    $mail-> to('nguyenthanhcongvt123@gmail.com');
+                    $mail ->from($request ->email);
+                    $mail->subject('contact form');
+                });
+                session() -> flash('success','completely sent contact ');
+                return redirect('/pages/contact');
+            }elseif($data_session) {
+                Mail::send('email.contact', [
+                    'name' => $request -> name,
+                    'email'=>$request->email,
+                    'phone'=>$request->phone,
+                    'detail' => $request -> description
+                ], function ($mail) use($request){
+                    $mail-> to('nguyenthanhcongvt123@gmail.com');
+                    $mail ->from($request ->email);
+                    $mail->subject('contact form');
+                });
+                session() -> flash('success','completely sent contact ');
+                return redirect('/pages/contactuser');
+            }
+    }
     //c
 }

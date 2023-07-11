@@ -22,9 +22,9 @@
 
 <a href="{{url('/admin/showproduct')}}" class="btn btn-primary btn-lg" > Show product -></a>
 
-<table class="table table-hover" style="border:1px" style="text-align: left"> <br><br>
+<table class="table table-hover" border="1" style="text-align: left"> <br><br>
 
-    <tr style="border:1px">
+    <!-- <tr style="border:1px">
         <th >id</th>
         <th>name_product</th>
         <th>detail</th>
@@ -38,19 +38,36 @@
             <td>{{$product -> detail_product}}</td>
             <td>{{$product -> price}}</td>
               @foreach($photos as $row)
-            <td><img src="{{asset('images/$row->name_photo' )}}" width="70" height="100"></td>
-            @endforeach
-            <!-- <td>@foreach($photos as $photo)
             
-                    <img src="{{asset('images/' .$photo -> name_photo)}}" width="70" height="100">
-                    
-                    <br>
-
+            <td><img src="{{asset('images/' .$row -> name_photo)}}" width="70" height="100"></td>
             @endforeach
-            </td> -->
-
             <td>{{$product -> name_category}}</td>
             
+    </tr> -->
+    <tr>
+      <td>name_product</td>
+      <th>{{$product -> id_product}}</th>
+    </tr>
+    <tr>
+      <td>detail</td>
+      <th>{!!$product -> detail_product!!}</th>
+    </tr>
+    <tr>
+      <td>price</td>
+      <th>{{$product -> price}} <span>vnd</span> </th>
+    </tr>
+    <tr>
+      <td>photo</td>
+      @foreach($photos as $row)
+            
+            <th class="d-flex flex-wrap"><img src="{{asset('images/' .$row -> name_photo)}}" width="70" height="100"></th>
+
+            
+            @endforeach
+    </tr>
+    <tr>
+      <td>id_category</td>
+      <th>{{$product -> name_category}}</th>
     </tr>
 </table>
 

@@ -14,11 +14,11 @@
 
                         <noscript>
                             <div class="product__media media gradient global-media-settings">
-                                <img src="{{asset('images/' .$firstimg-> name_photo)}}" loading="lazy" alt="">
+                                <img src="{{asset('images/' .$img-> name_photo)}}" loading="lazy" alt="">
                             </div>
                         </noscript>
                         <div class="product-item-img product__media media media--transparent gradient global-media-settings"><img src="{{asset('images/' .$img-> name_photo)}}" loading="lazy" alt="">
-                            <a href="//chocolate-workdo.myshopify.com/cdn/shop/products/pure_dark_truffle-removebg-preview_440x466.png?v=1669963056" data-caption="" class="open-lightbox">
+                            <a href="{{asset('images/' .$img -> name_photo)}}" data-caption="" class="open-lightbox">
                                 <div class="img-prew-icon">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="20" viewBox="0 0 25 25" fill="none">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9.375C0 14.5527 4.19733 18.75 9.375 18.75C11.5395 18.75 13.5328 18.0164 15.1196 16.7843C15.1794 16.9108 15.2615 17.0293 15.3661 17.1339L22.8661 24.6339C23.3543 25.122 24.1457 25.122 24.6339 24.6339C25.122 24.1457 25.122 23.3543 24.6339 22.8661L17.1339 15.3661C17.0293 15.2615 16.9108 15.1794 16.7844 15.1196C18.0164 13.5328 18.75 11.5395 18.75 9.375C18.75 4.19733 14.5527 0 9.375 0C4.19733 0 0 4.19733 0 9.375ZM2.5 9.375C2.5 5.57804 5.57804 2.5 9.375 2.5C13.172 2.5 16.25 5.57804 16.25 9.375C16.25 13.172 13.172 16.25 9.375 16.25C5.57804 16.25 2.5 13.172 2.5 9.375Z" fill="white"></path>
@@ -61,10 +61,10 @@
                 </div>
                 <p>{{$products ->detail_product}}</p>
                 <div class="no-js-hidden price" id="price-template--16620971000044__main" role="status">
-                    <ins class="price-item--regular">{{$products -> price}} <span class=wbcur>USD</span></ins>
+                    <ins class="price-item--regular">{{$products -> price}} <span class=wbcur>VND</span></ins>
                     <del class="price-item--sale">
 
-                        {{$products -> fakeprice}} <span class=wbcur>USD</span>
+                        {{$products -> fakeprice}} <span class=wbcur>VND</span>
 
                     </del>
 
@@ -87,7 +87,7 @@
                 </div><variant-selects class="no-js-hidden" data-section="template--16620971000044__main" data-url="/products/salted-caramel-dark-chocolate">
                     <div class="product-form__input product-form__input--dropdown">
                         <label class="form__label" for="Option-template--16620971000044__main-0">
-                            Flavour
+                            Options
                         </label>
                         <div class="select">
                             <select id="Option-template--16620971000044__main-0" class="select__select nice-select" name="options[Flavour]" form="product-form-template--16620971000044__main">

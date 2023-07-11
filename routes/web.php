@@ -23,6 +23,7 @@ Route::group([], function () {
     Route::get('/logoutuser',[IndexController::class,'logout_user']);
     Route::get('/logoutadmin',[IndexController::class,'logout_admin']);
     // Route::post('/sortby/{id_category}',[ProductController::class,'sort_by']);
+    
 });
     
 
@@ -38,6 +39,27 @@ Route::group(['prefix' => 'allcategories'], function(){
     Route::get('/cateproductuser/{name_category}',[ProductController::class,'cateProductuser']);
     Route::get('/detailproductuser/{name_product}',[ProductController::class,'detailproductuser']);
 });
+Route::group(['prefix' => 'pages'], function(){
+    Route::get('/blog',[ProductController::class,'blog']);
+    Route::get('/bloguser',[ProductController::class,'bloguser']);
+    Route::get('/bloglist/{id_blog}',[ProductController::class,'bloglist']);
+    Route::get('/bloglistuser/{id_blog}',[ProductController::class,'bloglistuser']);
+    Route::get('/aboutus',[TheCakeController::class,'aboutus']);
+    Route::get('/aboutususer',[TheCakeController::class,'aboutususer']);
+    Route::get('/news',[TheCakeController::class,'news']);
+    Route::get('/newsuser',[TheCakeController::class,'newsuser']);
+    Route::get('/collectionlist',[TheCakeController::class,'collectionlist']);
+    Route::get('/collectionlistuser',[TheCakeController::class,'collectionlistuser']);
+    Route::get('/faq',[TheCakeController::class,'faq']);
+    Route::get('/faquser',[TheCakeController::class,'faquser']);
+
+    Route::get('contact',[TheCakeController::class,'contact'])->name('contact');
+    Route::get('contactuser',[TheCakeController::class,'contactuser'])->name('contact');
+    Route::post('postcontact',[TheCakeController::class,'postcontact']);
+
+  
+});
+
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/add', [AdminController::class, 'add']);
     Route::post('/save', [AdminController::class, 'save']);
@@ -60,13 +82,22 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/deleteproduct/{id_product}', [AdminController::class, 'delete_product']);
     Route::get('/deletephoto/{id_photo}', [AdminController::class, 'delete_photo']);
     Route::get('/deletecategory/{id_category}', [AdminController::class, 'delete_category']);
+    Route::get('/deleteblog/{id_blog}', [AdminController::class, 'delete_blog']);
     Route::get('/editproduct/{id_product}', [AdminController::class, 'edit_product']);
+    Route::get('/editblog/{id_blog}', [AdminController::class, 'edit_blog']);
     Route::get('/editcategory/{id_category}', [AdminController::class, 'edit_category']);
     Route::get('/editproduct/{id_product}', [AdminController::class, 'list_cate_ineditproduct']);
     Route::post('/update_product/{id_product}', [AdminController::class, 'update_product']);
     Route::post('/update_category/{id_category}', [AdminController::class, 'update_category']);
+    Route::post('/update_blog/{id_blog}', [AdminController::class, 'update_blog']);
     Route::get('/formcreateadmin',[AdminController::class,'registeradmin']);
     Route::post('/create_admin',[AdminController::class,'save_admin']);
+
+    Route::get('/showblog',[AdminController::class,'show_blog']);
+    Route::get('/addblog',[AdminController::class,'add_blog']);
+    Route::post('/save_blog',[AdminController::class,'save_blog']);
+
+
     
 
 

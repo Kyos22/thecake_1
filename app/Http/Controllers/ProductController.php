@@ -47,11 +47,17 @@ class ProductController extends BaseController
    
         $listcakeevents = DB::table('category')// biến sổ danh sách category bánh event
            ->select('*')->where('type', 'like', '%event%')->get();
+        $immerse = DB::table('product')
+           ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
+       
+
+        
 
         return view('allcategories/cateproduct')->with('productsPerPage', $productsPerPage)
         ->with('name' ,$name_category)
         ->with('listcakes' ,$listcakes)
         ->with('listcakeevents' ,$listcakeevents)
+        ->with('immerse', $immerse);
         ;
         // ->with('listimg' ,$listimg);
     }
@@ -76,12 +82,18 @@ class ProductController extends BaseController
        
             $listcakeevents = DB::table('category')// biến sổ danh sách category bánh event
                ->select('*')->where('type', 'like', '%event%')->get();
-    
+
+            $immerse = DB::table('product')
+               ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
+           
+        
             return view('allcategories/cateproductuser', compact('category'))->with('productsPerPage', $productsPerPage)
             ->with('name' ,$name_category)
             ->with('listcakes' ,$listcakes)
             ->with('listcakeevents' ,$listcakeevents)
-            ->with('data_user', $data_user);
+            ->with('data_user', $data_user)
+            ->with('immerse', $immerse);
+
             
             // ->with('listimg' ,$listimg);
         }
@@ -90,7 +102,7 @@ class ProductController extends BaseController
         //hàm liên kết vs bảng photo để truy vấn ảnh 
         $listimg = DB::table('photo')->join('product', 'photo.id_product','=','product.id_product')
         ->select('*')->where('product.name_product','=', $name_product)->get();
-$firstimg=DB::table('photo')->join('product', 'photo.id_product','=','product.id_product')
+        $firstimg = DB::table('photo')->join('product', 'photo.id_product','=','product.id_product')
         ->select('*')->where('product.name_product','=', $name_product)->where('photo.status','=',1)->first();
         $products = DB::table('product')->select('*')->where('name_product','like',$name_product)->first();
         $listcakes = DB::table('category')
@@ -98,6 +110,9 @@ $firstimg=DB::table('photo')->join('product', 'photo.id_product','=','product.id
    
         $listcakeevents = DB::table('category')
            ->select('*')->where('type', 'like', '%event%')->get();
+        $immerse = DB::table('product')
+           ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
+       
 
            return view('allcategories/detailproduct')->with('products', $products)
         ->with('name' ,$name_product)
@@ -105,6 +120,7 @@ $firstimg=DB::table('photo')->join('product', 'photo.id_product','=','product.id
         ->with('listcakeevents' ,$listcakeevents)
         ->with('listimg' ,$listimg)
         ->with('firstimg',$firstimg)
+        ->with('immerse', $immerse);
         ;
     }
     public function detailproductuser($name_product) {
@@ -120,32 +136,70 @@ $firstimg=DB::table('photo')->join('product', 'photo.id_product','=','product.id
    
         $listcakeevents = DB::table('category')
            ->select('*')->where('type', 'like', '%event%')->get();
+        $immerse = DB::table('product')
+           ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
+       
 
            return view('allcategories/detailproductuser')->with('products', $products)
         ->with('name' ,$name_product)
         ->with('listcakes' ,$listcakes)
         ->with('listcakeevents' ,$listcakeevents)
         ->with('listimg' ,$listimg)
-        ->with('data_user', $data_user);
+        ->with('data_user', $data_user)
+        ->with('immerse', $immerse);
     }
-//     public function sort_by(Request $request, $id_category) {
-//         $filterdash = $request -> input('filterdash');
-//         switch ($filterdash) {
-//             case '1':
-//                 $productsPerPage = DB::table('product')->orderBy('product.name_product', 'DESC')->paginate(25);
-//                 break;
-//             case '2':
-//                 $productsPerPage = DB::table('product')->orderBy('product.name_product', 'ASC')->paginate(25);
-//                 break;
-//             case '3':
-//                 $productsPerPage = DB::table('product')->orderBy('product.price', 'DESC')->paginate(25);
-//                 break;
-//             case '4':
-//                 $productsPerPage = DB::table('product')->orderBy('product.price', 'ASC')->paginate(25);
-//                 break;
-           
-//     }
-//     return view ('/allcategories/cateproductuser')->with('productsPerPage'. $productsPerPage);
-// }
+    public function blog(){
+    $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
 
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+    $blogmain = DB::table('blog')
+        ->select('*')->where('type','like', '%article%')->orderBy('created', 'desc')->first();
+    $bloglist = DB::table('blog')
+        ->select('*')->where('type','like', '%article%')->orderBy('created', 'desc')->get();
+
+        
+    return view('pages/blog')->with('listcakes' ,$listcakes)
+        ->with('listcakeevents' ,$listcakeevents)->with('blogmain', $blogmain)->with('bloglist',$bloglist);
+    }
+    public function bloguser(){
+        $listcakes = DB::table('category')
+            ->select('*')->where('type', 'like', '%cake%')->get();
+    
+        $listcakeevents = DB::table('category')
+           ->select('*')->where('type', 'like', '%event%')->get();
+        $blogmain = DB::table('blog')
+            ->select('*')->where('type','like', '%article%')->orderBy('created', 'desc')->first();
+        $bloglist = DB::table('blog')
+            ->select('*')->where('type','like', '%article%')->orderBy('created', 'desc')->get();
+    
+            
+        return view('pages/bloguser')->with('listcakes' ,$listcakes)
+            ->with('listcakeevents' ,$listcakeevents)->with('blogmain', $blogmain)->with('bloglist',$bloglist);
+        }
+    public function bloglist($id_blog){
+    $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+    $blogmain = DB::table('blog')
+       ->select('*')->where('id_blog',$id_blog)->first();
+    $bloglist = DB::table('blog')
+       ->select('*')->where('type','like', '%article%')->orderBy('created', 'desc')->get();
+        return view('/pages/bloglist')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents)->with('blogmain', $blogmain)->with('bloglist',$bloglist);
+    }
+    public function bloglistuser($id_blog){
+        $listcakes = DB::table('category')
+            ->select('*')->where('type', 'like', '%cake%')->get();
+    
+        $listcakeevents = DB::table('category')
+           ->select('*')->where('type', 'like', '%event%')->get();
+        $blogmain = DB::table('blog')
+           ->select('*')->where('id_blog',$id_blog)->first();
+        $bloglist = DB::table('blog')
+           ->select('*')->where('type','like', '%article%')->orderBy('created', 'desc')->get();
+            return view('/pages/bloglistuser')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents)->with('blogmain', $blogmain)->with('bloglist',$bloglist);
+        }
 }

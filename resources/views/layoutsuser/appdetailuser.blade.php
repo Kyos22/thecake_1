@@ -1059,6 +1059,9 @@
 
        @yield('main')
     </main>
+
+    @include('layoutsuser.immerseuser')
+
     <footer id="shopify-section-footer" class="shopify-section site-footer footer-with-img">
         @include('layoutsuser.footer')
     </footer>

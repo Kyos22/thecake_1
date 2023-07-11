@@ -1025,6 +1025,7 @@
                                                     </h5>
                                                 </div>
                                             </div>
+                                            
                                             <div class="card-bottom-inner">
                                                 <variant-selects class="no-js-hidden" data-section="template--16620970705132__product-grid" data-product="7838553047276" data-url="" data-update-url="false" data-layout="card">
                                                     <div class="product-form__input product-form__input--dropdown">

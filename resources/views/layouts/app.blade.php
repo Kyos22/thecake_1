@@ -9,7 +9,7 @@
     <link rel="canonical" href="https://chocolate-workdo.myshopify.com/">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <meta name="theme-color" content=""><link rel="icon" type="image/png" href="//chocolate-workdo.myshopify.com/cdn/shop/files/chocolate_a83bd691-0fce-4d7a-8383-93f117c97727.png?crop=center&height=32&v=1686391460&width=32"><title>
-      Chocolate WorkDo
+      The Cake
 </title>
 
     

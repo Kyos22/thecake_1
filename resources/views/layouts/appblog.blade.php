@@ -6,29 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    <link rel="canonical" href="https://chocolate-workdo.myshopify.com/collections/cakes">
+    <link rel="canonical" href="https://chocolate-workdo.myshopify.com/blogs/news/it-s-more-than-just-a-chocolate-with-heart-shape">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
     <meta name="theme-color" content="">
     <link rel="icon" type="image/png" href="//chocolate-workdo.myshopify.com/cdn/shop/files/chocolate_a83bd691-0fce-4d7a-8383-93f117c97727.png?crop=center&height=32&v=1686391460&width=32">
     <title>
-        cakes
+        {{$blogmain -> article}}
         &ndash; Chocolate WorkDo</title>
 
 
-    <meta name="description" content="&quot;Immerse yourself in the captivating aroma of our chocolate creations, as the rich scent of cocoa envelops your senses, enticing you to unravel the layers of flavor that lie within each delectable piece.&quot;">
+    <meta name="description" content="&quot;Learn about the health benefits of chocolate, its surprising nutritional qualities, and discover guilt-free ways to enjoy this heavenly treat while maintaining a balanced lifestyle.&quot; A heart-shaped chocolate is often associated with love, affection, and romance. It can be a sweet gesture to express your feelings to so">
 
 
 
 
     <meta property="og:site_name" content="Chocolate WorkDo">
-    <meta property="og:url" content="https://chocolate-workdo.myshopify.com/collections/cakes">
-    <meta property="og:title" content="cakes">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="&quot;Immerse yourself in the captivating aroma of our chocolate creations, as the rich scent of cocoa envelops your senses, enticing you to unravel the layers of flavor that lie within each delectable piece.&quot;">
+    <meta property="og:url" content="https://chocolate-workdo.myshopify.com/blogs/news/it-s-more-than-just-a-chocolate-with-heart-shape">
+    <meta property="og:title" content="It’s More than Just a Chocolate with Heart Shape">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="&quot;Learn about the health benefits of chocolate, its surprising nutritional qualities, and discover guilt-free ways to enjoy this heavenly treat while maintaining a balanced lifestyle.&quot; A heart-shaped chocolate is often associated with love, affection, and romance. It can be a sweet gesture to express your feelings to so">
+    <meta property="og:image" content="http://chocolate-workdo.myshopify.com/cdn/shop/articles/1.png?v=1669791382">
+    <meta property="og:image:secure_url" content="https://chocolate-workdo.myshopify.com/cdn/shop/articles/1.png?v=1669791382">
+    <meta property="og:image:width" content="263">
+    <meta property="og:image:height" content="180">
     <meta name="twitter:site" content="@shopify">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="cakes">
-    <meta name="twitter:description" content="&quot;Immerse yourself in the captivating aroma of our chocolate creations, as the rich scent of cocoa envelops your senses, enticing you to unravel the layers of flavor that lie within each delectable piece.&quot;">
+    <meta name="twitter:title" content="It’s More than Just a Chocolate with Heart Shape">
+    <meta name="twitter:description" content="&quot;Learn about the health benefits of chocolate, its surprising nutritional qualities, and discover guilt-free ways to enjoy this heavenly treat while maintaining a balanced lifestyle.&quot; A heart-shaped chocolate is often associated with love, affection, and romance. It can be a sweet gesture to express your feelings to so">
 
 
     <script src="//chocolate-workdo.myshopify.com/cdn/shop/t/3/assets/global.js?v=58264105761399725471669958692" defer="defer"></script>
@@ -38,11 +42,11 @@
         window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');
     </script>
     <meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/64555942124/digital_wallets/dialog">
-    <link rel="alternate" type="application/atom+xml" title="Feed" href="/collections/cakes.atom" />
-    <link rel="alternate" hreflang="x-default" href="https://chocolate-workdo.myshopify.com/collections/cakes">
-    <link rel="alternate" hreflang="en-US" href="https://chocolate-workdo.myshopify.com/collections/cakes">
-    <link rel="alternate" hreflang="en-IN" href="https://chocolate-workdo.myshopify.com/en-in/collections/cakes">
-    <link rel="alternate" type="application/json+oembed" href="https://chocolate-workdo.myshopify.com/collections/cakes.oembed">
+    <link rel="alternate" type="application/atom+xml" title="Feed" href="/blogs/news.atom" />
+    <link rel="alternate" hreflang="x-default" href="https://chocolate-workdo.myshopify.com/blogs/news/it-s-more-than-just-a-chocolate-with-heart-shape">
+    <link rel="alternate" hreflang="en-US" href="https://chocolate-workdo.myshopify.com/blogs/news/it-s-more-than-just-a-chocolate-with-heart-shape">
+    <link rel="alternate" hreflang="en-IN" href="https://chocolate-workdo.myshopify.com/en-in/blogs/news/it-s-more-than-just-a-chocolate-with-heart-shape">
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
     <script>
         (function() {
             var scripts = ["https://cdn.shopify.com/shopifycloud/checkout-web/assets/runtime.latest.en.8645d252f07ec25fdbc6.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-packages~Information~NoAddressLocation~Payment~PostPurchase~Review~Shipping~ShopPay~Sho~cf13f96e.latest.en.04837ae4ff5a8e949953.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information~Payment~ShopPay.latest.en.84ff9c0024faf7f72c14.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/Information.latest.en.900911b3d82c82309ebf.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-ui~app.latest.en.86cd9328cdcd6cd3a58f.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/vendors~app.latest.en.b4546f9bffad10b3673b.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/checkout-web-packages~app.latest.en.f5154093d2604596d084.js", "https://cdn.shopify.com/shopifycloud/checkout-web/assets/app.latest.en.931851b1b02f1bcae42a.js"];
@@ -164,12 +168,13 @@
         var __st = {
             "a": 64555942124,
             "offset": 19800,
-            "reqid": "afdedf8c-1b44-414e-be23-f76e28543663",
-            "pageurl": "chocolate-workdo.myshopify.com\/collections\/cakes",
-            "u": "8b495480d4fc",
-            "p": "collection",
-            "rtyp": "collection",
-            "rid": 399145304300
+            "reqid": "6bddcc0b-c7be-43d7-81a6-0c586319b30d",
+            "pageurl": "chocolate-workdo.myshopify.com\/blogs\/news\/it-s-more-than-just-a-chocolate-with-heart-shape",
+            "s": "articles-587562811628",
+            "u": "216dbd77de24",
+            "p": "article",
+            "rtyp": "article",
+            "rid": 587562811628
         };
     </script>
     <script>
@@ -271,7 +276,7 @@
                             navigation_start,
                             duration: currentMs - navigation_start,
                             session_token: session_token && session_token.length === 2 ? session_token[1] : "",
-                            page_type: "collection"
+                            page_type: "article"
                         };
                         window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({
                             schema_id: "online_store_buyer_site_abandonment/1.1",
@@ -398,15 +403,15 @@
             } catch (e) {}
             if (d && l.indexOf("web_pixels_prefetch_assets") > -1) {
                 var u = self.location.origin,
-                    h = (e.webPixelsConfigList || []).filter((function(e) {
+                    w = (e.webPixelsConfigList || []).filter((function(e) {
                         return "app" === e.type.toLowerCase()
                     }));
-                for (let e = 0; e < h.length; e++) {
-                    s([u, "/wpm@", r, "/web-pixel-", h[e].id, "@", h[e].scriptVersion, "/sandbox/worker.", c, ".js"].join(""), "script")
+                for (let e = 0; e < w.length; e++) {
+                    s([u, "/wpm@", r, "/web-pixel-", w[e].id, "@", w[e].scriptVersion, "/sandbox/worker.", c, ".js"].join(""), "script")
                 }
             }
-            var w, y, m, g, v, _, b, x, S = [a, l.indexOf("web_pixels_manager_runtime_asset_prefix") > -1 ? "/wpm" : null, "/", f, r, p, ".js"].join("");
-            w = {
+            var h, y, m, g, _, v, b, x, S = [a, l.indexOf("web_pixels_manager_runtime_asset_prefix") > -1 ? "/wpm" : null, "/", f, r, p, ".js"].join("");
+            h = {
                 src: S,
                 async: !0,
                 onload: function() {
@@ -414,7 +419,7 @@
                         var a = window.webPixelsManager.init(e);
                         n(a), window.Shopify.analytics.replayQueue.forEach((function(e) {
                             a.publishCustomEvent(e[0], e[1], e[2])
-                        })), window.Shopify.analytics.replayQueue = [], window.Shopify.analytics.publish = a.publishCustomEvent
+                        })), window.Shopify.analytics.replayQueue = [], window.Shopify.analytics.publish = a.publishCustomEvent, l.indexOf("web_pixels_identify_api") > -1 && (window.Shopify.analytics.identify = a.identify)
                     }
                 },
                 onerror: function() {
@@ -447,26 +452,26 @@
                     }
                     return !1
                 }
-            }, y = document.createElement("script"), m = w.src, g = w.async || !0, v = w.onload, _ = w.onerror, b = document.head, x = document.body, y.async = g, y.src = m, v && y.addEventListener("load", v), _ && y.addEventListener("error", _), b ? b.appendChild(y) : x ? x.appendChild(y) : console.error("Did not find a head or body element to append the script")
+            }, y = document.createElement("script"), m = h.src, g = h.async || !0, _ = h.onload, v = h.onerror, b = document.head, x = document.body, y.async = g, y.src = m, _ && y.addEventListener("load", _), v && y.addEventListener("error", v), b ? b.appendChild(y) : x ? x.appendChild(y) : console.error("Did not find a head or body element to append the script")
         })({
             shopId: 64555942124,
             storefrontBaseUrl: "https://chocolate-workdo.myshopify.com",
             cdnBaseUrl: "https://chocolate-workdo.myshopify.com/cdn",
             surface: "storefront-renderer",
-            enabledBetaFlags: ["web_pixels_use_shop_domain_monorail_endpoint", "web_pixels_shopify_pixel_validation", "web_pixels_prefetch_assets", "web_pixels_manager_runtime_asset_prefix", "web_pixels_async_pixel_refactor"],
+            enabledBetaFlags: ["web_pixels_shopify_pixel_validation", "web_pixels_prefetch_assets", "web_pixels_manager_runtime_asset_prefix", "web_pixels_async_pixel_refactor"],
             webPixelsConfigList: [{
                 "id": "shopify-app-pixel",
                 "configuration": "{}",
                 "eventPayloadVersion": "v1",
                 "runtimeContext": "STRICT",
-                "scriptVersion": "0549",
+                "scriptVersion": "0550",
                 "apiClientId": "shopify-pixel",
                 "type": "APP"
             }, {
                 "id": "shopify-custom-pixel",
                 "eventPayloadVersion": "v1",
                 "runtimeContext": "LAX",
-                "scriptVersion": "0549",
+                "scriptVersion": "0550",
                 "apiClientId": "shopify-pixel",
                 "type": "CUSTOM"
             }],
@@ -478,191 +483,17 @@
             },
         }, function pageEvents(webPixelsManagerAPI) {
             webPixelsManagerAPI.publish("page_viewed");
-            webPixelsManagerAPI.publish("collection_viewed", {
-                "collection": {
-                    "id": "399145304300",
-                    "title": "cakes",
-                    "productVariants": [{
-                        "id": "43537942184172",
-                        "image": {
-                            "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/TRFR-Chocolatier-Australia-Dark-Chocolate-Fruits-Of-Passion-Liqueur-Truffle-700-removebg-preview.png?v=1669963054"
-                        },
-                        "price": {
-                            "amount": 52.0,
-                            "currencyCode": "USD"
-                        },
-                        "product": {
-                            "id": "7838553047276",
-                            "title": "Salted Caramel Dark Chocolate",
-                            "untranslatedTitle": "Salted Caramel Dark Chocolate",
-                            "vendor": "Dark Chocolate",
-                            "type": "Dark Chocolate"
-                        },
-                        "sku": "",
-                        "title": "Red velvet",
-                        "untranslatedTitle": "Red velvet"
-                    }, {
-                        "id": "42810247774444",
-                        "image": {
-                            "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/7_6985b1ee-0419-4030-a559-84e9acbfdd90.png?v=1654151788"
-                        },
-                        "price": {
-                            "amount": 100.0,
-                            "currencyCode": "USD"
-                        },
-                        "product": {
-                            "id": "7644542501100",
-                            "title": "Chocolate Cup Cake",
-                            "untranslatedTitle": "Chocolate Cup Cake",
-                            "vendor": "Chocolate",
-                            "type": "cake"
-                        },
-                        "sku": "",
-                        "title": "Dark choco",
-                        "untranslatedTitle": "Dark choco"
-                    }, {
-                        "id": "42810210713836",
-                        "image": {
-                            "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/3_9a357753-253a-48b9-9350-3129570e515a.png?v=1654151608"
-                        },
-                        "price": {
-                            "amount": 45.0,
-                            "currencyCode": "USD"
-                        },
-                        "product": {
-                            "id": "7644536701164",
-                            "title": "Multi-colored sugar art donuts",
-                            "untranslatedTitle": "Multi-colored sugar art donuts",
-                            "vendor": "Donuts",
-                            "type": "Donuts"
-                        },
-                        "sku": "",
-                        "title": "chocolate",
-                        "untranslatedTitle": "chocolate"
-                    }, {
-                        "id": "42810191053036",
-                        "image": {
-                            "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/04.png?v=1668769118"
-                        },
-                        "price": {
-                            "amount": 120.0,
-                            "currencyCode": "USD"
-                        },
-                        "product": {
-                            "id": "7644534702316",
-                            "title": "chocolate cake",
-                            "untranslatedTitle": "chocolate cake",
-                            "vendor": "Chocolate",
-                            "type": "Chocolate"
-                        },
-                        "sku": "",
-                        "title": "vanilla",
-                        "untranslatedTitle": "vanilla"
-                    }]
-                }
-            });
-        }, "https://chocolate-workdo.myshopify.com/cdn", "browser", "0.0.319", "26b59c55w2783e5eep32010d49m0be09be3", ["web_pixels_use_shop_domain_monorail_endpoint", "web_pixels_shopify_pixel_validation", "web_pixels_prefetch_assets", "web_pixels_manager_runtime_asset_prefix", "web_pixels_async_pixel_refactor"]);
+        }, "https://chocolate-workdo.myshopify.com/cdn", "browser", "0.0.320", "7ee3691bw4881c675p880fb5a8mb8e4869e", ["web_pixels_shopify_pixel_validation", "web_pixels_prefetch_assets", "web_pixels_manager_runtime_asset_prefix", "web_pixels_async_pixel_refactor"]);
     </script>
     <script>
         window.ShopifyAnalytics = window.ShopifyAnalytics || {};
         window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
         window.ShopifyAnalytics.meta.currency = 'USD';
         var meta = {
-            "products": [{
-                "id": 7838553047276,
-                "gid": "gid:\/\/shopify\/Product\/7838553047276",
-                "vendor": "Dark Chocolate",
-                "type": "Dark Chocolate",
-                "variants": [{
-                    "id": 43537942184172,
-                    "price": 5200,
-                    "name": "Salted Caramel Dark Chocolate - Red velvet",
-                    "public_title": "Red velvet",
-                    "sku": ""
-                }, {
-                    "id": 43537942216940,
-                    "price": 5200,
-                    "name": "Salted Caramel Dark Chocolate - Venila",
-                    "public_title": "Venila",
-                    "sku": ""
-                }, {
-                    "id": 43537942249708,
-                    "price": 5200,
-                    "name": "Salted Caramel Dark Chocolate - Coffee",
-                    "public_title": "Coffee",
-                    "sku": ""
-                }]
-            }, {
-                "id": 7644542501100,
-                "gid": "gid:\/\/shopify\/Product\/7644542501100",
-                "vendor": "Chocolate",
-                "type": "cake",
-                "variants": [{
-                    "id": 42810247774444,
-                    "price": 10000,
-                    "name": "Chocolate Cup Cake - Dark choco",
-                    "public_title": "Dark choco",
-                    "sku": ""
-                }, {
-                    "id": 42810247807212,
-                    "price": 11000,
-                    "name": "Chocolate Cup Cake - Bluebarry",
-                    "public_title": "Bluebarry",
-                    "sku": ""
-                }, {
-                    "id": 42810247839980,
-                    "price": 11000,
-                    "name": "Chocolate Cup Cake - Strawbery",
-                    "public_title": "Strawbery",
-                    "sku": ""
-                }]
-            }, {
-                "id": 7644536701164,
-                "gid": "gid:\/\/shopify\/Product\/7644536701164",
-                "vendor": "Donuts",
-                "type": "Donuts",
-                "variants": [{
-                    "id": 42810210713836,
-                    "price": 4500,
-                    "name": "Multi-colored sugar art donuts - chocolate",
-                    "public_title": "chocolate",
-                    "sku": ""
-                }, {
-                    "id": 43537912004844,
-                    "price": 4500,
-                    "name": "Multi-colored sugar art donuts - Coffee",
-                    "public_title": "Coffee",
-                    "sku": ""
-                }]
-            }, {
-                "id": 7644534702316,
-                "gid": "gid:\/\/shopify\/Product\/7644534702316",
-                "vendor": "Chocolate",
-                "type": "Chocolate",
-                "variants": [{
-                    "id": 42810191053036,
-                    "price": 12000,
-                    "name": "chocolate cake - vanilla",
-                    "public_title": "vanilla",
-                    "sku": ""
-                }, {
-                    "id": 42810191085804,
-                    "price": 45000,
-                    "name": "chocolate cake - strawberry",
-                    "public_title": "strawberry",
-                    "sku": ""
-                }, {
-                    "id": 43503712960748,
-                    "price": 26000,
-                    "name": "chocolate cake - cream",
-                    "public_title": "cream",
-                    "sku": ""
-                }]
-            }],
             "page": {
-                "pageType": "collection",
-                "resourceType": "collection",
-                "resourceId": 399145304300
+                "pageType": "article",
+                "resourceType": "article",
+                "resourceId": 587562811628
             }
         };
         for (var attr in meta) {
@@ -838,22 +669,16 @@
                 document.write = originalDocumentWrite;
 
                 window.ShopifyAnalytics.lib.page(null, {
-                    "pageType": "collection",
-                    "resourceType": "collection",
-                    "resourceId": 399145304300
+                    "pageType": "article",
+                    "resourceType": "article",
+                    "resourceId": 587562811628
                 });
 
                 var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
                 var token = match ? match[1] : undefined;
                 if (!hasLoggedConversion(token)) {
                     setCookieIfConversion(token);
-                    window.ShopifyAnalytics.lib.track("Viewed Product Category", {
-                        "currency": "USD",
-                        "category": "Collection: cakes",
-                        "collectionName": "cakes",
-                        "collectionId": 399145304300,
-                        "nonInteraction": true
-                    });
+
                 }
             });
 
@@ -879,7 +704,7 @@
             window.BOOMR.themeVersion = "6.2.0";
             window.BOOMR.shopId = 64555942124;
             window.BOOMR.themeId = 136172601580;
-            window.BOOMR.renderRegion = "gcp-us-east1";
+            window.BOOMR.renderRegion = "gcp-us-central1";
             window.BOOMR.url =
                 "https://chocolate-workdo.myshopify.com/cdn/shopifycloud/boomerang/shopify-boomerang-1.0.0.min.js";
             var where = document.currentScript || document.getElementsByTagName("script")[0];
@@ -1016,7 +841,7 @@
     </script>
 </head>
 
-<body class="collection template-collection">
+<body class="article template-article">
     <div class="overlay cart-overlay"></div>
     <style>
         .ttloader {
@@ -1052,22 +877,17 @@
     </div>
 
     <header id="shopify-section-header" class="shopify-section site-header header-style-one home-header header-style-two">
-        @include('layouts.header')
+    @include('layouts.header')
     </header>
 
     <main id="MainContent" class="content-for-layout focus-none wrapper wrapper-top" role="main" tabindex="-1">
 
-       @yield('main')
-
-      
+        @yield('main')
     </main>
-    <section id="shopify-section-template--16620970705132__df1c8f66-354b-4e03-8359-3dfc1f8c47e8" class="shopify-section pro-base-slider-sec">
-
-            @include('layouts.immerse')
-
-            </section>
     <footer id="shopify-section-footer" class="shopify-section site-footer footer-with-img">
         @include('layouts.footer')
+
+
     </footer>
 
     <ul hidden>

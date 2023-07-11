@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Photo;
+use App\Models\Blog;
 use DateTime;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\DB;
@@ -149,7 +150,7 @@ class AdminController extends Controller
         $keyword = $request->get('keyword');
 
         $product_inner = DB::table('product')->where('name_product', 'like', '%' . $keyword . '%')->orWhere('name_category', 'like', '%' . $keyword. '%')
-            ->join('category', 'product.id_category', '=', 'category.id_category')->paginate(5);
+            ->join('category', 'product.id_category', '=', 'category.id_category')->paginate(10);
 
         return view('admin/showproduct')->with('product_inner', $product_inner);
     }
@@ -388,5 +389,99 @@ class AdminController extends Controller
         Account::create($account);
 
         return redirect('/admin/showproduct');
+    }
+    public function show_blog() {
+
+        $blog = DB::table('blog')->select('*')->orderBy('created', 'desc')->paginate(4);
+        return view('admin/showblog')->with('blog', $blog);
+    }
+    public function add_blog(){ 
+
+
+        return view('admin/addblog');  
+
+    }
+    public function save_blog(Request $request){
+
+        $photo = 'thumb1.gif';
+        $request->validate([
+            'photo' => 'required|image|mimes:jpeg,jpg,png,gif,svg|max:1048',
+        ]);
+
+        if ($request->hasFile('photo')) {
+
+            $file = $request->file('photo');
+
+            $request->photo->move(public_path('images'), $file->getClientOriginalName());
+            $photo = $file->getClientOriginalName();
+
+        }
+        $created = $request->input('created');
+        $createdDB = DateTime::createFromFormat('d/m/Y', $created)->format('Y-m-d');
+
+        $blog = [
+            'created' => $createdDB,
+            'article' => $request->input('article'),
+            'content' => $request->input('content'),
+            'photo' => $photo,
+            'type' =>  $request->input('type')
+            
+            
+            
+        ];
+        Blog::create($blog);
+        return redirect('/admin/showblog');
+        
+    }
+    public function delete_blog($id_blog) {
+        DB::table('blog')->where('id_blog', $id_blog)->delete();
+        return redirect('/admin/showblog');
+    }
+    public function edit_blog($id_blog) {
+
+        $blog = DB::table('blog')->where('id_blog', $id_blog)->first();
+        return view('admin/editblog')->with('blog',$blog);
+    }
+    public function update_blog(Request $request, $id_blog) {
+        $request->validate([
+            'photo' => 'image|mimes:jpeg,jpg,png,gif,svg|max:1048',
+        ]);
+
+        $blog = DB::table('blog')->where('blog.id_blog', $id_blog)->first();
+
+
+        $photo = $request->input('photo');
+        if ($request->hasFile('photo')) {
+
+            // $currentphoto = $request->photo;
+
+            $file = $request->file('photo');
+
+            $request->photo->move(public_path('images'), $file->getClientOriginalName());
+            $photo = $file->getClientOriginalName();
+
+            // if(empty($photo)) {
+            //     $photo = $currentphoto;
+            // }
+        }else {
+            $photo = $blog -> photo;
+        }
+        $created = $request->input('created');
+        $createdDB = DateTime::createFromFormat('d/m/Y', $created)->format('Y-m-d');
+        
+        $blog = [
+            'created' => $createdDB,
+            'article' => $request->input('article'),
+            'content' => $blog->content,
+            'photo' => $photo,
+            'type' =>  $request->input('type')
+            
+            
+            
+        ];
+
+        DB::table('blog') ->select('*')-> where('id_blog',$id_blog)->update($blog);
+        
+        return redirect('/admin/showblog')->with('success','update product complete')->with('blog', $blog);
     }
 }

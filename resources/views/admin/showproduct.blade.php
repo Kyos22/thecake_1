@@ -50,15 +50,24 @@
   </tr>
   <?php
       $url= $_SERVER['REQUEST_URI'];
-      $string = substr($url,18);
-      $i = $string ? ($string - 1) * 5 + 1 : 1;
+      $string = substr($url,24);
+      $last=(int)$string;
+      $i = $last ? ($last - 1) * 5 + 1 : 1;
 
   ?>
   @foreach($product_inner as $product)
   <tr style="text-align: center" style="border:1px" style="text-align: left">
     <td>{{$i++}}</td>
     <td> <a href="{{url('/admin/detailproduct/'.$product ->id_product)}}">{{$product -> name_product}}</a></td>
-    <td>{{$product -> detail_product}}</td>
+    <td style="max-width: 300px; word-break: break-all;">
+            <?php
+                $detail = $product->detail_product;
+                if (mb_strlen($detail) > 50) {
+                    $detail = mb_substr($detail, 0, 50) . '...';
+                }
+                echo $detail;
+            ?>
+        </td>
     <td>{{$product -> price}}</td>
     <td><img src="{{asset('images/' .$product -> photo)}}" width="70" height="100"></td>
     <td>{{$product -> name_category}}</td>
