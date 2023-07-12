@@ -2,6 +2,8 @@
 @section('main')
 <link href="//chocolate-workdo.myshopify.com/cdn/shop/t/3/assets/component-loading-overlay.css?v=16694493214799988661668502207" rel="stylesheet" type="text/css" media="all" />
 <script src="//chocolate-workdo.myshopify.com/cdn/shop/t/3/assets/product-form.js?v=154520108827843999331668502208" defer="defer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div class="container">
     <div class="row no-gutters">
         <div class="grid__item col-md-6 col-12 pdp-left-col">
@@ -214,269 +216,129 @@
                     </del>
 
                 </div>
-                <div class="prorow-lbl-qntty">
-                    <label class="product-labl" for="Quantity-template--16620971000044__main">Quantity</label>
-                    <quantity-input class="quantity qty-spinner">
-                        <button class="quantity__button no-js-hidden quantity-decrement " name="minus" type="button">
-                            <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 0.251343V1.74871H12V0.251343H0Z" fill="#61AFB3"></path>
-                            </svg>
-                        </button>
-                        <input class="quantity__input" type="number" name="quantity" id="Quantity-template--16620971000044__main" min="1" value="1" form="product-form-template--16620971000044__main">
-                        <button class="quantity__button no-js-hidden quantity-increment" name="plus" type="button">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.74868 5.25132V0H5.25132V5.25132H0V6.74868H5.25132V12H6.74868V6.74868H12V5.25132H6.74868Z" fill="#61AFB3"></path>
-                            </svg>
-                        </button>
-                    </quantity-input>
-                </div><variant-selects class="no-js-hidden" data-section="template--16620971000044__main" data-url="/products/salted-caramel-dark-chocolate">
-                    <div class="product-form__input product-form__input--dropdown">
-                        <label class="form__label" for="Option-template--16620971000044__main-0">
-                            Options :
-                        </label>
-                        <div class="select">
-                            <select id="Option-template--16620971000044__main-0" class="select__select nice-select" name="options[Flavour]" form="product-form-template--16620971000044__main">
-                                <option value="Red velvet" selected="selected">
-                                    normal eggs
-                                </option>
-                                <option value="Venila">
-                                    many eggs
-                                </option>
-                                <option value="Coffee">
-                                    fews eggs
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <script type="application/json">
-                        [{
-                            "id": 43537942184172,
-                            "title": "Red velvet",
-                            "option1": "Red velvet",
-                            "option2": null,
-                            "option3": null,
-                            "sku": "",
-                            "requires_shipping": true,
-                            "taxable": true,
-                            "featured_image": {
-                                "id": 38241362641132,
-                                "product_id": 7838553047276,
-                                "position": 5,
-                                "created_at": "2022-12-02T12:07:33+05:30",
-                                "updated_at": "2022-12-02T12:07:34+05:30",
-                                "alt": null,
-                                "width": 500,
-                                "height": 500,
-                                "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/TRFR-Chocolatier-Australia-Dark-Chocolate-Fruits-Of-Passion-Liqueur-Truffle-700-removebg-preview.png?v=1669963054",
-                                "variant_ids": [43537942184172]
-                            },
-                            "available": true,
-                            "name": "Salted Caramel Dark Chocolate - Red velvet",
-                            "public_title": "Red velvet",
-                            "options": ["Red velvet"],
-                            "price": 5200,
-                            "weight": 0,
-                            "compare_at_price": 6000,
-                            "inventory_management": "shopify",
-                            "barcode": "",
-                            "featured_media": {
-                                "alt": null,
-                                "id": 30919033520364,
-                                "position": 5,
-                                "preview_image": {
-                                    "aspect_ratio": 1.0,
-                                    "height": 500,
-                                    "width": 500,
-                                    "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/TRFR-Chocolatier-Australia-Dark-Chocolate-Fruits-Of-Passion-Liqueur-Truffle-700-removebg-preview.png?v=1669963054"
-                                }
-                            },
-                            "quantity_rule": {
-                                "min": 1,
-                                "max": null,
-                                "increment": 1
-                            }
-                        }, {
-                            "id": 43537942216940,
-                            "title": "Venila",
-                            "option1": "Venila",
-                            "option2": null,
-                            "option3": null,
-                            "sku": "",
-                            "requires_shipping": true,
-                            "taxable": true,
-                            "featured_image": {
-                                "id": 38241363165420,
-                                "product_id": 7838553047276,
-                                "position": 3,
-                                "created_at": "2022-12-02T12:07:33+05:30",
-                                "updated_at": "2022-12-02T12:07:35+05:30",
-                                "alt": null,
-                                "width": 500,
-                                "height": 500,
-                                "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/pure_white_truffle-removebg-preview.png?v=1669963055",
-                                "variant_ids": [43537942216940]
-                            },
-                            "available": true,
-                            "name": "Salted Caramel Dark Chocolate - Venila",
-                            "public_title": "Venila",
-                            "options": ["Venila"],
-                            "price": 5200,
-                            "weight": 0,
-                            "compare_at_price": 6000,
-                            "inventory_management": "shopify",
-                            "barcode": "",
-                            "featured_media": {
-                                "alt": null,
-                                "id": 30919033454828,
-                                "position": 3,
-                                "preview_image": {
-                                    "aspect_ratio": 1.0,
-                                    "height": 500,
-                                    "width": 500,
-                                    "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/pure_white_truffle-removebg-preview.png?v=1669963055"
-                                }
-                            },
-                            "quantity_rule": {
-                                "min": 1,
-                                "max": null,
-                                "increment": 1
-                            }
-                        }, {
-                            "id": 43537942249708,
-                            "title": "Coffee",
-                            "option1": "Coffee",
-                            "option2": null,
-                            "option3": null,
-                            "sku": "",
-                            "requires_shipping": true,
-                            "taxable": true,
-                            "featured_image": {
-                                "id": 38241362608364,
-                                "product_id": 7838553047276,
-                                "position": 6,
-                                "created_at": "2022-12-02T12:07:33+05:30",
-                                "updated_at": "2022-12-02T12:07:34+05:30",
-                                "alt": null,
-                                "width": 500,
-                                "height": 500,
-                                "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/TRGR-Chocolatier-Australia-Dark-Chocolate-Grand-Marnier-Liqueur-Truffle-700-removebg-preview.png?v=1669963054",
-                                "variant_ids": [43537942249708]
-                            },
-                            "available": true,
-                            "name": "Salted Caramel Dark Chocolate - Coffee",
-                            "public_title": "Coffee",
-                            "options": ["Coffee"],
-                            "price": 5200,
-                            "weight": 0,
-                            "compare_at_price": 6000,
-                            "inventory_management": "shopify",
-                            "barcode": "",
-                            "featured_media": {
-                                "alt": null,
-                                "id": 30919033553132,
-                                "position": 6,
-                                "preview_image": {
-                                    "aspect_ratio": 1.0,
-                                    "height": 500,
-                                    "width": 500,
-                                    "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/TRGR-Chocolatier-Australia-Dark-Chocolate-Grand-Marnier-Liqueur-Truffle-700-removebg-preview.png?v=1669963054"
-                                }
-                            },
-                            "quantity_rule": {
-                                "min": 1,
-                                "max": null,
-                                "increment": 1
-                            }
-                        }]
-                    </script>
-                </variant-selects><noscript class="product-form__noscript-wrapper-template--16620971000044__main">
-                    <div class="product-form__input">
-                        <label class="form__label" for="Variants-template--16620971000044__main">Product variants</label>
-                        <div class="select">
-                            <select name="id" id="Variants-template--16620971000044__main" class="select__select" form="product-form-template--16620971000044__main">
-                                <option selected="selected" value="43537942184172">
-                                    Red velvet
-
-                                    - 52.00 USD
-                                </option>
-                                <option value="43537942216940">
-                                    Venila
-
-                                    - 52.00 USD
-                                </option>
-                                <option value="43537942249708">
-                                    Coffee
-
-                                    - 52.00 USD
-                                </option>
-                            </select>
-
-                        </div>
-                    </div>
-                </noscript>
-                <div>
-                    <form method="post" action="/cart/add" id="product-form-installment-template--16620971000044__main" accept-charset="UTF-8" class="installment caption-large" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="id" value="43537942184172">
-                    </form>
-                </div>
-                <div class="pdp-cart-btn">
-                    <product-form class="product-cart pro-btn">
-                        <div class="wbquicksuccess hidden" hidden>Liquid error (sections/main-product line 266): Could not find asset snippets/icon-check.liquid translation missing: en.wbcustomlabel.wballtext.quicksuccessmsg</div>
-                        <div class="product-form__error-message-wrapper" role="alert" hidden>
-                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13" width="20" height="20">
-                                <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2" />
-                                <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7" />
-                                <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white" />
-                                <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
-                            </svg>
-                            <span class="product-form__error-message"></span>
-                        </div>
-                        <form method="post" action="/cart/add" id="product-form-template--16620971000044__main" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="id" value="43537942184172" disabled>
-                            <button type="submit" name="add" class="btna btn-secondary d-flex align-items-center">
-                                <span>Add to Cart
-                                </span>
-                                <svg viewBox="0 0 10 5">
-                                    <path d="M2.37755e-08 2.57132C-3.38931e-06 2.7911 0.178166 2.96928 0.397953 2.96928L8.17233 2.9694L7.23718 3.87785C7.07954 4.031 7.07589 4.28295 7.22903 4.44059C7.38218 4.59824 7.63413 4.60189 7.79177 4.44874L9.43039 2.85691C9.50753 2.78197 9.55105 2.679 9.55105 2.57146C9.55105 2.46392 9.50753 2.36095 9.43039 2.28602L7.79177 0.69418C7.63413 0.541034 7.38218 0.544682 7.22903 0.702329C7.07589 0.859976 7.07954 1.11192 7.23718 1.26507L8.1723 2.17349L0.397965 2.17336C0.178179 2.17336 3.46059e-06 2.35153 2.37755e-08 2.57132Z">
-                                    </path>
+                <form action="/addcart/{{$products->id_product}}" method="post">
+                    @csrf
+                    <div class="prorow-lbl-qntty">
+                        <label class="product-labl" for="Quantity-template--16620971000044__main">Quantity</label>
+                        <quantity-input class="quantity qty-spinner">
+                            <button class="quantity__button no-js-hidden quantity-decrement " name="minus" type="button">
+                                <svg width="12" height="2" viewBox="0 0 12 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0.251343V1.74871H12V0.251343H0Z" fill="#61AFB3"></path>
                                 </svg>
-                                <div class="loading-overlay__spinner hidden">
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 511.494 511.494" style="enable-background:new 0 0 511.494 511.494;" xml:space="preserve" width="512" height="512">
-                                        <g>
-                                            <path d="M478.291,255.492c-16.133,0.143-29.689,12.161-31.765,28.16c-15.37,105.014-112.961,177.685-217.975,162.315   S50.866,333.006,66.236,227.992S179.197,50.307,284.211,65.677c35.796,5.239,69.386,20.476,96.907,43.959l-24.107,24.107   c-8.33,8.332-8.328,21.84,0.004,30.17c4.015,4.014,9.465,6.262,15.142,6.246h97.835c11.782,0,21.333-9.551,21.333-21.333V50.991   c-0.003-11.782-9.556-21.331-21.338-21.329c-5.655,0.001-11.079,2.248-15.078,6.246l-28.416,28.416   C320.774-29.34,159.141-19.568,65.476,86.152S-18.415,353.505,87.304,447.17s267.353,83.892,361.017-21.828   c32.972-37.216,54.381-83.237,61.607-132.431c2.828-17.612-9.157-34.183-26.769-37.011   C481.549,255.641,479.922,255.505,478.291,255.492z" />
-                                        </g>
-                                    </svg>
-                                </div>
                             </button>
+
+                            <input class="quantity__input" type="number" name="quantity" id="quantity" min="1" value="1">
+                            <button class="quantity__button no-js-hidden quantity-increment" name="plus" type="button" onclick="total()">
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.74868 5.25132V0H5.25132V5.25132H0V6.74868H5.25132V12H6.74868V6.74868H12V5.25132H6.74868Z" fill="#61AFB3"></path>
+                                </svg>
+                            </button>
+                        </quantity-input>
+                    </div><variant-selects class="no-js-hidden" data-section="template--16620971000044__main" data-url="/products/salted-caramel-dark-chocolate">
+                        <div class="product-form__input product-form__input--dropdown">
+                            <label class="form__label" for="Option-template--16620971000044__main-0">
+                                Flavour
+                            </label>
+                            <div class="select">
+                                <select id="Option-template--16620971000044__main-0" class="select__select nice-select" name="options" form="product-form-template--16620971000044__main">
+                                    <option value="1" selected="selected">
+                                        Normal Eggs
+                                    </option>
+                                    <option value="2">
+                                        Many Eggs
+                                    </option>
+                                    <option value="3">
+                                        Fews Eggs
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </variant-selects><noscript class="product-form__noscript-wrapper-template--16620971000044__main">
+                        <div class="product-form__input">
+                            <label class="form__label" for="Variants-template--16620971000044__main">Product variants</label>
+                            <div class="select">
+                                <select name="id" id="Variants-template--16620971000044__main" class="select__select" form="product-form-template--16620971000044__main">
+                                    <option selected="selected" value="43537942184172">
+                                        Red velvet
+
+                                        - 52.00 USD
+                                    </option>
+                                    <option value="43537942216940">
+                                        Venila
+
+                                        - 52.00 USD
+                                    </option>
+                                    <option value="43537942249708">
+                                        Coffee
+
+                                        - 52.00 USD
+                                    </option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </noscript>
+                    <div>
+
+                    </div>
+                    <div class="pdp-cart-btn">
+                        <product-form class="product-cart pro-btn">
+                            <div class="wbquicksuccess hidden" hidden>Liquid error (sections/main-product line 266): Could not find asset snippets/icon-check.liquid translation missing: en.wbcustomlabel.wballtext.quicksuccessmsg</div>
+                            <div class="product-form__error-message-wrapper" role="alert" hidden>
+                                <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-error" viewBox="0 0 13 13" width="20" height="20">
+                                    <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2" />
+                                    <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7" />
+                                    <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white" />
+                                    <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+                                </svg>
+                                <span class="product-form__error-message"></span>
+                            </div>
+                            <form action="/addcart/{{$products->id_product}}"></form>
+                            @if(Session::has('success'))
+                            <script>
+                                toastr.success("{{session('success')}}")
+                            </script>
+
+                            @endif
+
+                            <button type="submit" class="btna btn-secondary d-flex align-items-center">
+                                Add To Cart
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1258 5.12596H2.87416C2.04526 5.12596 1.38823 5.82533 1.43994 6.65262L1.79919 12.4007C1.84653 13.1581 2.47458 13.7481 3.23342 13.7481H10.7666C11.5254 13.7481 12.1535 13.1581 12.2008 12.4007L12.5601 6.65262C12.6118 5.82533 11.9547 5.12596 11.1258 5.12596ZM2.87416 3.68893C1.21635 3.68893 -0.0977 5.08768 0.00571155 6.74226L0.364968 12.4904C0.459638 14.0051 1.71574 15.1851 3.23342 15.1851H10.7666C12.2843 15.1851 13.5404 14.0051 13.635 12.4904L13.9943 6.74226C14.0977 5.08768 12.7837 3.68893 11.1258 3.68893H2.87416Z" fill="white"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.40723 4.40744C3.40723 2.42332 5.01567 0.81488 6.99979 0.81488C8.9839 0.81488 10.5923 2.42332 10.5923 4.40744V5.84447C10.5923 6.24129 10.2707 6.56298 9.87384 6.56298C9.47701 6.56298 9.15532 6.24129 9.15532 5.84447V4.40744C9.15532 3.21697 8.19026 2.2519 6.99979 2.2519C5.80932 2.2519 4.84425 3.21697 4.84425 4.40744V5.84447C4.84425 6.24129 4.52256 6.56298 4.12574 6.56298C3.72892 6.56298 3.40723 6.24129 3.40723 5.84447V4.40744Z" fill="white"></path>
+                                </svg>
+                            </button>
+                        </product-form>
+                </form>
+                <div class="pro-checkout">
+                    <product-form class="product-form">
+                        <form method="post" action="/admin/addcart/{{$products -> name_product}}" id="product-form-template--16620971000044__main" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="id" value="43537942184172" disabled>
+                            <div class="product-form__buttons">
+                                <div data-shopify="payment-button" data-has-selling-plan="false" data-has-fixed-selling-plan="false" class="shopify-payment-button"><button class="shopify-payment-button__button shopify-payment-button__button--unbranded shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button><button class="shopify-payment-button__more-options shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button></div>
+                            </div>
                         </form>
                     </product-form>
-                    <div class="pro-checkout">
-                        <product-form class="product-form">
-                            <form method="post" action="/cart/add" id="product-form-template--16620971000044__main" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="id" value="43537942184172" disabled>
-                                <div class="product-form__buttons">
-                                    <div data-shopify="payment-button" data-has-selling-plan="false" data-has-fixed-selling-plan="false" class="shopify-payment-button"><button class="shopify-payment-button__button shopify-payment-button__button--unbranded shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button><button class="shopify-payment-button__more-options shopify-payment-button__button--hidden" disabled="disabled" aria-hidden="true"> </button></div>
+
+                    <link href="//chocolate-workdo.myshopify.com/cdn/shop/t/3/assets/component-pickup-availability.css?v=23027427361927693261668502207" rel="stylesheet" type="text/css" media="all" />
+                    <pickup-availability class="product__pickup-availabilities no-js-hidden" data-root-url="/" data-variant-id="43537942184172" data-has-only-default-variant="false">
+                        <template>
+                            <pickup-availability-preview class="pickup-availability-preview">
+                                Liquid error (sections/main-product line 321): Could not find asset snippets/icon-unavailable.liquid
+                                <div class="pickup-availability-info">
+                                    <p class="caption-large">Couldn&#39;t load pickup availability</p>
+                                    <button class="pickup-availability-button link link--text underlined-link">Refresh</button>
                                 </div>
-                            </form>
-                        </product-form>
+                            </pickup-availability-preview>
+                        </template>
+                    </pickup-availability>
 
-                        <link href="//chocolate-workdo.myshopify.com/cdn/shop/t/3/assets/component-pickup-availability.css?v=23027427361927693261668502207" rel="stylesheet" type="text/css" media="all" />
-                        <pickup-availability class="product__pickup-availabilities no-js-hidden" data-root-url="/" data-variant-id="43537942184172" data-has-only-default-variant="false">
-                            <template>
-                                <pickup-availability-preview class="pickup-availability-preview">
-                                    Liquid error (sections/main-product line 321): Could not find asset snippets/icon-unavailable.liquid
-                                    <div class="pickup-availability-info">
-                                        <p class="caption-large">Couldn&#39;t load pickup availability</p>
-                                        <button class="pickup-availability-button link link--text underlined-link">Refresh</button>
-                                    </div>
-                                </pickup-availability-preview>
-                            </template>
-                        </pickup-availability>
+                    <script src="//chocolate-workdo.myshopify.com/cdn/shop/t/3/assets/pickup-availability.js?v=95345216988985239631668502208" defer="defer"></script>
 
-                        <script src="//chocolate-workdo.myshopify.com/cdn/shop/t/3/assets/pickup-availability.js?v=95345216988985239631668502208" defer="defer"></script>
-
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 
@@ -504,44 +366,5 @@
             hiddenInput.value = event.currentTarget.value;
         });
     });
-</script>
-<script type="application/ld+json">
-    {
-        "@context": "http://schema.org/",
-        "@type": "Product",
-        "name": "Salted Caramel Dark Chocolate",
-        "url": "https:\/\/chocolate-workdo.myshopify.com\/products\/salted-caramel-dark-chocolate",
-        "image": [
-            "https:\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/TRFR-Chocolatier-Australia-Dark-Chocolate-Fruits-Of-Passion-Liqueur-Truffle-700-removebg-preview_500x.png?v=1669963054"
-        ],
-        "description": "Dark Chocolate: Dark chocolate forms the base of this treat, providing a deep and intense chocolate flavor. It is known for its higher cocoa content and less sugar compared to milk chocolate, resulting in a more robust and slightly bitter taste.\nSalted Caramel Filling: The dark chocolate is filled with a luscious and creamy salted caramel center. The salted caramel adds a delightful contrast of flavors, with its sweet and buttery notes complemented by a hint of saltiness.",
-
-        "brand": {
-            "@type": "Thing",
-            "name": "Dark Chocolate"
-        },
-        "offers": [{
-                "@type": "Offer",
-                "availability": "http://schema.org/InStock",
-                "price": 52.0,
-                "priceCurrency": "USD",
-                "url": "https:\/\/chocolate-workdo.myshopify.com\/products\/salted-caramel-dark-chocolate?variant=43537942184172"
-            },
-            {
-                "@type": "Offer",
-                "availability": "http://schema.org/InStock",
-                "price": 52.0,
-                "priceCurrency": "USD",
-                "url": "https:\/\/chocolate-workdo.myshopify.com\/products\/salted-caramel-dark-chocolate?variant=43537942216940"
-            },
-            {
-                "@type": "Offer",
-                "availability": "http://schema.org/InStock",
-                "price": 52.0,
-                "priceCurrency": "USD",
-                "url": "https:\/\/chocolate-workdo.myshopify.com\/products\/salted-caramel-dark-chocolate?variant=43537942249708"
-            }
-        ]
-    }
 </script>
 @endsection

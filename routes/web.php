@@ -4,6 +4,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\TheCakeController;
+use App\Http\Controllers\CartController;
 use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'login'], function(){
@@ -105,5 +106,9 @@ Route::group(['prefix' => 'admin'], function() {
 
     
 
-
+    
 });
+    Route::get('/cart', [CartController::class, 'cart']);
+    Route::post('/addcart/{id_product}', [CartController::class, 'addcart']);
+    Route::get('/deletecart/{id}',[CartController::class,'deletecart']);
+    Route::post('/checkout',[CartController::class,'checkout']);
