@@ -58,7 +58,7 @@ class TheCakeController extends Controller
 {
 
     $request->validate([
-        'password' => 'required|min:6',
+        'password' => 'required|min:7',
         
     ]);
 

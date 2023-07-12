@@ -94,7 +94,9 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('/update_category/{id_category}', [AdminController::class, 'update_category']);
     Route::post('/update_blog/{id_blog}', [AdminController::class, 'update_blog']);
     Route::get('/formcreateadmin',[AdminController::class,'registeradmin']);
-    Route::post('/create_admin',[AdminController::class,'save_admin']);
+    Route::get('/showdelete',[AdminController::class,'showdelete']);
+    Route::get('/showdelete',[AdminController::class,'showdelete']);
+    Route::post('/delete_all',[AdminController::class,'delete_all'])->name('item.delete');
 
     Route::get('/showblog',[AdminController::class,'show_blog']);
     Route::get('/addblog',[AdminController::class,'add_blog']);

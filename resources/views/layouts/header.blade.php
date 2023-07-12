@@ -255,9 +255,7 @@
 
                                             </div>
                                         </li>
-                                        <li>
-                                            <a href="/search">Search</a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>

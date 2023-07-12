@@ -299,10 +299,10 @@
                         <div class="card-btn-wrapper">
                           <div class="no-js-hidden price" id="price-template--16620970705132__product-grid-7838553047276" role="status">
 
-                            <ins class="price-item--regular">{{$cake -> price}} <span class=wbcur>VND</span></ins>
+                            <ins class="price-item--regular"> {{number_format($cake -> price, 0,'.','.')}} <span class=wbcur>VND</span></ins>
                             <del class="price-item--sale">
 
-                              {{$cake -> fakeprice}} <span class=wbcur>VND</span>
+                            {{number_format($cake -> fakeprice, 0,'.','.')}} <span class=wbcur>VND</span>
 
                             </del>
 
@@ -613,10 +613,10 @@
                                                 <div class="card-btn-wrapper">
                                                     <div class="no-js-hidden price" id="price-template--16620970705132__product-grid-7838553047276" role="status">
 
-                                                        <ins class="price-item--regular">{{$cake -> price}} <span class=wbcur>VND</span></ins>
+                                                        <ins class="price-item--regular"> {{number_format($cake -> price, 0,'.','.')}}<span class=wbcur>VND</span></ins>
                                                         <del class="price-item--sale">
 
-                                                            {{$cake -> fakeprice}} <span class=wbcur>VND</span>
+                                                        {{number_format($cake -> price, 0,'.','.')}} <span class=wbcur>VND</span>
 
                                                         </del>
 
@@ -949,10 +949,10 @@
                                                 <div class="card-btn-wrapper">
                                                     <div class="no-js-hidden price" id="price-template--16620970705132__product-grid-7838553047276" role="status">
 
-                                                        <ins class="price-item--regular">{{$cake -> price}} <span class=wbcur>VND</span></ins>
+                                                        <ins class="price-item--regular"> {{number_format($cake -> price, 0,'.','.')}}<span class=wbcur>VND</span></ins>
                                                         <del class="price-item--sale">
 
-                                                            {{$cake -> fakeprice}} <span class=wbcur>VND</span>
+                                                        {{number_format($cake -> fakeprice, 0,'.','.')}}<span class=wbcur>VND</span>
 
                                                         </del>
 
@@ -1220,10 +1220,10 @@
                     <div class="card-btn-wrapper">
                       <div class="no-js-hidden price" id="price-template--16620970737900__ff5a3f7d-0f6c-426a-9cfd-64b5a1a99325-7838553047276" role="status">
 
-                        <ins class="price-item--regular">52.00 <span class=wbcur>USD</span></ins>
+                        <ins class="price-item--regular"> {{number_format($cake -> price, 0,'.','.')}}<span class=wbcur>VND</span></ins>
                         <del class="price-item--sale">
 
-                          60.00 <span class=wbcur>USD</span>
+                        {{number_format($cake -> fakeprice, 0,'.','.')}} <span class=wbcur>VND</span>
 
                         </del>
 
@@ -5812,10 +5812,10 @@
                                                 <div class="card-btn-wrapper">
                                                     <div class="no-js-hidden price" id="price-template--16620970705132__product-grid-7838553047276" role="status">
 
-                                                        <ins class="price-item--regular">{{$cake -> price}} <span class=wbcur>VND</span></ins>
+                                                        <ins class="price-item--regular"> {{number_format($cake -> price, 0,'.','.')}} <span class=wbcur>VND</span></ins>
                                                         <del class="price-item--sale">
 
-                                                            {{$cake -> fakeprice}} <span class=wbcur>VND</span>
+                                                        {{number_format($cake -> fakeprice, 0,'.','.')}} <span class=wbcur>VND</span>
 
                                                         </del>
 

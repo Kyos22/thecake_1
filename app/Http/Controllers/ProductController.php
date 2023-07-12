@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use App\Models\Product;
-
+use App\Models\Category;
 
 class BaseController extends Controller
 {
@@ -31,17 +31,16 @@ class ProductController extends BaseController
 
     }
     //hàm trang category
-    public function cateProduct($name_category) {
+    public function cateProduct($name_category, Request $request) {
 
     //    hàm liên kết vs bảng photo để truy vấn ảnh 
     //     $listimg = DB::table('photo')->join('product', 'photo.id_product','=','product.id_product')
     //     ->select('*')->where('product.name_product')->get();
 
-
-        $productsPerPage = DB::table('product')// biến lấy từng sản phẩm 
-            ->join('category','product.id_category','=','category.id_category')
-            ->select('*')
-            ->where('category.name_category','=',$name_category) ->get();
+        // $productsPerPage = DB::table('product')// biến lấy từng sản phẩm 
+        //     ->join('category','product.id_category','=','category.id_category')
+        //     ->select('*')
+        //     ->where('category.name_category','=',$name_category) ->get();
             
         $listcakes = DB::table('category')// biến sổ danh sách category
             ->select('*')->where('type', 'like', '%cake%')->get();
@@ -50,11 +49,26 @@ class ProductController extends BaseController
            ->select('*')->where('type', 'like', '%event%')->get();
         $immerse = DB::table('product')
            ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
-       
 
+
+
+   
+           // Thực hiện truy vấn và lấy dữ liệu
+           $productCheck = $request->input('status', []);
+           $query = Product::join('category', 'product.id_category', '=', 'category.id_category')->select('*')->where('category.name_category','=',$name_category);
+           if (in_array(1, $productCheck)) {
+            $query ->where('product.status', 1)->get();
+        }
+
+        if (in_array(2, $productCheck)) {
+            $query ->where('product.status', 2)->get();
+        }
+        $productsPerPage = $query->get();
+   
         
 
         return view('allcategories/cateproduct')->with('productsPerPage', $productsPerPage)
+        
         ->with('name' ,$name_category)
         ->with('listcakes' ,$listcakes)
         ->with('listcakeevents' ,$listcakeevents)
@@ -62,7 +76,7 @@ class ProductController extends BaseController
         ;
         // ->with('listimg' ,$listimg);
     }
-    public function cateProductuser($name_category) {
+    public function cateProductuser($name_category, Request $request) {
 
         //    hàm liên kết vs bảng photo để truy vấn ảnh 
         //     $listimg = DB::table('photo')->join('product', 'photo.id_product','=','product.id_product')
@@ -86,9 +100,22 @@ class ProductController extends BaseController
 
             $immerse = DB::table('product')
                ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
+
+
+               $productCheck = $request->input('status', []);
+           $query = Product::join('category', 'product.id_category', '=', 'category.id_category')->select('*')->where('category.name_category','=',$name_category);
+           if (in_array(1, $productCheck)) {
+            $query ->where('product.status', 1)->get();
+        }
+
+        if (in_array(2, $productCheck)) {
+            $query ->where('product.status', 2)->get();
+        }
+        $productsPerPage = $query->get();
+   
            
         
-            return view('allcategories/cateproductuser', compact('category'))->with('productsPerPage', $productsPerPage)
+            return view('allcategories/cateproductuser')->with('productsPerPage', $productsPerPage)
             ->with('name' ,$name_category)
             ->with('listcakes' ,$listcakes)
             ->with('listcakeevents' ,$listcakeevents)
@@ -203,6 +230,7 @@ class ProductController extends BaseController
            ->select('*')->where('type','like', '%article%')->orderBy('created', 'desc')->get();
             return view('/pages/bloglistuser')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents)->with('blogmain', $blogmain)->with('bloglist',$bloglist);
         }
+
         public function allProduct( Request $request) {
         
 
@@ -213,8 +241,8 @@ class ProductController extends BaseController
             $productCheck = $request->input('status', []);
         
             // Lấy giá trị của trường số
-            $minPrice = $request->input('price.0');
-            $maxPrice = $request->input('price.1');
+            $minPrice = $request->input('min');
+            $maxPrice = $request->input('max');
         
                 $productsPerPage = DB::table('product')// biến lấy từng sản phẩm 
                     ->join('category','product.id_category','=','category.id_category')
@@ -329,4 +357,5 @@ class ProductController extends BaseController
                 // ->with('listimg' ,$listimg);
                  
             }
+    
 }

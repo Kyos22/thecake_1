@@ -43,20 +43,7 @@
                             <facet-filters-form>
                                 <form id="FacetFiltersForm">
                                     <div class="facet-filters sorting caption">
-                                        <div class="facet-filters__field">
-                                            <span class="sort-lbl"><label for="SortBy">Sort by:</label></span>
-                                            <div class="select"><select name="sort_by" class="facet-filters__sort select__select caption-large nice-select" id="SortBy" aria-describedby="a11y-refresh-page-message">
-                                                    <option value="manual">Featured</option>
-                                                    <option value="best-selling" selected="selected">Best selling</option>
-                                                    <option value="title-ascending">Alphabetically, A-Z</option>
-                                                    <option value="title-descending">Alphabetically, Z-A</option>
-                                                    <option value="price-ascending">Price, low to high</option>
-                                                    <option value="price-descending">Price, high to low</option>
-                                                    <option value="created-ascending">Date, old to new</option>
-                                                    <option value="created-descending">Date, new to old</option>
-                                                </select>
-                                            </div>
-                                        </div>
+                                        
                                         <noscript>
                                             <button type="submit" class="facets__button-no-js button">Sort</button>
                                         </noscript>
@@ -109,7 +96,7 @@
                                                 <li class="list-menu__item  facets__item">
                                                     <label for="Filter-Availability-1" class="facet-checkbox">
 
-                                                        <input type="checkbox" name="filter.v.availability" value="1" id="Filter-Availability-1">
+                                                        <input type="checkbox" name="filter.v.availability" value="1"  {{ in_array(1, request()->input('status', [])) ? 'checked' : '' }} >
 
                                                         <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                                                             <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
@@ -126,7 +113,7 @@
                                                 <li class="list-menu__item  facets__item">
                                                     <label for="Filter-Availability-2" class="facet-checkbox facet-checkbox--disabled">
 
-                                                        <input type="checkbox" name="filter.v.availability" value="0" id="Filter-Availability-2" disabled>
+                                                        <input type="checkbox" name="filter.v.availability" value="0" {{ in_array(2, request()->input('status', [])) ? 'checked' : '' }}>>
 
                                                         <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                                                             <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>

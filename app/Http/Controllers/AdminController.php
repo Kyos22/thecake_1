@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Account;
+use App\Models\Testdelete;
 
 
 
@@ -484,4 +485,17 @@ class AdminController extends Controller
         
         return redirect('/admin/showblog')->with('success','update product complete')->with('blog', $blog);
     }
+    public function showdelete() {
+
+        $items = DB::table('testdelete')->get();
+        return view('admin/testdelete')->with('items', $items);
+    }
+    public function delete_all(Request $request) {
+        $ids=$request->ids;
+        Testdelete::whereIn('id',$ids)->delete();
+        return response()->json(["success"=>"category have been deleted"]);
+        
+        
+    }
+
 }

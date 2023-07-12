@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Material Dash</title>
+  <title>ADMIN</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="{{asset('vendors/mdi/css/materialdesignicons.min.css')}}">
   <link rel="stylesheet" href="{{asset('vendors/css/vendor.bundle.base.css')}}">
@@ -41,7 +41,7 @@
     <aside class="mdc-drawer mdc-drawer--dismissible mdc-drawer--open">
       <div class="mdc-drawer__header">
         <a href="index.html" class="brand-logo">
-          <img src="{{asset('images/logo.svg')}}" alt="logo">
+          <h2>ADMIN</h2>
         </a>
       </div>
       <div class="mdc-drawer__content">
@@ -111,63 +111,13 @@
                 Blog
               </a>
             </div>
-            <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-expansion-panel-link" href="#" data-toggle="expansionPanel" data-target="sample-page-submenu">
-                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">pages</i>
-                Sample Pages
-                <i class="mdc-drawer-arrow material-icons">chevron_right</i>
-              </a>
-              <div class="mdc-expansion-panel" id="sample-page-submenu">
-                <nav class="mdc-list mdc-drawer-submenu">
-                  <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="pages/samples/blank-page.html">
-                      Blank Page
-                    </a>
-                  </div>
-                  <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="pages/samples/403.html">
-                      403
-                    </a>
-                  </div>
-                  <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="pages/samples/404.html">
-                      404
-                    </a>
-                  </div>
-                  <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="pages/samples/500.html">
-                      500
-                    </a>
-                  </div>
-                  <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="pages/samples/505.html">
-                      505
-                    </a>
-                  </div>
-                  <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="pages/samples/login.html">
-                      Login
-                    </a>
-                  </div>
-                  <div class="mdc-list-item mdc-drawer-item">
-                    <a class="mdc-drawer-link" href="pages/samples/register.html">
-                      Register
-                    </a>
-                  </div>
-                </nav>
-              </div>
-            </div>
-            <div class="mdc-list-item mdc-drawer-item">
-              <a class="mdc-drawer-link" href="https://www.bootstrapdash.com/demo/material-admin-free/jquery/documentation/documentation.html" target="_blank">
-                <i class="material-icons mdc-list-item__start-detail mdc-drawer-item-icon" aria-hidden="true">description</i>
-                Documentation
-              </a>
-            </div>
+           
+          
           </nav>
         </div>
         <div class="profile-actions">
-          <a href="javascript:;">Settings</a>
-          <span class="divider"></span>
+          
+          
           <a href="{{url('/logoutadmin')}}">Logout</a>
         </div>
         <div class="mdc-card premium-card">
@@ -195,18 +145,8 @@
         <div class="mdc-top-app-bar__row">
           <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
             <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button sidebar-toggler">menu</button>
-            <span class="mdc-top-app-bar__title">Greetings Clyde!</span>
-            <div class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon search-text-field d-none d-md-flex">
-              <i class="material-icons mdc-text-field__icon">search</i>
-              <input class="mdc-text-field__input" id="text-field-hero-input">
-              <div class="mdc-notched-outline">
-                <div class="mdc-notched-outline__leading"></div>
-                <div class="mdc-notched-outline__notch">
-                  <label for="text-field-hero-input" class="mdc-floating-label">Search..</label>
-                </div>
-                <div class="mdc-notched-outline__trailing"></div>
-              </div>
-            </div>
+            <span class="mdc-top-app-bar__title">Greeting Administrator</span>
+            
           </div>
           <div class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar__section-right">
             <div class="menu-button-container menu-profile d-none d-md-block">
