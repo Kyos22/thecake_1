@@ -1031,7 +1031,7 @@
                                                 <variant-selects class="no-js-hidden" data-section="template--16620970705132__product-grid" data-product="7838553047276" data-url="" data-update-url="false" data-layout="card">
                                                     <div class="product-form__input product-form__input--dropdown">
                                                         <div class="select select-box">
-                                                            <label>Flavour:</label>
+                                                            <label>Options:</label>
                                                             <select id="Option-template--16620970705132__product-grid-7838553047276-0" class="select__select nice-select" name="options[Flavour]" form="product-form-template--16620970705132__product-grid-7838553047276">
                                                                 <option data-val="Red velvet" value="Red velvet" selected="selected">
                                                                     Normal eggs
@@ -1212,10 +1212,10 @@
                                                 <div class="card-btn-wrapper">
                                                     <div class="no-js-hidden price" id="price-template--16620970705132__product-grid-7838553047276" role="status">
 
-                                                        <ins class="price-item--regular">{{$prd -> price}} <span class=wbcur>USD</span></ins>
+                                                    <ins class="price-item--regular">{{number_format($prd -> price, 0,'.','.')}} <span class=wbcur>VND</span></ins>
                                                         <del class="price-item--sale">
 
-                                                            {{$prd -> fakeprice}} <span class=wbcur>USD</span>
+                                                            {{$prd -> fakeprice}} <span class=wbcur>VND</span>
 
                                                         </del>
 

@@ -206,10 +206,10 @@
                 </div>
                 <p>{{$products ->detail_product}}</p>
                 <div class="no-js-hidden price" id="price-template--16620971000044__main" role="status">
-                    <ins class="price-item--regular">{{$products -> price}} <span class=wbcur>VND</span></ins>
+                    <ins class="price-item--regular">{{number_format($products -> price, 0,'.','.')}} <span class=wbcur>VND</span></ins>
                     <del class="price-item--sale">
 
-                        {{$products -> fakeprice}} <span class=wbcur>VND</span>
+                    {{number_format($products -> price, 0,'.','.')}}  <span class=wbcur>VND</span>
 
                     </del>
 

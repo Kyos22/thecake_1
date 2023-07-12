@@ -31,12 +31,12 @@ class IndexController extends Controller
                 ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=', 6)->get();
             //$lessegg cái sổ ra less egg trong homepage
             $lessegg = DB::table('product')
-                ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=', 5)->get();
+                ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=', 10)->get();
             //$slidehome cái sổ ra slide chính lên xuống ngay đầu homepage trong homepage
             $slidehome = DB::table('product')
             ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
             $immerse = DB::table('product')
-            ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
+            ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',11)->paginate(3);
             $bloglist = DB::table('blog')
             ->select('*')->where('type','like', '%article%')->orderBy('created', 'desc')->get();
 
@@ -54,11 +54,11 @@ class IndexController extends Controller
             $getthegoodness = DB::table('product')
                 ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=', 6)->get();
             $lessegg = DB::table('product')
-                ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=', 5)->get();
+                ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=', 10)->get();
             $slidehome = DB::table('product')
                 ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
             $immerse = DB::table('product')
-                ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
+                ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',11)->paginate(3);
             $bloglist = DB::table('blog')
             ->select('*')->where('type','like', '%article%')->orderBy('created', 'desc')->get();
 
