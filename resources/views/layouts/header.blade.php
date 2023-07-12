@@ -89,6 +89,11 @@
                                     </a>
 
                                 </li>
+                                <li class="">
+                                    <a href="/allcategories/allproduct">All Product
+                                    </a>
+
+                                </li>
 
 
                                 <li class="">

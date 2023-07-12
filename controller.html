@@ -1,0 +1,65 @@
+public function allProduct($name_category, Request $request) {
+        
+
+    //    hàm liên kết vs bảng photo để truy vấn ảnh 
+    //     $listimg = DB::table('photo')->join('product', 'photo.id_product','=','product.id_product')
+    //     ->select('*')->where('product.name_product')->get();
+    // Lấy giá trị của checkbox
+    $productCheck = $request->input('status', []);
+
+    // Lấy giá trị của trường số
+    $minPrice = $request->input('price.0');
+    $maxPrice = $request->input('price.1');
+
+        $productsPerPage = DB::table('product')// biến lấy từng sản phẩm 
+            ->join('category','product.id_category','=','category.id_category')
+            ->select('*')
+            ->where('category.name_category','=',$name_category) ->get();
+            
+        $listcakes = DB::table('category')// biến sổ danh sách category
+            ->select('*')->where('type', 'like', '%cake%')->get();
+   
+        $listcakeevents = DB::table('category')// biến sổ danh sách category bánh event
+           ->select('*')->where('type', 'like', '%event%')->get();
+        $immerse = DB::table('product')
+           ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
+        
+       
+
+        // Tạo query builder cho bảng 'products'
+        $query = Product::query();
+
+        // Thêm điều kiện dựa trên checkbox
+        if (in_array(1, $productCheck)) {
+            $query->where('status', 1);
+        }
+
+        if (in_array(2, $productCheck)) {
+            $query->where('status', 2);
+        }
+        if (in_array(3, $productCheck)) {
+            $query->where('status', 3);
+        }
+        // Thêm điều kiện dựa trên trường số
+        if ($minPrice !== null) {
+            $query->where('price', '>=', $minPrice);
+        }
+
+        if ($maxPrice !== null) {
+            $query->where('price', '<=', $maxPrice);
+        }
+
+        // Thực hiện truy vấn và lấy dữ liệu
+        $products = $query->paginate(9);
+
+        return view('allcategories/allproduct')->with('productsPerPage', $productsPerPage)
+        ->with('products' ,$products)
+        ->with('name' ,$name_category)
+        ->with('listcakes' ,$listcakes)
+        ->with('listcakeevents' ,$listcakeevents)
+        ->with('immerse', $immerse);
+        ;
+        // ->with('listimg' ,$listimg);
+         
+    }
+    

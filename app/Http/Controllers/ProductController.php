@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Validation\ValidatesRequests;
-use App\Models\Category;
 use App\Models\Product;
+
 
 class BaseController extends Controller
 {
@@ -31,18 +31,12 @@ class ProductController extends BaseController
 
     }
     //hàm trang category
-    public function cateProduct($name_category, Request $request) {
-        
+    public function cateProduct($name_category) {
 
     //    hàm liên kết vs bảng photo để truy vấn ảnh 
     //     $listimg = DB::table('photo')->join('product', 'photo.id_product','=','product.id_product')
     //     ->select('*')->where('product.name_product')->get();
-    // Lấy giá trị của checkbox
-    $productCheck = $request->input('status', []);
 
-    // Lấy giá trị của trường số
-    $minPrice = $request->input('price.0');
-    $maxPrice = $request->input('price.1');
 
         $productsPerPage = DB::table('product')// biến lấy từng sản phẩm 
             ->join('category','product.id_category','=','category.id_category')
@@ -56,89 +50,17 @@ class ProductController extends BaseController
            ->select('*')->where('type', 'like', '%event%')->get();
         $immerse = DB::table('product')
            ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
-        
        
 
-        // Tạo query builder cho bảng 'products'
-        $query = Product::query();
-
-        // Thêm điều kiện dựa trên checkbox
-        if (in_array(1, $productCheck)) {
-            $query->where('status', 1);
-        }
-
-        if (in_array(2, $productCheck)) {
-            $query->where('status', 2);
-        }
-        if (in_array(3, $productCheck)) {
-            $query->where('status', 3);
-        }
-        // Thêm điều kiện dựa trên trường số
-        if ($minPrice !== null) {
-            $query->where('price', '>=', $minPrice);
-        }
-
-        if ($maxPrice !== null) {
-            $query->where('price', '<=', $maxPrice);
-        }
-
-        // Thực hiện truy vấn và lấy dữ liệu
-        $products = $query->paginate(9);
+        
 
         return view('allcategories/cateproduct')->with('productsPerPage', $productsPerPage)
-        ->with('products' ,$products)
         ->with('name' ,$name_category)
         ->with('listcakes' ,$listcakes)
         ->with('listcakeevents' ,$listcakeevents)
         ->with('immerse', $immerse);
         ;
         // ->with('listimg' ,$listimg);
-         
-    }
-    public function cakes(Request $request) 
-    {
-        // Lấy giá trị của checkbox
-        $productCheck = $request->input('status', []);
-
-        // Lấy giá trị của trường số
-        $minPrice = $request->input('price.0');
-        $maxPrice = $request->input('price.1');
-
-        // Tạo query builder cho bảng 'products'
-        $query = Product::query();
-
-        // Thêm điều kiện dựa trên checkbox
-        if (in_array(0, $productCheck)) {
-            $query->where('status', 0);
-        }
-
-        if (in_array(1, $productCheck)) {
-            $query->where('status', 1);
-        }
-        if (in_array(2, $productCheck)) {
-            $query->where('status', 2);
-        }
-        // Thêm điều kiện dựa trên trường số
-        if ($minPrice !== null) {
-            $query->where('price', '>=', $minPrice);
-        }
-
-        if ($maxPrice !== null) {
-            $query->where('price', '<=', $maxPrice);
-        }
-
-        // Thực hiện truy vấn và lấy dữ liệu
-        $products = $query->paginate(9);
-
-        // Trả về view hiển thị dữ liệu
-        
-        return view('allcategories/cateproduct', compact('products'));
-    }
-    public function category() {
-
-        $category = DB::table('category')->select('*')->get();
-
-        return view('home/index')->with('category', $category);
     }
     public function cateProductuser($name_category) {
 
@@ -165,7 +87,7 @@ class ProductController extends BaseController
             $immerse = DB::table('product')
                ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
            
-            
+        
             return view('allcategories/cateproductuser', compact('category'))->with('productsPerPage', $productsPerPage)
             ->with('name' ,$name_category)
             ->with('listcakes' ,$listcakes)
@@ -221,7 +143,6 @@ class ProductController extends BaseController
 
            return view('allcategories/detailproductuser')->with('products', $products)
         ->with('name' ,$name_product)
-        ->with('products' ,$products)
         ->with('listcakes' ,$listcakes)
         ->with('listcakeevents' ,$listcakeevents)
         ->with('listimg' ,$listimg)
@@ -282,4 +203,130 @@ class ProductController extends BaseController
            ->select('*')->where('type','like', '%article%')->orderBy('created', 'desc')->get();
             return view('/pages/bloglistuser')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents)->with('blogmain', $blogmain)->with('bloglist',$bloglist);
         }
+        public function allProduct( Request $request) {
+        
+
+            //    hàm liên kết vs bảng photo để truy vấn ảnh 
+            //     $listimg = DB::table('photo')->join('product', 'photo.id_product','=','product.id_product')
+            //     ->select('*')->where('product.name_product')->get();
+            // Lấy giá trị của checkbox
+            $productCheck = $request->input('status', []);
+        
+            // Lấy giá trị của trường số
+            $minPrice = $request->input('price.0');
+            $maxPrice = $request->input('price.1');
+        
+                $productsPerPage = DB::table('product')// biến lấy từng sản phẩm 
+                    ->join('category','product.id_category','=','category.id_category')
+                    ->select('*')
+                     ->get();
+                    
+                $listcakes = DB::table('category')// biến sổ danh sách category
+                    ->select('*')->where('type', 'like', '%cake%')->get();
+           
+                $listcakeevents = DB::table('category')// biến sổ danh sách category bánh event
+                   ->select('*')->where('type', 'like', '%event%')->get();
+                $immerse = DB::table('product')
+                   ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
+                
+               
+        
+                // Tạo query builder cho bảng 'products'
+                $query = Product::query();
+        
+                // Thêm điều kiện dựa trên checkbox
+                if (in_array(1, $productCheck)) {
+                    $query->where('status', 1);
+                }
+        
+                if (in_array(2, $productCheck)) {
+                    $query->where('status', 2);
+                }
+                if (in_array(3, $productCheck)) {
+                    $query->where('status', 3);
+                }
+                // Thêm điều kiện dựa trên trường số
+                if ($minPrice !== null) {
+                    $query->where('price', '>=', $minPrice);
+                }
+        
+                if ($maxPrice !== null) {
+                    $query->where('price', '<=', $maxPrice);
+                }
+        
+                // Thực hiện truy vấn và lấy dữ liệu
+                $products = $query->paginate(9);
+        
+                return view('allcategories/allproduct')->with('productsPerPage', $productsPerPage)
+                ->with('products' ,$products)
+               
+                ->with('listcakes' ,$listcakes)
+                ->with('listcakeevents' ,$listcakeevents)
+                ->with('immerse', $immerse);
+                ;
+                // ->with('listimg' ,$listimg);
+                 
+            }
+        public function allProductuser( Request $request) {
+        
+
+            //    hàm liên kết vs bảng photo để truy vấn ảnh 
+            //     $listimg = DB::table('photo')->join('product', 'photo.id_product','=','product.id_product')
+            //     ->select('*')->where('product.name_product')->get();
+            // Lấy giá trị của checkbox
+            $productCheck = $request->input('status', []);
+        
+            // Lấy giá trị của trường số
+            $minPrice = $request->input('price.0');
+            $maxPrice = $request->input('price.1');
+        
+                $productsPerPage = DB::table('product')// biến lấy từng sản phẩm 
+                    ->join('category','product.id_category','=','category.id_category')
+                    ->select('*')
+                     ->get();
+                    
+                $listcakes = DB::table('category')// biến sổ danh sách category
+                    ->select('*')->where('type', 'like', '%cake%')->get();
+           
+                $listcakeevents = DB::table('category')// biến sổ danh sách category bánh event
+                   ->select('*')->where('type', 'like', '%event%')->get();
+                $immerse = DB::table('product')
+                   ->select('*')->join('category','product.id_category','=','category.id_category')->where('product.id_category','=',5)->paginate(3);
+                
+               
+        
+                // Tạo query builder cho bảng 'products'
+                $query = Product::query();
+        
+                // Thêm điều kiện dựa trên checkbox
+                if (in_array(1, $productCheck)) {
+                    $query->where('status', 1);
+                }
+        
+                if (in_array(2, $productCheck)) {
+                    $query->where('status', 2);
+                }
+                
+                // Thêm điều kiện dựa trên trường số
+                if ($minPrice !== null) {
+                    $query->where('price', '>=', $minPrice);
+                }
+        
+                if ($maxPrice !== null) {
+                    $query->where('price', '<=', $maxPrice);
+                }
+        
+                // Thực hiện truy vấn và lấy dữ liệu
+                $products = $query->paginate(9);
+        
+                return view('allcategories/allproductuser')->with('productsPerPage', $productsPerPage)
+                ->with('products' ,$products)
+               
+                ->with('listcakes' ,$listcakes)
+                ->with('listcakeevents' ,$listcakeevents)
+                ->with('immerse', $immerse);
+                ;
+                // ->with('listimg' ,$listimg);
+                 
+            }
 }

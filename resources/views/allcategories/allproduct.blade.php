@@ -9,7 +9,7 @@
                 </svg>
             </span>Back to Return
         </a>
-        <h2 class="heading text-left">{{$name}}</h2>
+        <h2 class="heading text-left">All Products</h2>
         <div class="row collection-content">
             <div class="col-12  collection-text"></div>
         </div>
@@ -37,7 +37,7 @@
                         <ul class="produdt-filter-cat d-flex align-items-center">
                             <li><a href="javascript&colon;history.go(-1)">Home</a></li>
                             <li><a href="#">cakes</a></li>
-                            <li><a href="#">{{$name}}</a></li>
+                            <li><a href="#">All Product</a></li>
                         </ul>
                         <div class="filter-select-box d-flex align-items-center justify-content-end">
                             <facet-filters-form>
@@ -104,13 +104,11 @@
                                                     </a>
                                                 </facet-remove>
                                             </div>
-
                                             <ul class="facets__list list-unstyled" role="list">
                                                 <li class="list-menu__item  facets__item">
                                                     <label for="Filter-Availability-1" class="facet-checkbox">
 
-                                                        <input type="checkbox" name="filter.v.availability" value="1" id="Filter-Availability-1">
-
+                                                        <input type="checkbox" name="status[]" id="Filter-Availability-1" value="1" {{ in_array(1, request()->input('status', [])) ? 'checked' : '' }} >
                                                         <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                                                             <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
                                                         </svg>
@@ -121,12 +119,13 @@
 
                                                         In stock
                                                     </label>
-                                                    <span class="filter-count">(4)</span>
+                                                    <span class="filter-count"></span>
                                                 </li>
-                                                <li class="list-menu__item  facets__item">
-                                                    <label for="Filter-Availability-2" class="facet-checkbox facet-checkbox--disabled">
 
-                                                        <input type="checkbox" name="filter.v.availability" value="0" id="Filter-Availability-2" disabled>
+                                                <li class="list-menu__item  facets__item">
+                                                    <label for="Filter-Availability-2" class="facet-checkbox">
+
+                                                        <input type="checkbox" name="status[]" id="Filter-Availability-2" value="2" {{ in_array(2, request()->input('status', [])) ? 'checked' : '' }}>
 
                                                         <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                                                             <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
@@ -138,7 +137,7 @@
 
                                                         Out of stock
                                                     </label>
-                                                    <span class="filter-count">(0)</span>
+                                                    <span class="filter-count"></span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -153,9 +152,9 @@
                                             </h4>
                                         </summary>
                                         <div id="Facet-2-template--16620970705132__product-grid" class="facets__display pro-itm-inner acnav-list">
-                                            <div class="facets__header"><span class="facets__selected">The highest price is 450.00 USD</span>
+                                            <div class="facets__header"><span class="facets__selected">The highest price is 100.00 USD</span>
                                                 <facet-remove>
-                                                    <a href="/collections/cakes" class="facets__reset link">
+                                                    <a href="/collections/chocolate-bars" class="facets__reset link">
                                                         Reset
                                                     </a>
                                                 </facet-remove>
@@ -163,20 +162,20 @@
                                             <price-range class="facets__price">
                                                 <div class="field">
                                                     <label class="field__label" for="Filter-Price-GTE">Min price:</label>
-                                                    <input class="field__input" name="filter.v.price.gte" id="Filter-Price-GTE" type="number" placeholder="0" min="0" max="450.00">
+                                                    <input class="field__input" name="price[]" id="Filter-Price-GTE" type="number" placeholder="0" min="0" max="100.00">
                                                 </div>
                                                 <div class="field">
                                                     <label class="field__label" for="Filter-Price-LTE">Max price:</label>
-                                                    <input class="field__input" name="filter.v.price.lte" id="Filter-Price-LTE" type="number" min="0" placeholder="450.00" max="450.00">
+                                                    <input class="field__input" name="price[]" id="Filter-Price-LTE" type="number" min="0" placeholder="100.00" max="100.00">
                                                 </div>
                                             </price-range>
                                         </div>
                                     </details>
 
 
-                                    
 
-                                    
+
+
 
                                     <noscript>
                                         <button type="submit" class="facets__button-no-js button button--tertiary">Filter</button>
@@ -511,153 +510,7 @@
                                                 </details>
 
 
-                                                <details id="Details-Mobile-5-template--16620970705132__product-grid" class="mobile-facets__details js-filter" data-index="mobile-5">
-                                                    <summary class="mobile-facets__summary focus-inset">
-                                                        <div>
-                                                            <span>Flavor</span>
-                                                            <span class="mobile-facets__arrow no-js-hidden">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                                    <polyline points="12 5 19 12 12 19"></polyline>
-                                                                </svg>
-                                                            </span>
-                                                            <noscript><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
-                                                                    <polyline points="6 9 12 15 18 9"></polyline>
-                                                                </svg></noscript>
-                                                        </div>
-                                                    </summary>
-                                                    <div id="FacetMobile-5-template--16620970705132__product-grid" class="mobile-facets__submenu">
-                                                        <button class="mobile-facets__close-button link link--text focus-inset" aria-expanded="true" type="button">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-                                                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                                                <polyline points="12 5 19 12 12 19"></polyline>
-                                                            </svg>
-                                                            Flavor
-                                                        </button>
-                                                        <ul class="mobile-facets__list list-unstyled" role="list">
-                                                            <li class="mobile-facets__item list-menu__item">
-                                                                <label for="Filter-Flavor-mobile-1" class="mobile-facets__label">
-                                                                    <input class="mobile-facets__checkbox" type="checkbox" name="filter.v.option.flavor" value="Bluebarry" id="Filter-Flavor-mobile-1">
-                                                                    <span class="mobile-facets__highlight"></span>
-                                                                    <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                                                                        <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                                                                    </svg>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
-                                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                                    </svg>
-                                                                    Bluebarry
-                                                                </label>
-                                                                <span class="filter-count">1</span>
-                                                            </li>
-                                                            <li class="mobile-facets__item list-menu__item">
-                                                                <label for="Filter-Flavor-mobile-2" class="mobile-facets__label">
-                                                                    <input class="mobile-facets__checkbox" type="checkbox" name="filter.v.option.flavor" value="chocolate" id="Filter-Flavor-mobile-2">
-                                                                    <span class="mobile-facets__highlight"></span>
-                                                                    <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                                                                        <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                                                                    </svg>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
-                                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                                    </svg>
-                                                                    chocolate
-                                                                </label>
-                                                                <span class="filter-count">1</span>
-                                                            </li>
-                                                            <li class="mobile-facets__item list-menu__item">
-                                                                <label for="Filter-Flavor-mobile-3" class="mobile-facets__label">
-                                                                    <input class="mobile-facets__checkbox" type="checkbox" name="filter.v.option.flavor" value="Coffee" id="Filter-Flavor-mobile-3">
-                                                                    <span class="mobile-facets__highlight"></span>
-                                                                    <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                                                                        <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                                                                    </svg>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
-                                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                                    </svg>
-                                                                    Coffee
-                                                                </label>
-                                                                <span class="filter-count">1</span>
-                                                            </li>
-                                                            <li class="mobile-facets__item list-menu__item">
-                                                                <label for="Filter-Flavor-mobile-4" class="mobile-facets__label">
-                                                                    <input class="mobile-facets__checkbox" type="checkbox" name="filter.v.option.flavor" value="cream" id="Filter-Flavor-mobile-4">
-                                                                    <span class="mobile-facets__highlight"></span>
-                                                                    <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                                                                        <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                                                                    </svg>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
-                                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                                    </svg>
-                                                                    cream
-                                                                </label>
-                                                                <span class="filter-count">1</span>
-                                                            </li>
-                                                            <li class="mobile-facets__item list-menu__item">
-                                                                <label for="Filter-Flavor-mobile-5" class="mobile-facets__label">
-                                                                    <input class="mobile-facets__checkbox" type="checkbox" name="filter.v.option.flavor" value="Dark choco" id="Filter-Flavor-mobile-5">
-                                                                    <span class="mobile-facets__highlight"></span>
-                                                                    <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                                                                        <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                                                                    </svg>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
-                                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                                    </svg>
-                                                                    Dark choco
-                                                                </label>
-                                                                <span class="filter-count">1</span>
-                                                            </li>
-                                                            <li class="mobile-facets__item list-menu__item">
-                                                                <label for="Filter-Flavor-mobile-6" class="mobile-facets__label">
-                                                                    <input class="mobile-facets__checkbox" type="checkbox" name="filter.v.option.flavor" value="strawberry" id="Filter-Flavor-mobile-6">
-                                                                    <span class="mobile-facets__highlight"></span>
-                                                                    <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                                                                        <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                                                                    </svg>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
-                                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                                    </svg>
-                                                                    strawberry
-                                                                </label>
-                                                                <span class="filter-count">1</span>
-                                                            </li>
-                                                            <li class="mobile-facets__item list-menu__item">
-                                                                <label for="Filter-Flavor-mobile-7" class="mobile-facets__label">
-                                                                    <input class="mobile-facets__checkbox" type="checkbox" name="filter.v.option.flavor" value="Strawbery" id="Filter-Flavor-mobile-7">
-                                                                    <span class="mobile-facets__highlight"></span>
-                                                                    <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                                                                        <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                                                                    </svg>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
-                                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                                    </svg>
-                                                                    Strawbery
-                                                                </label>
-                                                                <span class="filter-count">1</span>
-                                                            </li>
-                                                            <li class="mobile-facets__item list-menu__item">
-                                                                <label for="Filter-Flavor-mobile-8" class="mobile-facets__label">
-                                                                    <input class="mobile-facets__checkbox" type="checkbox" name="filter.v.option.flavor" value="vanilla" id="Filter-Flavor-mobile-8">
-                                                                    <span class="mobile-facets__highlight"></span>
-                                                                    <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
-                                                                        <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
-                                                                    </svg>
-                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check">
-                                                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                                                    </svg>
-                                                                    vanilla
-                                                                </label>
-                                                                <span class="filter-count">1</span>
-                                                            </li>
-                                                        </ul>
 
-                                                        <div class="no-js-hidden mobile-facets__footer">
-                                                            <facet-remove class="mobile-facets__clear-wrapper btn-secondary">
-                                                                <a href="/collections/cakes" class="mobile-facets__clear">Clear</a>
-                                                            </facet-remove>
-                                                            <button type="button" class="no-js-hidden btn" onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()">Apply</button>
-                                                            <noscript><button class="button">Apply</button></noscript>
-                                                        </div>
-                                                    </div>
-                                                </details>
 
                                                 <div class="mobile-facets__footer">
                                                     <facet-remove class="mobile-facets__clear-wrapper btn-secondary">
@@ -678,12 +531,11 @@
                 <div class="product-filter-right-column col-lg-9 col-md-8 col-12">
                     <div id="product-grid" data-id="template--16620970705132__product-grid" class="row">
 
-                        @foreach($productsPerPage as $prd)
-
+                        @foreach ($products as $item)
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12 product-card grid__item">
                             <div class="card product-card-inner">
                                 <div class="card-top">
-                                    <span>13%</span>
+                                    <span>33%</span>
 
                                     <div class="favorite-icon">
 
@@ -697,85 +549,89 @@
                                     </div>
                                 </div>
                                 <div class="product-card-image product-img">
-                                    <div id="pro-template--16620970705132__product-grid-7838553047276" class="card__media">
-                                        <!-- note ảnh -->
-                                        <a href="{{url('/allcategories/detailproduct/'.$prd->name_product)}}" title="Salted Caramel Dark Chocolate" class="product__media-item" data-media-id="template--16620970705132__product-grid-7838553047276-30919033520364" tabindex="0">
-                                            <img loading="lazy" class="default-img" src="{{asset('images/' .$prd -> photo)}}" alt="">
-                                        </a>
-                                        <a href="{{url('/allcategories/detailproduct/'.$prd->name_product)}}" class="hover-img">
-                                            <img loading="lazy" srcset="{{asset('images/' .$prd -> photo)}}">
+                                    <div id="pro-template--16620970705132__product-grid-7838545019116" class="card__media"><a href="{{url('/allcategories/detailproduct/'.$item->name_product)}}" title="Espresso Dark Chocolate" class="product__media-item" data-media-id="template--16620970705132__product-grid-7838545019116-30918991511788" tabindex="0">
+                                            <img loading="lazy" class="default-img" srcset="/images/{{$item->photo}}" alt="">
+                                        </a><a href="{{url('/allcategories/detailproduct/'.$item->name_product)}}" title="Espresso Dark Chocolate" class="product__media-item" data-media-id="template--16620970705132__product-grid-7838545019116-30918991380716" tabindex="0">
+                                            <img loading="lazy" class="default-img" srcset="/images/{{ $item->photo }}" alt="">
+                                        </a><a href="{{url('/allcategories/detailproduct/'.$item->name_product)}}" title="Espresso Dark Chocolate" class="product__media-item" data-media-id="template--16620970705132__product-grid-7838545019116-30918991413484" tabindex="0">
+                                            <img loading="lazy" class="default-img" srcset="/images/{{ $item->photo }}" alt="">
+                                        </a><a href="{{url('/allcategories/detailproduct/'.$item->name_product)}}" title="Espresso Dark Chocolate" class="hover-img">
+                                            <img loading="lazy" srcset="/images/{{ $item->photo }}" alt="Espresso Dark Chocolate">
                                         </a>
                                     </div>
                                 </div>
-                                <div id="ProductInfo-template--16620970705132__product-grid-7838553047276" class="card-bottom">
+                                <div id="ProductInfo-template--16620970705132__product-grid-7838545019116" class="card-bottom">
                                     <div class="card-top-inner">
-                                        <div class="label">{{$name}}</div>
+                                        <div class="label">{{$item->name_product}}</div>
                                         <div class="card-title">
-                                            <h5 id="title--7838553047276" class="product-title">
-                                                <a href="{{url('/allcategories/detailproduct/'.$prd->name_product)}}" tabindex="0">{{$prd -> name_product}}</a>
+                                            <h5 id="title--7838545019116" class="product-title">
+                                                <a href="{{url('/allcategories/detailproduct/'.$item->name_product)}}" tabindex="0">{{$item->name_product}}</a>
                                             </h5>
                                         </div>
                                     </div>
-
                                     <div class="card-bottom-inner">
-                                        <variant-selects class="no-js-hidden" data-section="template--16620970705132__product-grid" data-product="7838553047276" data-url="" data-update-url="false" data-layout="card">
+                                        <variant-selects class="no-js-hidden" data-section="template--16620970705132__product-grid" data-product="7838545019116" data-url="" data-update-url="false" data-layout="card">
                                             <div class="product-form__input product-form__input--dropdown">
+
+                                                <!--Khoa-->
                                                 <div class="select select-box">
-                                                    <label>Options:</label>
-                                                    <select id="Option-template--16620970705132__product-grid-7838553047276-0" class="select__select nice-select" name="options[Flavour]" form="product-form-template--16620970705132__product-grid-7838553047276">
+                                                    <label>Option:</label>
+                                                    <select id="Option-template--16620970737900__166357255109ff5dc3-7838553047276-0" class="select__select nice-select" name="options[Flavour]" form="product-form-template--16620970737900__166357255109ff5dc3-7838553047276">
+
                                                         <option data-val="Red velvet" value="Red velvet" selected="selected">
-                                                            Normal eggs
+                                                            Normal
                                                         </option>
                                                         <option data-val="Venila" value="Venila">
-                                                            Many egg
+                                                            Many Eggs
                                                         </option>
-                                                        <option data-val="Venila" value="Venila">
-                                                            Fews egg
+                                                        <option data-val="Coffee" value="Coffee">
+                                                            Few Eggs
                                                         </option>
 
                                                     </select>
                                                 </div>
+                                                <!--Khoa-->
                                             </div>
                                             <script type="application/json">
                                                 [{
-                                                    "id": 43537942184172,
-                                                    "title": "Red velvet",
-                                                    "option1": "Red velvet",
+                                                    "id": 43537926422764,
+                                                    "title": "Strawbery",
+                                                    "option1": "Strawbery",
                                                     "option2": null,
                                                     "option3": null,
                                                     "sku": "",
                                                     "requires_shipping": true,
                                                     "taxable": true,
                                                     "featured_image": {
-                                                        "id": 38241362641132,
-                                                        "product_id": 7838553047276,
+                                                        "id": 38241322664172,
+                                                        "product_id": 7838545019116,
                                                         "position": 5,
-                                                        "created_at": "2022-12-02T12:07:33+05:30",
-                                                        "updated_at": "2022-12-02T12:07:34+05:30",
+                                                        "created_at": "2022-12-02T12:01:02+05:30",
+                                                        "updated_at": "2022-12-02T12:01:04+05:30",
                                                         "alt": null,
                                                         "width": 500,
                                                         "height": 500,
-                                                        "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/TRFR-Chocolatier-Australia-Dark-Chocolate-Fruits-Of-Passion-Liqueur-Truffle-700-removebg-preview.png?v=1669963054",
-                                                        "variant_ids": [43537942184172]
+                                                        "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0645\/5594\/2124\/products\/ML0101-Chocolatier-Australia-Dark-Chocolate-Berry-Ganache-700-removebg-preview.png?v=1669962664",
+                                                        "variant_ids": [43537926422764]
                                                     },
                                                     "available": true,
-                                                    "name": "Salted Caramel Dark Chocolate - Red velvet",
-                                                    "public_title": "Red velvet",
-                                                    "options": ["Red velvet"],
-                                                    "price": 5200,
+                                                    "name": "Espresso Dark Chocolate - Strawbery",
+                                                    "public_title": "Strawbery",
+                                                    "options": ["Strawbery"],
+                                                    "price": 1000,
                                                     "weight": 0,
-                                                    "compare_at_price": 6000,
+                                                    "compare_at_price": 1500,
                                                     "inventory_management": "shopify",
                                                     "barcode": "",
                                                     "featured_media": {
                                                         "alt": null,
-                                                        "id": 30919033520364,
+                                                        "id": 30918991511788,
                                                         "position": 5,
                                                         "preview_image": {
                                                             "aspect_ratio": 1.0,
                                                             "height": 500,
                                                             "width": 500,
-                                                            "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/TRFR-Chocolatier-Australia-Dark-Chocolate-Fruits-Of-Passion-Liqueur-Truffle-700-removebg-preview.png?v=1669963054"
+                                                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0645\/5594\/2124\/products\/ML0101-Chocolatier-Australia-Dark-Chocolate-Berry-Ganache-700-removebg-preview.png?v=1669962664"
                                                         }
                                                     },
                                                     "quantity_rule": {
@@ -784,53 +640,7 @@
                                                         "increment": 1
                                                     }
                                                 }, {
-                                                    "id": 43537942216940,
-                                                    "title": "Venila",
-                                                    "option1": "Venila",
-                                                    "option2": null,
-                                                    "option3": null,
-                                                    "sku": "",
-                                                    "requires_shipping": true,
-                                                    "taxable": true,
-                                                    "featured_image": {
-                                                        "id": 38241363165420,
-                                                        "product_id": 7838553047276,
-                                                        "position": 3,
-                                                        "created_at": "2022-12-02T12:07:33+05:30",
-                                                        "updated_at": "2022-12-02T12:07:35+05:30",
-                                                        "alt": null,
-                                                        "width": 500,
-                                                        "height": 500,
-                                                        "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/pure_white_truffle-removebg-preview.png?v=1669963055",
-                                                        "variant_ids": [43537942216940]
-                                                    },
-                                                    "available": true,
-                                                    "name": "Salted Caramel Dark Chocolate - Venila",
-                                                    "public_title": "Venila",
-                                                    "options": ["Venila"],
-                                                    "price": 5200,
-                                                    "weight": 0,
-                                                    "compare_at_price": 6000,
-                                                    "inventory_management": "shopify",
-                                                    "barcode": "",
-                                                    "featured_media": {
-                                                        "alt": null,
-                                                        "id": 30919033454828,
-                                                        "position": 3,
-                                                        "preview_image": {
-                                                            "aspect_ratio": 1.0,
-                                                            "height": 500,
-                                                            "width": 500,
-                                                            "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/pure_white_truffle-removebg-preview.png?v=1669963055"
-                                                        }
-                                                    },
-                                                    "quantity_rule": {
-                                                        "min": 1,
-                                                        "max": null,
-                                                        "increment": 1
-                                                    }
-                                                }, {
-                                                    "id": 43537942249708,
+                                                    "id": 43537926455532,
                                                     "title": "Coffee",
                                                     "option1": "Coffee",
                                                     "option2": null,
@@ -839,35 +649,81 @@
                                                     "requires_shipping": true,
                                                     "taxable": true,
                                                     "featured_image": {
-                                                        "id": 38241362608364,
-                                                        "product_id": 7838553047276,
-                                                        "position": 6,
-                                                        "created_at": "2022-12-02T12:07:33+05:30",
-                                                        "updated_at": "2022-12-02T12:07:34+05:30",
+                                                        "id": 38241322696940,
+                                                        "product_id": 7838545019116,
+                                                        "position": 2,
+                                                        "created_at": "2022-12-02T12:01:02+05:30",
+                                                        "updated_at": "2022-12-02T12:01:05+05:30",
                                                         "alt": null,
                                                         "width": 500,
                                                         "height": 500,
-                                                        "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/TRGR-Chocolatier-Australia-Dark-Chocolate-Grand-Marnier-Liqueur-Truffle-700-removebg-preview.png?v=1669963054",
-                                                        "variant_ids": [43537942249708]
+                                                        "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0645\/5594\/2124\/products\/MOCH-Chocolatier-Australia-Dark-Chocolate-Cherry-Liqueur-700-removebg-preview.png?v=1669962665",
+                                                        "variant_ids": [43537926455532]
                                                     },
                                                     "available": true,
-                                                    "name": "Salted Caramel Dark Chocolate - Coffee",
+                                                    "name": "Espresso Dark Chocolate - Coffee",
                                                     "public_title": "Coffee",
                                                     "options": ["Coffee"],
-                                                    "price": 5200,
+                                                    "price": 1000,
                                                     "weight": 0,
-                                                    "compare_at_price": 6000,
+                                                    "compare_at_price": 1500,
                                                     "inventory_management": "shopify",
                                                     "barcode": "",
                                                     "featured_media": {
                                                         "alt": null,
-                                                        "id": 30919033553132,
-                                                        "position": 6,
+                                                        "id": 30918991413484,
+                                                        "position": 2,
                                                         "preview_image": {
                                                             "aspect_ratio": 1.0,
                                                             "height": 500,
                                                             "width": 500,
-                                                            "src": "\/\/chocolate-workdo.myshopify.com\/cdn\/shop\/products\/TRGR-Chocolatier-Australia-Dark-Chocolate-Grand-Marnier-Liqueur-Truffle-700-removebg-preview.png?v=1669963054"
+                                                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0645\/5594\/2124\/products\/MOCH-Chocolatier-Australia-Dark-Chocolate-Cherry-Liqueur-700-removebg-preview.png?v=1669962665"
+                                                        }
+                                                    },
+                                                    "quantity_rule": {
+                                                        "min": 1,
+                                                        "max": null,
+                                                        "increment": 1
+                                                    }
+                                                }, {
+                                                    "id": 43537926488300,
+                                                    "title": "Cream",
+                                                    "option1": "Cream",
+                                                    "option2": null,
+                                                    "option3": null,
+                                                    "sku": "",
+                                                    "requires_shipping": true,
+                                                    "taxable": true,
+                                                    "featured_image": {
+                                                        "id": 38241322598636,
+                                                        "product_id": 7838545019116,
+                                                        "position": 1,
+                                                        "created_at": "2022-12-02T12:01:02+05:30",
+                                                        "updated_at": "2022-12-02T12:01:04+05:30",
+                                                        "alt": null,
+                                                        "width": 500,
+                                                        "height": 500,
+                                                        "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0645\/5594\/2124\/products\/ML0103-Chocolatier-Australia-Milk-Chocolate-Peanut-Butter-Caramel-700-removebg-preview.png?v=1669962664",
+                                                        "variant_ids": [43537926488300]
+                                                    },
+                                                    "available": true,
+                                                    "name": "Espresso Dark Chocolate - Cream",
+                                                    "public_title": "Cream",
+                                                    "options": ["Cream"],
+                                                    "price": 1000,
+                                                    "weight": 0,
+                                                    "compare_at_price": 1500,
+                                                    "inventory_management": "shopify",
+                                                    "barcode": "",
+                                                    "featured_media": {
+                                                        "alt": null,
+                                                        "id": 30918991380716,
+                                                        "position": 1,
+                                                        "preview_image": {
+                                                            "aspect_ratio": 1.0,
+                                                            "height": 500,
+                                                            "width": 500,
+                                                            "src": "https:\/\/cdn.shopify.com\/s\/files\/1\/0645\/5594\/2124\/products\/ML0103-Chocolatier-Australia-Milk-Chocolate-Peanut-Butter-Caramel-700-removebg-preview.png?v=1669962664"
                                                         }
                                                     },
                                                     "quantity_rule": {
@@ -879,48 +735,50 @@
                                             </script>
 
                                             <wbdemo id="abc"></wbdemo>
+                                            <!-- @if($item->status == 1)
+                                                <div class="status">status:     <span class="text"> stocking </span>  </div>
+                                            @elseif($item->status == 2)
+                                                <div class="status">status: <span class="text">out of stock</span> </div>
+                                            @endif -->
+
                                             <div class="select select-box">
 
-                                                @if($prd->status == 1)
-                                                <div class="status">status: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text" style="border:1px solid; border-radius:30px;font-size:14px;padding: 10px;" width="1400em"> stocking
-
+                                                @if($item->status == 1)
+                                                <div class="status">status: <span class="text" style="border:1px solid; border-radius:30px;font-size:14px;padding: 10px;" width="1400em"> stocking
+                                                        
                                                     </span> </div>
-                                                @elseif($prd->status == 2)
-                                                <div class="status">status:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="text" style="border:1px solid; border-radius:30px;font-size:14px;padding: 10px;" width="1400em">out of stock</span> </div>
+                                                @elseif($item->status == 2)
+                                                <div class="status">status: <span class="text" style="border:1px solid; border-radius:30px;font-size:14px;padding: 10px;" width="1400em">out of stock</span> </div>
                                                 @endif
 
                                             </div>
 
+                                        </variant-selects><select id="Variants-template--16620970705132__product-grid-7838545019116" class="select__select no-js" form="product-form-template--16620970705132__product-grid-7838545019116">
+                                            <option data-v-title="Strawbery" data-price="10.00 <span class=wbcur>USD</span>" data-cprice="15.00 <span class=wbcur>USD</span>" selected="selected" value="43537926422764">
+                                                Strawbery
 
-                                        </variant-selects><select id="Variants-template--16620970705132__product-grid-7838553047276" class="select__select no-js" form="product-form-template--16620970705132__product-grid-7838553047276">
-                                            <option data-v-title="Red velvet" data-price="{{$prd -> price}} <span class=wbcur>USD</span>" data-cprice="{{$prd -> fakeprice}} <span class=wbcur>USD</span>" selected="selected" value="43537942184172">
-                                                normal eggs
-
-                                                - {{$prd -> price}}
+                                                - 10.00 USD
                                             </option>
-                                            <option data-v-title="Venila" data-price="{{$prd -> price}} <span class=wbcur>USD</span>" data-cprice="{{$prd -> fakeprice}} <span class=wbcur>USD</span>" value="43537942216940">
-                                                many eggs
+                                            <option data-v-title="Coffee" data-price="10.00 <span class=wbcur>USD</span>" data-cprice="15.00 <span class=wbcur>USD</span>" value="43537926455532">
+                                                Coffee
 
-                                                - {{$prd -> price}}
+                                                - 10.00 USD
                                             </option>
-                                            <option data-v-title="Venila" data-price="{{$prd -> price}} <span class=wbcur>USD</span>" data-cprice="{{$prd -> fakeprice}} <span class=wbcur>USD</span>" value="43537942216940">
-                                                few eggs
+                                            <option data-v-title="Cream" data-price="10.00 <span class=wbcur>USD</span>" data-cprice="15.00 <span class=wbcur>USD</span>" value="43537926488300">
+                                                Cream
 
-                                                - {{$prd -> price}}
+                                                - 10.00 USD
                                             </option>
-
                                         </select>
                                         <div class="card-btn-wrapper">
-                                            <div class="no-js-hidden price" id="price-template--16620970705132__product-grid-7838553047276" role="status">
+                                            <div class="no-js-hidden price" id="price-template--16620970705132__product-grid-7838545019116" role="status">
 
-                                                <ins class="price-item--regular">{{number_format($prd -> price, 0,'.','.')}} <span class=wbcur>VND</span></ins>
+                                                <ins class="price-item--regular">{{ number_format($item->price, 0) }} <span class=wbcur>USD</span></ins>
                                                 <del class="price-item--sale">
 
-                                                    {{$prd -> fakeprice}} <span class=wbcur>VND</span>
+                                                    {{ number_format($item->price, 0) }} <span class=wbcur>USD</span>
 
                                                 </del>
-
-
                                             </div>
                                             <product-form class="product-form">
                                                 <div class="wbquicksuccess hidden" hidden>translation missing: en.wbcustomlabel.wballtext.quicksuccessmsg</div>
@@ -933,8 +791,8 @@
                                                     </svg>
                                                     <span class="product-form__error-message"></span>
                                                 </div>
-                                                <form method="post" action="/cart/add" id="product-form-template--16620970705132__product-grid-7838553047276" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="id" value="43537942184172" disabled>
-                                                @if($prd->status==1)
+                                                <form method="post" action="/cart/add" id="product-form-template--16620970705132__product-grid-7838545019116" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="id" value="43537926422764" disabled>
+                                                    @if($item->status==1)
                                                     <button type="submit" name="add" class="btn-secondary cartb product-form__submit" aria-label="Add to Cart"><span>Add to Cart</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
                                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1258 5.12596H2.87416C2.04526 5.12596 1.38823 5.82533 1.43994 6.65262L1.79919 12.4007C1.84653 13.1581 2.47458 13.7481 3.23342 13.7481H10.7666C11.5254 13.7481 12.1535 13.1581 12.2008 12.4007L12.5601 6.65262C12.6118 5.82533 11.9547 5.12596 11.1258 5.12596ZM2.87416 3.68893C1.21635 3.68893 -0.0977 5.08768 0.00571155 6.74226L0.364968 12.4904C0.459638 14.0051 1.71574 15.1851 3.23342 15.1851H10.7666C12.2843 15.1851 13.5404 14.0051 13.635 12.4904L13.9943 6.74226C14.0977 5.08768 12.7837 3.68893 11.1258 3.68893H2.87416Z" fill="white"></path>
                                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.40723 4.40744C3.40723 2.42332 5.01567 0.81488 6.99979 0.81488C8.9839 0.81488 10.5923 2.42332 10.5923 4.40744V5.84447C10.5923 6.24129 10.2707 6.56298 9.87384 6.56298C9.47701 6.56298 9.15532 6.24129 9.15532 5.84447V4.40744C9.15532 3.21697 8.19026 2.2519 6.99979 2.2519C5.80932 2.2519 4.84425 3.21697 4.84425 4.40744V5.84447C4.84425 6.24129 4.52256 6.56298 4.12574 6.56298C3.72892 6.56298 3.40723 6.24129 3.40723 5.84447V4.40744Z" fill="white"></path>
@@ -947,7 +805,7 @@
                                                             </svg>
                                                         </div>
                                                     </button>
-                                                    @elseif($prd->status==2)
+                                                    @elseif($item->status==2)
                                                     <button type="submit" name="add" class="btn-secondary cartb product-form__submit" aria-label="Add to Cart"  style="pointer-events: none;"><span>Sold out</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
                                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1258 5.12596H2.87416C2.04526 5.12596 1.38823 5.82533 1.43994 6.65262L1.79919 12.4007C1.84653 13.1581 2.47458 13.7481 3.23342 13.7481H10.7666C11.5254 13.7481 12.1535 13.1581 12.2008 12.4007L12.5601 6.65262C12.6118 5.82533 11.9547 5.12596 11.1258 5.12596ZM2.87416 3.68893C1.21635 3.68893 -0.0977 5.08768 0.00571155 6.74226L0.364968 12.4904C0.459638 14.0051 1.71574 15.1851 3.23342 15.1851H10.7666C12.2843 15.1851 13.5404 14.0051 13.635 12.4904L13.9943 6.74226C14.0977 5.08768 12.7837 3.68893 11.1258 3.68893H2.87416Z" fill="white"></path>
                                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.40723 4.40744C3.40723 2.42332 5.01567 0.81488 6.99979 0.81488C8.9839 0.81488 10.5923 2.42332 10.5923 4.40744V5.84447C10.5923 6.24129 10.2707 6.56298 9.87384 6.56298C9.47701 6.56298 9.15532 6.24129 9.15532 5.84447V4.40744C9.15532 3.21697 8.19026 2.2519 6.99979 2.2519C5.80932 2.2519 4.84425 3.21697 4.84425 4.40744V5.84447C4.84425 6.24129 4.52256 6.56298 4.12574 6.56298C3.72892 6.56298 3.40723 6.24129 3.40723 5.84447V4.40744Z" fill="white"></path>
@@ -977,7 +835,62 @@
             </div>
         </div>
     </div>
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li class="page-item {{ $products->previousPageUrl() ? '' : 'disabled' }}">
+                <a class="page-link" href="{{ $products->previousPageUrl() }}">Previous</a>
+            </li>
 
+            @foreach ($products->getUrlRange(1, $products->lastPage()) as $page => $url)
+            <li class="page-item {{ $page == $products->currentPage() ? 'active' : '' }}">
+                <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+            </li>
+            @endforeach
+
+            <li class="page-item {{ $products->nextPageUrl() ? '' : 'disabled' }}">
+                <a class="page-link" href="{{ $products->nextPageUrl() }}">Next</a>
+            </li>
+        </ul>
+    </nav>
 
 </section>
+<style>
+    .pagination {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .pagination li {
+        margin: 0 5px;
+    }
+
+    .pagination li a {
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    .pagination li a.active {
+        background-color: #ccc;
+        color: #fff;
+        border-color: #ccc;
+    }
+
+    .pagination li.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    .status {
+        padding-bottom: 15px;
+    }
+
+    .text {
+        margin-left: 50px;
+    }
+</style>
 @endsection

@@ -38,6 +38,9 @@ Route::group(['prefix' => 'allcategories'], function(){
     Route::get('/detailproduct/{name_product}',[ProductController::class,'detailproduct']);
     Route::get('/cateproductuser/{name_category}',[ProductController::class,'cateProductuser']);
     Route::get('/detailproductuser/{name_product}',[ProductController::class,'detailproductuser']);
+
+    Route::get('/allproduct',[ProductController::class,'allProduct']);
+    Route::get('/allproductuser',[ProductController::class,'allProductuser']);
 });
 Route::group(['prefix' => 'pages'], function(){
     Route::get('/blog',[ProductController::class,'blog']);
