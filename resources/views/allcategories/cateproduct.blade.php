@@ -38,10 +38,13 @@
                             <li><a href="javascript&colon;history.go(-1)">Home</a></li>
                             <li><a href="#">cakes</a></li>
                             <li><a href="#">{{$name}}</a></li>
+
                         </ul>
                         <div class="filter-select-box d-flex align-items-center justify-content-end">
+
                             <facet-filters-form>
-                                <form id="FacetFiltersForm">
+                                <form method="post" action="{{url('/admin/sortby')}}" id="FacetFiltersForm">
+                                    @csrf
                                     <div class="facet-filters sorting caption">
                                         
                                         <noscript>
@@ -96,8 +99,7 @@
                                                 <li class="list-menu__item  facets__item">
                                                     <label for="Filter-Availability-1" class="facet-checkbox">
 
-                                                        <input type="checkbox" name="filter.v.availability" value="1"  {{ in_array(1, request()->input('status', [])) ? 'checked' : '' }} >
-
+                                                        <input type="checkbox" name="status[]" id="Filter-Availability-1" value="1" {{ in_array(1, request()->input('status', [])) ? 'checked' : '' }} >
                                                         <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                                                             <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
                                                         </svg>
@@ -108,12 +110,13 @@
 
                                                         In stock
                                                     </label>
-                                                    <span class="filter-count">(4)</span>
+                                                    <span class="filter-count"></span>
                                                 </li>
-                                                <li class="list-menu__item  facets__item">
-                                                    <label for="Filter-Availability-2" class="facet-checkbox facet-checkbox--disabled">
 
-                                                        <input type="checkbox" name="filter.v.availability" value="0" {{ in_array(2, request()->input('status', [])) ? 'checked' : '' }}>>
+                                                <li class="list-menu__item  facets__item">
+                                                    <label for="Filter-Availability-2" class="facet-checkbox">
+
+                                                        <input type="checkbox" name="status[]" id="Filter-Availability-2" value="2" {{ in_array(2, request()->input('status', [])) ? 'checked' : '' }}>
 
                                                         <svg width="1.6rem" height="1.6rem" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
                                                             <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
@@ -125,7 +128,7 @@
 
                                                         Out of stock
                                                     </label>
-                                                    <span class="filter-count">(0)</span>
+                                                    <span class="filter-count"></span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -133,38 +136,7 @@
 
 
 
-                                    <details id="Details-2-template--16620970705132__product-grid" class="product-price-widget product-widget disclosure-has-popup facets__disclosure js-filter" data-index="2" open="">
-                                        <summary class="facets__summary caption-large focus-offset pro-itm">
-                                            <h4 class="acnav-label">
-                                                Price
-                                            </h4>
-                                        </summary>
-                                        <div id="Facet-2-template--16620970705132__product-grid" class="facets__display pro-itm-inner acnav-list">
-                                            <div class="facets__header"><span class="facets__selected">The highest price is 450.00 USD</span>
-                                                <facet-remove>
-                                                    <a href="/collections/cakes" class="facets__reset link">
-                                                        Reset
-                                                    </a>
-                                                </facet-remove>
-                                            </div>
-                                            <price-range class="facets__price">
-                                                <div class="field">
-                                                    <label class="field__label" for="Filter-Price-GTE">Min price:</label>
-                                                    <input class="field__input" name="filter.v.price.gte" id="Filter-Price-GTE" type="number" placeholder="0" min="0" max="450.00">
-                                                </div>
-                                                <div class="field">
-                                                    <label class="field__label" for="Filter-Price-LTE">Max price:</label>
-                                                    <input class="field__input" name="filter.v.price.lte" id="Filter-Price-LTE" type="number" min="0" placeholder="450.00" max="450.00">
-                                                </div>
-                                            </price-range>
-                                        </div>
-                                    </details>
-
-
-                                    
-
-                                    
-
+                                   
                                     <noscript>
                                         <button type="submit" class="facets__button-no-js button button--tertiary">Filter</button>
                                     </noscript>
@@ -703,7 +675,6 @@
                                             </h5>
                                         </div>
                                     </div>
-
                                     <div class="card-bottom-inner">
                                         <variant-selects class="no-js-hidden" data-section="template--16620970705132__product-grid" data-product="7838553047276" data-url="" data-update-url="false" data-layout="card">
                                             <div class="product-form__input product-form__input--dropdown">
@@ -866,17 +837,7 @@
                                             </script>
 
                                             <wbdemo id="abc"></wbdemo>
-                                            <div class="select select-box">
-
-                                                @if($prd->status == 1)
-                                                <div class="status">status: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text" style="border:1px solid; border-radius:30px;font-size:14px;padding: 10px;" width="1400em"> stocking
-
-                                                    </span> </div>
-                                                @elseif($prd->status == 2)
-                                                <div class="status">status:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="text" style="border:1px solid; border-radius:30px;font-size:14px;padding: 10px;" width="1400em">out of stock</span> </div>
-                                                @endif
-
-                                            </div>
+                                            
 
 
                                         </variant-selects><select id="Variants-template--16620970705132__product-grid-7838553047276" class="select__select no-js" form="product-form-template--16620970705132__product-grid-7838553047276">
@@ -920,9 +881,9 @@
                                                     </svg>
                                                     <span class="product-form__error-message"></span>
                                                 </div>
-                                                <form method="post" action="/cart/add" id="product-form-template--16620970705132__product-grid-7838553047276" accept-charset="UTF-8" class="form" enctype="multipart/form-data" novalidate="novalidate" data-type="add-to-cart-form"><input type="hidden" name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="id" value="43537942184172" disabled>
                                                 @if($prd->status==1)
-                                                    <button type="submit" name="add" class="btn-secondary cartb product-form__submit" aria-label="Add to Cart"><span>Add to Cart</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
+                                                <a href="{{url('/allcategories/detailproduct/'.$prd->name_product)}}">
+                                                    <button type="submit" name="add" class="btn-secondary cartb product-form__submit" aria-label="Add to Cart"><span>Detail</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
                                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1258 5.12596H2.87416C2.04526 5.12596 1.38823 5.82533 1.43994 6.65262L1.79919 12.4007C1.84653 13.1581 2.47458 13.7481 3.23342 13.7481H10.7666C11.5254 13.7481 12.1535 13.1581 12.2008 12.4007L12.5601 6.65262C12.6118 5.82533 11.9547 5.12596 11.1258 5.12596ZM2.87416 3.68893C1.21635 3.68893 -0.0977 5.08768 0.00571155 6.74226L0.364968 12.4904C0.459638 14.0051 1.71574 15.1851 3.23342 15.1851H10.7666C12.2843 15.1851 13.5404 14.0051 13.635 12.4904L13.9943 6.74226C14.0977 5.08768 12.7837 3.68893 11.1258 3.68893H2.87416Z" fill="white"></path>
                                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.40723 4.40744C3.40723 2.42332 5.01567 0.81488 6.99979 0.81488C8.9839 0.81488 10.5923 2.42332 10.5923 4.40744V5.84447C10.5923 6.24129 10.2707 6.56298 9.87384 6.56298C9.47701 6.56298 9.15532 6.24129 9.15532 5.84447V4.40744C9.15532 3.21697 8.19026 2.2519 6.99979 2.2519C5.80932 2.2519 4.84425 3.21697 4.84425 4.40744V5.84447C4.84425 6.24129 4.52256 6.56298 4.12574 6.56298C3.72892 6.56298 3.40723 6.24129 3.40723 5.84447V4.40744Z" fill="white"></path>
                                                         </svg>
@@ -934,8 +895,9 @@
                                                             </svg>
                                                         </div>
                                                     </button>
+                                                    </a>
                                                     @elseif($prd->status==2)
-                                                    <button type="submit" name="add" class="btn-secondary cartb product-form__submit" aria-label="Add to Cart"  style="pointer-events: none;"><span>Sold out</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
+                                                    <button type="submit" name="add" class="btn-secondary cartb product-form__submit" aria-label="Add to Cart"  style="pointer-events: none;"><span style="color: #9e715d;">Sold out</span><svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16" fill="none">
                                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1258 5.12596H2.87416C2.04526 5.12596 1.38823 5.82533 1.43994 6.65262L1.79919 12.4007C1.84653 13.1581 2.47458 13.7481 3.23342 13.7481H10.7666C11.5254 13.7481 12.1535 13.1581 12.2008 12.4007L12.5601 6.65262C12.6118 5.82533 11.9547 5.12596 11.1258 5.12596ZM2.87416 3.68893C1.21635 3.68893 -0.0977 5.08768 0.00571155 6.74226L0.364968 12.4904C0.459638 14.0051 1.71574 15.1851 3.23342 15.1851H10.7666C12.2843 15.1851 13.5404 14.0051 13.635 12.4904L13.9943 6.74226C14.0977 5.08768 12.7837 3.68893 11.1258 3.68893H2.87416Z" fill="white"></path>
                                                             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.40723 4.40744C3.40723 2.42332 5.01567 0.81488 6.99979 0.81488C8.9839 0.81488 10.5923 2.42332 10.5923 4.40744V5.84447C10.5923 6.24129 10.2707 6.56298 9.87384 6.56298C9.47701 6.56298 9.15532 6.24129 9.15532 5.84447V4.40744C9.15532 3.21697 8.19026 2.2519 6.99979 2.2519C5.80932 2.2519 4.84425 3.21697 4.84425 4.40744V5.84447C4.84425 6.24129 4.52256 6.56298 4.12574 6.56298C3.72892 6.56298 3.40723 6.24129 3.40723 5.84447V4.40744Z" fill="white"></path>
                                                         </svg>
@@ -948,7 +910,6 @@
                                                         </div>
                                                     </button>
                                                     @endif
-                                                </form>
                                             </product-form>
                                         </div>
                                     </div>
@@ -967,4 +928,5 @@
 
 
 </section>
+
 @endsection

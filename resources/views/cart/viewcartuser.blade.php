@@ -868,6 +868,7 @@
                 <tbody>
 
                   @foreach($viewcart as $row)
+                  <input name="id_product[]" hidden value="{{$row->id_product}}">
                   <?php
                   $total = 0;
                   $total += $row->price * $row->quantity;
@@ -910,7 +911,7 @@
                             </svg>
                           </button>
                           
-                          <input name="id_product[]" hidden value="{{$row->id_product}}">
+                          
                           
                    
                           <input class="quantity__input" type="number" name="quantity[]" value="{{$row->quantity}}" min="1" id="quantityProduct<?php echo $row->id_product; ?>">

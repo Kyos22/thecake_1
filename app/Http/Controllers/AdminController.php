@@ -20,7 +20,11 @@ use App\Models\Testdelete;
 
 class AdminController extends Controller
 {
-    
+    public function dashboard () {
+
+
+        return view('/admin/dashboard');
+    }
     public function add()
     {
         return view('admin/add');
@@ -496,6 +500,18 @@ class AdminController extends Controller
         return response()->json(["success"=>"category have been deleted"]);
         
         
+    }
+    public function showorder() {
+        $orders = DB::table('order')->join('account','order.id_customer','=','account.id_account')->select('*')->paginate(10);
+
+        return view('admin/showorder')->with('orders',$orders);
+    }
+    public function delete_order($id_order)
+    {
+
+
+        DB::table('order')->where('id_order', $id_order)->delete();
+        return redirect('/admin/showorder');
     }
 
 }

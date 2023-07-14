@@ -511,11 +511,7 @@
                                             </script>
                         
                                             <wbdemo id="abc"></wbdemo>
-                                            @if($item->status == 1)
-                                                <div class="status">status:     <span class="text" style="border:1px solid; border-radius:30px;font-size:14px;padding: 10px;" width="1400em"> stocking </span>  </div>
-                                            @elseif($item->status == 2)
-                                                <div class="status">status: <span class="text" style="border:1px solid; border-radius:30px;font-size:14px;padding: 10px;" width="1400em">out of stock</span> </div>
-                                            @endif
+                                           
                                         </variant-selects><select id="Variants-template--16620970705132__product-grid-7838545019116" class="select__select no-js" form="product-form-template--16620970705132__product-grid-7838545019116">
                                             <option data-v-title="Strawbery" data-price="10.00 <span class=wbcur>USD</span>" data-cprice="15.00 <span class=wbcur>USD</span>" selected="selected" value="43537926422764">
                                             Strawbery

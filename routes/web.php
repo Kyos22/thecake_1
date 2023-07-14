@@ -65,6 +65,7 @@ Route::group(['prefix' => 'pages'], function(){
 });
 
 Route::group(['prefix' => 'admin'], function() {
+    Route::get('/dashboard', [AdminController::class, 'dashboard']);
     Route::get('/add', [AdminController::class, 'add']);
     Route::post('/save', [AdminController::class, 'save']);
     Route::post('/savephoto', [AdminController::class, 'save_photo']);
@@ -84,6 +85,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/detailproduct/{id_product}', [AdminController::class, 'detail_product']);
     Route::get('/detailcategory/{id_category}', [AdminController::class, 'detail_category']);
     Route::get('/deleteproduct/{id_product}', [AdminController::class, 'delete_product']);
+    Route::get('/deleteorder/{id_order}', [AdminController::class, 'delete_order']);
     Route::get('/deletephoto/{id_photo}', [AdminController::class, 'delete_photo']);
     Route::get('/deletecategory/{id_category}', [AdminController::class, 'delete_category']);
     Route::get('/deleteblog/{id_blog}', [AdminController::class, 'delete_blog']);
@@ -97,6 +99,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/formcreateadmin',[AdminController::class,'registeradmin']);
     Route::get('/showdelete',[AdminController::class,'showdelete']);
     Route::get('/showdelete',[AdminController::class,'showdelete']);
+    Route::get('/showorder',[AdminController::class,'showorder']);
     Route::post('/delete_all',[AdminController::class,'delete_all'])->name('item.delete');
 
     Route::get('/showblog',[AdminController::class,'show_blog']);

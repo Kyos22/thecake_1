@@ -115,6 +115,11 @@
                                     </a>
 
                                 </li>
+                                <li class="">
+                                <a href="/pages/contact">Contact
+                                    </a>
+
+                                </li>
 
                             </ul>
                         </div>
@@ -246,16 +251,7 @@
                                         </li>
 
 
-                                        <li class="headwish">
-                                            <div class="wishlist">
-
-                                                <a href="/account/login">Wishlist
-                                                    ( <span class="wishcount">0</span> )
-                                                </a>
-
-                                            </div>
-                                        </li>
-                                        
+                                       
                                     </ul>
                                 </div>
                             </div>
