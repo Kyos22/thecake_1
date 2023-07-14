@@ -5,11 +5,10 @@
                 <h2>
                     <a href="/">
                     <h2>TheCake</h2>
-                    </a>
+                  </a>
                 </h2> 
                 <p>Enjoy delicious cake every day with our cake website. Our food product made from original materials, consumed as candy and used to make beverages .</p>
                 <span>&copy; 2023, <a href="/" title="">THECAKE</a>, <a target="_blank" rel="nofollow" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">Powered by House of Mom</a></span>
-            </div>
             </div>
         </div>
        
@@ -20,33 +19,20 @@
                 
                   <ul>
                     
-                    <li><a href="/pages/shipping-delivery">Shipping & Delivery</a></li>
+                    <li><a href="/pages/shippingpageuser">Shipping & Delivery</a></li>
                     
-                    <li><a href="/pages/privacy-policy">privacy policy</a></li>
+                    <li><a href="/pages/privacyuser">privacy policy</a></li>
                     
-                    <li><a href="/pages/contact">Contact</a></li>
+                    <li><a href="/pages/contactuser">Contact</a></li>
                     
-                    <li><a href="/pages/terms-conditions">terms & conditions</a></li>
+                    <li><a href="/pages/termuser">terms & conditions</a></li>
                     
                   </ul>
                   
             </div>
         </div>
         
-          <div class="footer-col footer-link footer-link-1">
-            <div class="footer-widget footer-ween">
-                <h4>About us:</h4>
-                
-                  <ul>
-                    
-                    <li><a href="/collections/cakes">Strawberry Choco</a></li>
-                    
-                    <li><a href="/collections/cakes">Lindt Chocolate</a></li>
-                    
-                  </ul>
-                  
-            </div>
-        </div>
+         
         
       
       <div class="footer-col footer-link footer-link-3">

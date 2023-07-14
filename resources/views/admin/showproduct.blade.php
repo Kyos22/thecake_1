@@ -46,6 +46,7 @@
     <th>price</th>
     <th>photo</th>
     <th>id_category</th>
+    <th>status</th>
     <th>Action</th>
   </tr>
   <?php
@@ -71,6 +72,7 @@
     <td>{{$product -> price}}</td>
     <td><img src="{{asset('images/' .$product -> photo)}}" width="70" height="100"></td>
     <td>{{$product -> name_category}}</td>
+    <td>{{$product -> status}}</td>
     <td>
 
       <a href="{{url('/admin/deleteproduct/' .$product -> id_product)}}" onclick="return confirm('are you sure ?')" style="margin-right: 10px;">

@@ -242,13 +242,22 @@
                             <div class="header-panel-top">
                                 <div class="customer_account text-left">
                                     <ul class="list-unstyled">
+                                    <li>
+                                            <a href="{{url('/myaccount')}}" title="Create Account">
+                                            <?php
+          $name_user = Session::get('username') ;
+                  if($name_user) {
+                    echo $name_user;
+                  }
+                ?>
+        </p>
+        </a>
 
+                                        </li>
                                         <li>
                                             <a href="{{url('/logoutuser')}}">Log out</a>
                                         </li>
-                                        <li>
-                                            <a href="{{url('/myaccount')}}" title="Create Account">My Account</a>
-                                        </li>
+                                       
 
 
                                        

@@ -69,6 +69,13 @@
     <input type="Price" class="form-control" id="exampleInputPrice" aria-describedby="fakePrice" placeholder="fakePrice" name="fakeprice">
     <small id="Price" class="form-text text-muted"></small>
   </div>
+  <select name="status" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+      
+      <option value="1">1</option>
+      <option value="2">2</option>
+      
+    </select>
+
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">

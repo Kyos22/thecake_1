@@ -86,12 +86,10 @@
 
                       <div class="favorite-icon">
 
-                        <a class="wishlist wish add-wishlist" href="/login/login" title="translation missing: en.customlabel.wballtext.wishlist">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
                             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                             <use xlink:href="#wish"></use>
                           </svg>
-                        </a>
 
                       </div>
                     </div>
@@ -417,12 +415,10 @@
 
             <div class="favorite-icon">
 
-              <a class="wishlist wish add-wishlist" href="/account/login" title="translation missing: en.customlabel.wballtext.wishlist">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                   <use xlink:href="#wish"></use>
                 </svg>
-              </a>
 
             </div>
           </div>
@@ -768,12 +764,10 @@
 
                   <div class="favorite-icon">
 
-                    <a class="wishlist wish add-wishlist" href="/account/login" title="translation missing: en.customlabel.wballtext.wishlist">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                         <use xlink:href="#wish"></use>
                       </svg>
-                    </a>
 
                   </div>
                 </div>
@@ -957,17 +951,7 @@
                         }]
                       </script>
 
-                      <wbdemo id="abc"></wbdemo><div class="select select-box">
-
-@if($cake->status == 1)
-<div class="status">status: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text" style="border:1px solid; border-radius:30px;font-size:14px;padding: 10px;" width="1400em"> stocking
-
-  </span> </div>
-@elseif($cake->status == 2)
-<div class="status">status:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="text" style="border:1px solid; border-radius:30px;font-size:14px;padding: 10px;" width="1400em">out of stock</span> </div>
-@endif
-
-</div>
+                      <wbdemo id="abc"></wbdemo>
 
 
                     </variant-selects><select id="Variants-template--16620970705132__product-grid-7838553047276" class="select__select no-js" form="product-form-template--16620970705132__product-grid-7838553047276">
@@ -1323,12 +1307,10 @@
                 <div class="card-top">
                   <div class="favorite-icon">
 
-                    <a class="wishlist wish add-wishlist" href="/account/login" title="translation missing: en.customlabel.wballtext.wishlist">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                         <use xlink:href="#wish"></use>
                       </svg>
-                    </a>
 
                   </div>
                 </div>
@@ -1582,12 +1564,10 @@
                 <div class="card-top">
                   <div class="favorite-icon">
 
-                    <a class="wishlist wish add-wishlist" href="/account/login" title="translation missing: en.customlabel.wballtext.wishlist">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                         <use xlink:href="#wish"></use>
                       </svg>
-                    </a>
 
                   </div>
                 </div>
@@ -5658,12 +5638,10 @@
 
                   <div class="favorite-icon">
 
-                    <a class="wishlist wish add-wishlist" href="/account/login" title="translation missing: en.customlabel.wballtext.wishlist">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                         <use xlink:href="#wish"></use>
                       </svg>
-                    </a>
 
                   </div>
                 </div>
@@ -6035,11 +6013,7 @@
                   </p>
                 </div>
                 <div class="blog-card-bottom">
-                  <a href="{{url('/pages/bloglist/'.$each->id_blog)}}" class="btn">Read more
-                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.18164 3.99989C0.181641 3.82416 0.324095 3.68171 0.499822 3.68171L6.73168 3.68171L4.72946 1.67942C4.60521 1.55516 4.60521 1.3537 4.72947 1.22944C4.85373 1.10519 5.05519 1.10519 5.17945 1.22945L7.72482 3.7749C7.84907 3.89916 7.84907 4.10062 7.72482 4.22487L5.17945 6.77033C5.05519 6.89459 4.85373 6.89459 4.72947 6.77034C4.60521 6.64608 4.60521 6.44462 4.72946 6.32036L6.73168 4.31807L0.499822 4.31807C0.324095 4.31807 0.181641 4.17562 0.18164 3.99989Z" fill="white"></path>
-                    </svg>
-                  </a>
+                  
                   <span class="circle-divider caption-with-letter-spacing date" itemprop="dateCreated pubdate datePublished">
                     <time datetime="2022-05-26T05:17:40Z">{{DateTime::createFromFormat('Y-m-d',$each->created)->format('d/m/Y')}}</time>
                   </span>

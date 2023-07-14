@@ -56,9 +56,17 @@ Route::group(['prefix' => 'pages'], function(){
     Route::get('/collectionlistuser',[TheCakeController::class,'collectionlistuser']);
     Route::get('/faq',[TheCakeController::class,'faq']);
     Route::get('/faquser',[TheCakeController::class,'faquser']);
+    Route::get('/shippingpage',[TheCakeController::class,'shippingpage']);
+    Route::get('/shippingpageuser',[TheCakeController::class,'shippingpageuser']);
+    Route::get('/privacy',[TheCakeController::class,'privacy']);
+    Route::get('/privacyuser',[TheCakeController::class,'privacyuser']);
+    Route::get('/term',[TheCakeController::class,'term']);
+    Route::get('/termuser',[TheCakeController::class,'termuser']);
+
 
     Route::get('contact',[TheCakeController::class,'contact'])->name('contact');
     Route::get('contactuser',[TheCakeController::class,'contactuser'])->name('contact');
+    
     Route::post('postcontact',[TheCakeController::class,'postcontact']);
 
   

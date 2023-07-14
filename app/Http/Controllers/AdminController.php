@@ -50,6 +50,7 @@ class AdminController extends Controller
             'price' => $request->input('price'),
             'photo' => $request->input('photo'),
             'id_category' => $request->input('id_category'),
+            'status' => $request->input('status'),
         ];
         $id = $request->input('id');
         Product::find($id)->update($product);
@@ -59,7 +60,7 @@ class AdminController extends Controller
     {
         $photo = 'thumb1.gif';
         $request->validate([
-            'photo' => 'required|image|mimes:jpeg,jpg,png,gif,svg|max:1048',
+            'photo' => 'image|mimes:jpeg,jpg,png,gif,svg|max:1048',
         ]);
 
         if ($request->hasFile('photo')) {
@@ -76,7 +77,8 @@ class AdminController extends Controller
             'price' => $request->input('price'),
             'photo' => $photo,
             'id_category' => $request->input('id_category'),
-            'fakeprice' => $request->input('fakeprice')
+            'fakeprice' => $request->input('fakeprice'),
+            'status' => $request->input('status')
         ];
 
          // Lấy giá trị position cao nhất hiện tại

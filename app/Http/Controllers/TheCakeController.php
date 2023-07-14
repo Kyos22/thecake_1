@@ -78,6 +78,7 @@ class TheCakeController extends Controller
             Session::put('email_user',$email_session);
             Session::put('pass_user',$password_session);
             Session::put('id_user',$data_user->id_account);
+            Session::put('username',$data_user->username);
             return redirect('/'); 
         } 
     elseif ($data_admin && Hash::check($password_session, $data_admin->password)) {
@@ -356,6 +357,55 @@ class TheCakeController extends Controller
                 session() -> flash('success','completely sent contact ');
                 return redirect('/pages/contactuser');
             }
+
+    }
+    public function shippingpage() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+        return view('pages/shippingpage')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function shippingpageuser() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+        return view('pages/shippingpageuser')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function privacy() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+        return view('pages/privacy')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function privacyuser() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+        return view('pages/privacyuser')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function term() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+        return view('pages/privacy')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
+    }
+    public function termuser() {
+        $listcakes = DB::table('category')
+        ->select('*')->where('type', 'like', '%cake%')->get();
+
+    $listcakeevents = DB::table('category')
+       ->select('*')->where('type', 'like', '%event%')->get();
+        return view('pages/termuser')->with('listcakes' ,$listcakes)->with('listcakeevents' ,$listcakeevents);
     }
     //c
 }
