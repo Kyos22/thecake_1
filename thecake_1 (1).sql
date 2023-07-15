@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 12, 2023 lúc 09:46 PM
--- Phiên bản máy phục vụ: 10.4.27-MariaDB
--- Phiên bản PHP: 8.2.4
+-- Host: 127.0.0.1
+-- Generation Time: Jul 14, 2023 at 04:30 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `the_cake1`
+-- Database: `thecake_1`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `account`
+-- Table structure for table `account`
 --
 
 CREATE TABLE `account` (
@@ -37,7 +37,7 @@ CREATE TABLE `account` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `account`
+-- Dumping data for table `account`
 --
 
 INSERT INTO `account` (`id_account`, `username`, `password`, `email`, `contact`, `role`) VALUES
@@ -69,12 +69,13 @@ INSERT INTO `account` (`id_account`, `username`, `password`, `email`, `contact`,
 (27, 'cong', '$2y$10$EB/cywXdSDifBDzCiBTVHu.jtgcQtMaPPjM06vN9ucI8iS7mMDo1i', 'nguyenthanhcongvt123@gmail.com', 'nullable', 'user'),
 (28, 'wwww', '$2y$10$cNUDrkDw15qWUAnUhyE/YOH7NI9aTlNIybA28R/4vlpRSIIMXXEuC', 'wwww', 'nullable', 'user'),
 (29, 'cong', '$2y$10$DGXtRujUIiPHi7IgimJfJ.5Aaav8YvLW/Cl17lGfziPFYt1EKt.Si', 'nguyenthanhcongvt123@gmail.com', 'nullable', 'user'),
-(30, 'lehung', '$2y$10$BeNGaNlsJRBZ24lrCF1azetmL/1TWtJBPRqPouCqmPkDNth1i2tMS', 'lehung@gmail.com', 'nullable', 'user');
+(30, 'lehung', '$2y$10$BeNGaNlsJRBZ24lrCF1azetmL/1TWtJBPRqPouCqmPkDNth1i2tMS', 'lehung@gmail.com', 'nullable', 'user'),
+(31, 'Anh Khoa', '$2y$10$.Cl1QxtwOta5ixFnhJ3JBOHxMHEagvfXe.wLc6mfn059jWtyJNG3m', 'a123@gmail.com', 'nullable', 'user');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `blog`
+-- Table structure for table `blog`
 --
 
 CREATE TABLE `blog` (
@@ -87,17 +88,18 @@ CREATE TABLE `blog` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `blog`
+-- Dumping data for table `blog`
 --
 
 INSERT INTO `blog` (`id_blog`, `created`, `article`, `content`, `photo`, `type`) VALUES
 (1, '2022-10-25', 'Exploring the World of French Pastries: A Guide to Sweet Delights', 'When it comes to culinary delights, French pastries hold a special place in the hearts of food enthusiasts worldwide. From delicate croissants to decadent éclairs, French pastries are known for their exquisite taste, artistic presentation, and rich cultural heritage. In this guide, we will take you on a journey through the world of French pastries, uncovering the secrets behind these sweet delights.\r\n\r\nCroissant: The Iconic French Pastry\r\nLet\'s start our exploration with the most iconic French pastry of all—the croissant. With its flaky layers, buttery taste, and golden exterior, the croissant has become a symbol of French baking mastery. Learn about the history of the croissant and how to achieve that perfect balance of crispiness and tenderness when making your own.\r\n\r\nPain au Chocolat: A Chocolate Lover\'s Dream\r\nIndulge in the heavenly combination of buttery croissant dough and rich, melted chocolate with the pain au chocolat. Discover the techniques for shaping and filling these delightful pastries, and savor the aroma and taste of freshly baked pain au chocolat.\r\n\r\nMacarons: A Delicate French Delight\r\nNo exploration of French pastries would be complete without mentioning macarons. These colorful, almond meringue-based treats are famous for their delicate shells and creamy fillings. Uncover the secrets behind achieving the perfect texture, flavor combinations, and beautifully smooth macaron shells.\r\n\r\nÉclairs: Cream-Filled Bliss\r\nPrepare to be amazed by the elegant éclair, a pastry filled with luscious cream and topped with glossy chocolate ganache. Learn the art of piping the choux pastry dough and explore the endless possibilities for filling flavors, from classic vanilla to adventurous combinations like salted caramel or coffee.\r\n\r\nTarte Tatin: A Classic French Dessert\r\nTake a detour from flaky pastries to discover the beauty of Tarte Tatin—a caramelized upside-down apple tart. Delve into the history of this rustic yet refined dessert and master the art of caramelizing apples to perfection.\r\n\r\nMille-Feuille: Layers of Delight\r\nExperience the delicate layers of puff pastry, pastry cream, and luscious toppings in the Mille-Feuille. Uncover the techniques for creating a perfectly crisp and light pastry, and experiment with different flavors and fillings to create your own unique variations.\r\n\r\nProfiteroles: Bite-Sized Puffs of Joy\r\nDon\'t miss the delightful world of profiteroles—small choux pastry puffs filled with cream and often served with a drizzle of warm chocolate sauce. Explore different fillings, from classic whipped cream to decadent ice cream, and elevate your dessert game with these dainty treats.\r\n\r\nAs you embark on your journey through the world of French pastries, remember to embrace the artistry, precision, and attention to detail that make these treats so special. Whether you try your hand at making them yourself or indulge in the offerings of a local patisserie, French pastries are sure to transport your taste buds to a realm of sweet delights. Bon appétit!', 'crepe_blueberry1.jpg', 'article'),
-(2, '2023-11-25', 'Indulge Your Sweet Tooth: Irresistible Dessert Recipes to Tryy', 'Are you ready to embark on a delightful journey of delectable desserts that will satisfy your sweet tooth? Look no further! In this article, we present a collection of irresistible dessert recipes that will tantalize your taste buds and leave you craving for more. Get ready to indulge in the world of sweet delights!\r\n\r\nDecadent Chocolate Lava Cake\r\nSink your fork into a warm, gooey chocolate lava cake with a molten center that oozes out with every bite. This classic dessert is a chocoholic\'s dream come true. Follow our step-by-step recipe to achieve the perfect balance of a delicate cake exterior and a rich, chocolatey interior.\r\n\r\nCreamy Vanilla Panna Cotta\r\nExperience the smooth and velvety texture of a vanilla panna cotta. This Italian dessert is as elegant as it is delicious. Infused with a hint of vanilla, it pairs perfectly with a vibrant fruit coulis or a drizzle of caramel sauce. Impress your guests with this simple yet sophisticated dessert.\r\n\r\nHomemade Fruit Tart\r\nBring the freshness of seasonal fruits together with a buttery, flaky crust in a homemade fruit tart. The combination of vibrant fruits atop a luscious pastry cream creates a stunning dessert that is both visually appealing and bursting with natural flavors. Experiment with different fruits to create your own unique tart masterpiece.\r\n\r\nClassic Tiramisu\r\nTransport yourself to the streets of Italy with a classic tiramisu. Layers of espresso-soaked ladyfingers and creamy mascarpone cheese come together to create a heavenly dessert. Dusted with cocoa powder, each bite is a delicate balance of flavors that will leave you longing for more.\r\n\r\nRefreshing Lemon Bars\r\nWhen life gives you lemons, make lemon bars! These tangy and refreshing treats feature a buttery shortbread crust topped with a zesty lemon filling. The combination of sweet and tart flavors creates a delightful contrast that will brighten up any occasion.\r\n\r\nCrunchy Caramelized Crème Brûlée\r\nCrack into the crispy caramelized sugar layer to reveal the smooth and creamy custard beneath. Crème brûlée is a timeless dessert that never fails to impress. Master the technique of creating that perfect caramelized topping and savor the luxurious flavors of this classic French dessert.\r\n\r\nFluffy Strawberry Shortcake\r\nCelebrate the sweetness of summer with a fluffy strawberry shortcake. Layers of tender sponge cake, fresh strawberries, and whipped cream create a dessert that is light, fruity, and absolutely delightful. It\'s the perfect dessert for a sunny afternoon or a special occasion.\r\n\r\nThese irresistible dessert recipes are just the beginning of your sweet culinary adventure. So put on your apron, gather your ingredients, and let your creativity soar as you explore the world of mouthwatering desserts. Get ready to indulge in these heavenly treats and create memorable moments with every bite. Enjoy!', 'crepe_egg3.jpg', 'article');
+(2, '2023-11-25', 'Indulge Your Sweet Tooth: Irresistible Dessert Recipes to Tryy', 'Are you ready to embark on a delightful journey of delectable desserts that will satisfy your sweet tooth? Look no further! In this article, we present a collection of irresistible dessert recipes that will tantalize your taste buds and leave you craving for more. Get ready to indulge in the world of sweet delights!\r\n\r\nDecadent Chocolate Lava Cake\r\nSink your fork into a warm, gooey chocolate lava cake with a molten center that oozes out with every bite. This classic dessert is a chocoholic\'s dream come true. Follow our step-by-step recipe to achieve the perfect balance of a delicate cake exterior and a rich, chocolatey interior.\r\n\r\nCreamy Vanilla Panna Cotta\r\nExperience the smooth and velvety texture of a vanilla panna cotta. This Italian dessert is as elegant as it is delicious. Infused with a hint of vanilla, it pairs perfectly with a vibrant fruit coulis or a drizzle of caramel sauce. Impress your guests with this simple yet sophisticated dessert.\r\n\r\nHomemade Fruit Tart\r\nBring the freshness of seasonal fruits together with a buttery, flaky crust in a homemade fruit tart. The combination of vibrant fruits atop a luscious pastry cream creates a stunning dessert that is both visually appealing and bursting with natural flavors. Experiment with different fruits to create your own unique tart masterpiece.\r\n\r\nClassic Tiramisu\r\nTransport yourself to the streets of Italy with a classic tiramisu. Layers of espresso-soaked ladyfingers and creamy mascarpone cheese come together to create a heavenly dessert. Dusted with cocoa powder, each bite is a delicate balance of flavors that will leave you longing for more.\r\n\r\nRefreshing Lemon Bars\r\nWhen life gives you lemons, make lemon bars! These tangy and refreshing treats feature a buttery shortbread crust topped with a zesty lemon filling. The combination of sweet and tart flavors creates a delightful contrast that will brighten up any occasion.\r\n\r\nCrunchy Caramelized Crème Brûlée\r\nCrack into the crispy caramelized sugar layer to reveal the smooth and creamy custard beneath. Crème brûlée is a timeless dessert that never fails to impress. Master the technique of creating that perfect caramelized topping and savor the luxurious flavors of this classic French dessert.\r\n\r\nFluffy Strawberry Shortcake\r\nCelebrate the sweetness of summer with a fluffy strawberry shortcake. Layers of tender sponge cake, fresh strawberries, and whipped cream create a dessert that is light, fruity, and absolutely delightful. It\'s the perfect dessert for a sunny afternoon or a special occasion.\r\n\r\nThese irresistible dessert recipes are just the beginning of your sweet culinary adventure. So put on your apron, gather your ingredients, and let your creativity soar as you explore the world of mouthwatering desserts. Get ready to indulge in these heavenly treats and create memorable moments with every bite. Enjoy!', 'crepe_egg3.jpg', 'article'),
+(4, '2023-07-13', 'Cakes are delicious treats enjoyed by people all around the world. They come in various flavors, shapes, and sizes, making them a versatile dessert for any occasion.', '<p>Cakes are delicious treats enjoyed by people all around the world. They come in various flavors, shapes, and sizes, making them a versatile dessert for any occasion.</p>', 'Boston Cream Doughnuts - Baker by Nature.jpg', 'article');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `cart`
+-- Table structure for table `cart`
 --
 
 CREATE TABLE `cart` (
@@ -107,16 +109,17 @@ CREATE TABLE `cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `cart`
+-- Dumping data for table `cart`
 --
 
 INSERT INTO `cart` (`id_cart`, `id_customer`, `datecreation`) VALUES
-(2, 25, '2023-07-12 17:06:50');
+(2, 25, '2023-07-12 17:06:50'),
+(3, 31, '2023-07-13 02:35:28');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `cart_product`
+-- Table structure for table `cart_product`
 --
 
 CREATE TABLE `cart_product` (
@@ -125,10 +128,18 @@ CREATE TABLE `cart_product` (
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `cart_product`
+--
+
+INSERT INTO `cart_product` (`id_cart`, `id_product`, `quantity`) VALUES
+(3, 28, 9),
+(3, 31, 1);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `category`
+-- Table structure for table `category`
 --
 
 CREATE TABLE `category` (
@@ -139,7 +150,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `category`
+-- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`id_category`, `name_category`, `avatar_category`, `type`) VALUES
@@ -157,7 +168,7 @@ INSERT INTO `category` (`id_category`, `name_category`, `avatar_category`, `type
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `detailsorder`
+-- Table structure for table `detailsorder`
 --
 
 CREATE TABLE `detailsorder` (
@@ -168,7 +179,7 @@ CREATE TABLE `detailsorder` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `detailsorder`
+-- Dumping data for table `detailsorder`
 --
 
 INSERT INTO `detailsorder` (`id_order`, `id_product`, `quantity`, `price`) VALUES
@@ -177,12 +188,19 @@ INSERT INTO `detailsorder` (`id_order`, `id_product`, `quantity`, `price`) VALUE
 (10, 27, 3, 75000),
 (11, 28, 1, 95000),
 (12, 27, 1, 75000),
-(13, 1, 4, 10000);
+(13, 1, 4, 10000),
+(16, 1, 3, 10000),
+(16, 2, 1, 12000),
+(17, 27, 1, 75000),
+(18, 27, 1, 75000),
+(19, 20, 1, 184636),
+(20, 27, 2, 75000),
+(21, 27, 6, 75000);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `order`
+-- Table structure for table `order`
 --
 
 CREATE TABLE `order` (
@@ -194,7 +212,7 @@ CREATE TABLE `order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `order`
+-- Dumping data for table `order`
 --
 
 INSERT INTO `order` (`id_order`, `id_customer`, `datecreation`, `status`, `total`) VALUES
@@ -210,12 +228,20 @@ INSERT INTO `order` (`id_order`, `id_customer`, `datecreation`, `status`, `total
 (10, 25, '2023-07-12', 'In process', 225000),
 (11, 25, '2023-07-12', 'In process', 95000),
 (12, 25, '2023-07-12', 'In process', 75000),
-(13, 25, '2023-07-12', 'In process', 40000);
+(13, 25, '2023-07-12', 'In process', 40000),
+(14, 25, '2023-07-13', 'In process', NULL),
+(15, 25, '2023-07-13', 'In process', NULL),
+(16, 25, '2023-07-13', 'In process', 42000),
+(17, 25, '2023-07-13', 'In process', 75000),
+(18, 25, '2023-07-13', 'In process', 75000),
+(19, 25, '2023-07-13', 'In process', 184636),
+(20, 25, '2023-07-13', 'In process', 150000),
+(21, 31, '2023-07-13', 'In process', 450000);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `page`
+-- Table structure for table `page`
 --
 
 CREATE TABLE `page` (
@@ -228,7 +254,7 @@ CREATE TABLE `page` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `photo`
+-- Table structure for table `photo`
 --
 
 CREATE TABLE `photo` (
@@ -239,7 +265,7 @@ CREATE TABLE `photo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `photo`
+-- Dumping data for table `photo`
 --
 
 INSERT INTO `photo` (`id_photo`, `id_product`, `name_photo`, `status`) VALUES
@@ -393,7 +419,7 @@ INSERT INTO `photo` (`id_photo`, `id_product`, `name_photo`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product`
+-- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
@@ -408,35 +434,35 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `product`
+-- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`id_product`, `name_product`, `detail_product`, `price`, `id_category`, `photo`, `fakeprice`, `status`) VALUES
-(1, 'Crepe BlueBerry', 'Crepe cakes are a beautiful no-bake option, and just as visually stunning as a full layer cake! With over 20 layers of crepes filled with tart lemon curd and a velvety cream cheese spread, it’s well worth the time needed to make the crepes.', 10000, 6, 'crepe_blueberry1-removebg-preview.png', NULL, '1'),
-(2, 'Crepe Chocolate', 'Crepe cakes were one of those cakes that I looked at and thought, wow that is absolutely stunning. Layers of fluffy cream layered perfectly between paper thin crepes... LOTS of crepes.', 12000, 6, 'crepe_chocolate2-removebg-preview.png', NULL, '1'),
-(3, 'Crepe Eggs', 'Crepe cakes were one of those cakes that I looked at and thought, wow that is absolutely stunning. Layers of fluffy cream layered perfectly between paper thin crepes... LOTS of crepes.', 8000, 6, 'crepe_egg3-removebg-preview.png', NULL, '1'),
-(4, 'Crepe Matcha', 'Crepe cakes were one of those cakes that I looked at and thought, wow that is absolutely stunning. Layers of fluffy cream layered perfectly between paper thin crepes... LOTS of crepes.', 16000, 6, 'crepe_matcha2-removebg-preview.png', NULL, '1'),
-(5, 'Crepe StrawBerry', 'Crepe cakes were one of those cakes that I looked at and thought, wow that is absolutely stunning. Layers of fluffy cream layered perfectly between paper thin crepes... LOTS of crepes.', 20000, 6, 'crepe_strawberry1-removebg-preview.png', NULL, '2'),
-(6, 'Event Chocolate Cake ', 'Chocolate cake is a classic and beloved dessert that is enjoyed by chocolate enthusiasts all over the world. It is...', 120000, 13, 'event_chocolate2-removebg-preview.png', NULL, '1'),
-(7, 'Event StrawBerry Cake ', 'With our chocolate website, you can find all the delicious treats you need to satisfy your sweet tooth.', 150000, 9, 'event4.jpg', NULL, '1'),
-(8, 'Event BlueBerry Cake ', 'With our chocolate website, you can find all the delicious treats you need to satisfy your sweet tooth.', 149000, 9, 'bir-blue1.jpg', NULL, '1'),
-(9, 'Event Cream Cake ', 'With our chocolate website, you can find all the delicious treats you need to satisfy your sweet tooth.', 163000, 7, 'event4-removebg-preview.png', NULL, '2'),
-(10, 'Event Chocolate White Cake ', 'With our chocolate website, you can find all the delicious treats you need to satisfy your sweet tooth.', 200000, 13, 'choco-white1-removebg-preview.png', NULL, '1'),
-(11, 'Sweet Bread', 'With our chocolate website, you can find all the delicious treats you need to satisfy your sweet tooth.', 20000, 12, 'banhmingot3-removebg-preview.png', NULL, '1'),
-(12, 'Croissants', 'news', 45000, 12, 'banhsungbo3-removebg-preview.png', NULL, '1'),
-(13, 'Loaf', 'Very good Loaf', 12000, 12, 'loaf2-removebg-preview.png', NULL, '1'),
-(14, 'Scone', 'Very good Scone', 20000, 12, 'scone3-removebg-preview.png', NULL, '2'),
-(15, 'Orange Cup Cake ', 'Cup Cake ', 55000, 11, 'cupcake_cam5-removebg-preview.png', NULL, '1'),
-(16, 'Banana Cup Cake', 'Cup Cake', 58000, 11, 'cupcake_chuoi3-removebg-preview.png', NULL, '1'),
-(17, 'Oreo Cup Cake', 'This cake is delicious', 69000, 11, 'cupcake_oreo4-removebg-preview.png', NULL, '1'),
-(18, 'Grape Cup Cake', 'This cake is delicious', 44000, 11, 'cupcake_nho1-removebg-preview.png', NULL, '1'),
-(19, 'Velvet Cup Cake', 'Red Velvet is a cake that symbolizes love, what could be more wonderful than giving your loved one a beautiful cake made by yourself.', 82000, 11, 'cupcake_velvet4-removebg-preview.png', NULL, '2'),
-(20, 'Oreo Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 184636, 5, 'maca-oreo2-removebg-preview.png', NULL, '1'),
-(21, 'Vani Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 198280, 5, 'maca-vani4-removebg-preview.png', NULL, '2'),
-(22, 'StrawBerry Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 163000, 5, 'maca-straw3-removebg-preview.png', NULL, '1'),
-(23, 'Chocolate Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 230000, 5, 'maca-choco2-removebg-preview.png', NULL, '1'),
-(24, 'Coffee Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 140000, 5, 'maca-cf3-removebg-preview-removebg-preview.png', NULL, '1'),
-(25, 'Matcha Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 175000, 5, 'maca-matcha3-removebg-preview.png', NULL, '1'),
+(1, 'Crepe BlueBerry', 'Crepe cakes are a beautiful no-bake option, and just as visually stunning as a full layer cake! With over 20 layers of crepes filled with tart lemon curd and a velvety cream cheese spread, it’s well worth the time needed to make the crepes.', 10000, 6, 'crepe_blueberry1-removebg-preview.png', '20.000', '1'),
+(2, 'Crepe Chocolate', 'Crepe cakes were one of those cakes that I looked at and thought, wow that is absolutely stunning. Layers of fluffy cream layered perfectly between paper thin crepes... LOTS of crepes.', 12000, 6, 'crepe_chocolate2-removebg-preview.png', '22.000', '1'),
+(3, 'Crepe Eggs', 'Crepe cakes were one of those cakes that I looked at and thought, wow that is absolutely stunning. Layers of fluffy cream layered perfectly between paper thin crepes... LOTS of crepes.', 8000, 6, 'crepe_egg3-removebg-preview.png', '10.000', '1'),
+(4, 'Crepe Matcha', 'Crepe cakes were one of those cakes that I looked at and thought, wow that is absolutely stunning. Layers of fluffy cream layered perfectly between paper thin crepes... LOTS of crepes.', 16000, 6, 'crepe_matcha2-removebg-preview.png', '20.000', '1'),
+(5, 'Crepe StrawBerry', 'Crepe cakes were one of those cakes that I looked at and thought, wow that is absolutely stunning. Layers of fluffy cream layered perfectly between paper thin crepes... LOTS of crepes.', 20000, 6, 'crepe_strawberry1-removebg-preview.png', '22.000', '2'),
+(6, 'Event Chocolate Cake ', 'Chocolate cake is a classic and beloved dessert that is enjoyed by chocolate enthusiasts all over the world. It is...', 120000, 13, 'event_chocolate2-removebg-preview.png', '15.000', '1'),
+(7, 'Event StrawBerry Cake ', 'With our chocolate website, you can find all the delicious treats you need to satisfy your sweet tooth.', 150000, 9, 'event4.jpg', '20.000', '1'),
+(8, 'Event BlueBerry Cake ', 'With our chocolate website, you can find all the delicious treats you need to satisfy your sweet tooth.', 149000, 9, 'bir-blue1.jpg', '169.000', '1'),
+(9, 'Event Cream Cake ', 'With our chocolate website, you can find all the delicious treats you need to satisfy your sweet tooth.', 163000, 7, 'event4-removebg-preview.png', '173.000', '2'),
+(10, 'Event Chocolate White Cake ', 'With our chocolate website, you can find all the delicious treats you need to satisfy your sweet tooth.', 200000, 13, 'choco-white1-removebg-preview.png', '201.000', '1'),
+(11, 'Sweet Bread', 'With our chocolate website, you can find all the delicious treats you need to satisfy your sweet tooth.', 20000, 12, 'banhmingot3-removebg-preview.png', '30.000', '1'),
+(12, 'Croissants', 'news', 45000, 12, 'banhsungbo3-removebg-preview.png', '55.000', '1'),
+(13, 'Loaf', 'Very good Loaf', 12000, 12, 'loaf2-removebg-preview.png', '16.000', '1'),
+(14, 'Scone', 'Very good Scone', 20000, 12, 'scone3-removebg-preview.png', '29.000', '2'),
+(15, 'Orange Cup Cake ', 'Cup Cake ', 55000, 11, 'cupcake_cam5-removebg-preview.png', '65.000', '1'),
+(16, 'Banana Cup Cake', 'Cup Cake', 58000, 11, 'cupcake_chuoi3-removebg-preview.png', '78.000', '1'),
+(17, 'Oreo Cup Cake', 'This cake is delicious', 69000, 11, 'cupcake_oreo4-removebg-preview.png', '89.000', '1'),
+(18, 'Grape Cup Cake', 'This cake is delicious', 44000, 11, 'cupcake_nho1-removebg-preview.png', '54.000', '1'),
+(19, 'Velvet Cup Cake', 'Red Velvet is a cake that symbolizes love, what could be more wonderful than giving your loved one a beautiful cake made by yourself.', 82000, 11, 'cupcake_velvet4-removebg-preview.png', '92.000', '2'),
+(20, 'Oreo Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 184636, 5, 'maca-oreo2-removebg-preview.png', '194.000', '1'),
+(21, 'Vani Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 198280, 5, 'maca-vani4-removebg-preview.png', '200.000', '2'),
+(22, 'StrawBerry Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 163000, 5, 'maca-straw3-removebg-preview.png', '173.000', '1'),
+(23, 'Chocolate Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 230000, 5, 'maca-choco2-removebg-preview.png', '240.000', '1'),
+(24, 'Coffee Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 140000, 5, 'maca-cf3-removebg-preview-removebg-preview.png', '150.000', '1'),
+(25, 'Matcha Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 175000, 5, 'maca-matcha3-removebg-preview.png', '185.000', '1'),
 (26, 'Carrot Macaron', 'Macaron is an attractive dessert and originated in France. Let\'s learn how to make delicious and flavorful Macarons!', 120000, 5, 'maca-carot2-removebg-preview.png', NULL, '1'),
 (27, 'Cookies Mix 3 Flavour', 'The rich aroma of butter combined with the nutty flavor of almonds, sesame and the faint aroma of green tea and cocoa will satisfy you and make snacks worth the wait.', 75000, 4, 'cookie-mix4-removebg-preview.png', NULL, '2'),
 (28, 'Candy Cookies', 'The rich aroma of butter combined with the nutty flavor of almonds, sesame and the faint aroma of green tea and cocoa will satisfy you and make snacks worth the wait.', 95000, 4, 'cookie-cheese3-removebg-preview__2_-removebg-preview.png', NULL, '1'),
@@ -458,7 +484,7 @@ INSERT INTO `product` (`id_product`, `name_product`, `detail_product`, `price`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `testdelete`
+-- Table structure for table `testdelete`
 --
 
 CREATE TABLE `testdelete` (
@@ -467,7 +493,7 @@ CREATE TABLE `testdelete` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `testdelete`
+-- Dumping data for table `testdelete`
 --
 
 INSERT INTO `testdelete` (`id`, `name`) VALUES
@@ -480,43 +506,43 @@ INSERT INTO `testdelete` (`id`, `name`) VALUES
 (7, '7j');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `account`
+-- Indexes for table `account`
 --
 ALTER TABLE `account`
   ADD PRIMARY KEY (`id_account`);
 
 --
--- Chỉ mục cho bảng `blog`
+-- Indexes for table `blog`
 --
 ALTER TABLE `blog`
   ADD PRIMARY KEY (`id_blog`);
 
 --
--- Chỉ mục cho bảng `cart`
+-- Indexes for table `cart`
 --
 ALTER TABLE `cart`
   ADD PRIMARY KEY (`id_cart`),
   ADD UNIQUE KEY `id_customer` (`id_customer`);
 
 --
--- Chỉ mục cho bảng `cart_product`
+-- Indexes for table `cart_product`
 --
 ALTER TABLE `cart_product`
   ADD KEY `FK_cp_cart` (`id_cart`),
   ADD KEY `FK_cp_product` (`id_product`);
 
 --
--- Chỉ mục cho bảng `category`
+-- Indexes for table `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`id_category`);
 
 --
--- Chỉ mục cho bảng `detailsorder`
+-- Indexes for table `detailsorder`
 --
 ALTER TABLE `detailsorder`
   ADD PRIMARY KEY (`id_order`,`id_product`),
@@ -524,128 +550,134 @@ ALTER TABLE `detailsorder`
   ADD KEY `id_product` (`id_product`);
 
 --
--- Chỉ mục cho bảng `order`
+-- Indexes for table `order`
 --
 ALTER TABLE `order`
   ADD PRIMARY KEY (`id_order`),
   ADD KEY `id_customer` (`id_customer`);
 
 --
--- Chỉ mục cho bảng `page`
+-- Indexes for table `page`
 --
 ALTER TABLE `page`
   ADD PRIMARY KEY (`id_page`);
 
 --
--- Chỉ mục cho bảng `photo`
+-- Indexes for table `photo`
 --
 ALTER TABLE `photo`
   ADD PRIMARY KEY (`id_photo`),
   ADD KEY `id_product` (`id_product`);
 
 --
--- Chỉ mục cho bảng `product`
+-- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id_product`),
   ADD KEY `id_category` (`id_category`);
 
 --
--- Chỉ mục cho bảng `testdelete`
+-- Indexes for table `testdelete`
 --
 ALTER TABLE `testdelete`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `account`
+-- AUTO_INCREMENT for table `account`
 --
 ALTER TABLE `account`
-  MODIFY `id_account` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_account` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT cho bảng `blog`
+-- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_blog` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `cart`
+-- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id_cart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_cart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `category`
+-- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT cho bảng `order`
+-- AUTO_INCREMENT for table `order`
 --
 ALTER TABLE `order`
-  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT cho bảng `page`
+-- AUTO_INCREMENT for table `page`
 --
 ALTER TABLE `page`
   MODIFY `id_page` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `photo`
+-- AUTO_INCREMENT for table `photo`
 --
 ALTER TABLE `photo`
   MODIFY `id_photo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
 
 --
--- AUTO_INCREMENT cho bảng `product`
+-- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=212;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
 
 --
--- AUTO_INCREMENT cho bảng `testdelete`
+-- AUTO_INCREMENT for table `testdelete`
 --
 ALTER TABLE `testdelete`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `cart_product`
+-- Constraints for table `cart`
+--
+ALTER TABLE `cart`
+  ADD CONSTRAINT `FK_cart_account` FOREIGN KEY (`id_customer`) REFERENCES `account` (`id_account`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `cart_product`
 --
 ALTER TABLE `cart_product`
   ADD CONSTRAINT `FK_cp_product` FOREIGN KEY (`id_product`) REFERENCES `product` (`id_product`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `cart_product_ibfk_1` FOREIGN KEY (`id_cart`) REFERENCES `cart` (`id_cart`);
 
 --
--- Các ràng buộc cho bảng `detailsorder`
+-- Constraints for table `detailsorder`
 --
 ALTER TABLE `detailsorder`
   ADD CONSTRAINT `detailsorder_ibfk_1` FOREIGN KEY (`id_order`) REFERENCES `order` (`id_order`),
   ADD CONSTRAINT `detailsorder_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `product` (`id_product`);
 
 --
--- Các ràng buộc cho bảng `order`
+-- Constraints for table `order`
 --
 ALTER TABLE `order`
-  ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`id_customer`) REFERENCES `account` (`id_account`);
+  ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`id_customer`) REFERENCES `account` (`id_account`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `photo`
+-- Constraints for table `photo`
 --
 ALTER TABLE `photo`
   ADD CONSTRAINT `photo_ibfk_1` FOREIGN KEY (`id_product`) REFERENCES `product` (`id_product`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Các ràng buộc cho bảng `product`
+-- Constraints for table `product`
 --
 ALTER TABLE `product`
   ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id_category`);

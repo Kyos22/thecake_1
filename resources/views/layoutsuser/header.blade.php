@@ -57,7 +57,9 @@
     <div class="container">
         <div class="navigationbar-row d-flex align-items-center">
             <div class="logo-col">
-            <a href="/"><h4>TheCake</h4></a>
+                <a href="/">
+                    <h4>TheCake</h4>
+                </a>
             </div>
             <div class="menu-items-col">
                 <ul id="megalevel-1" class="main-nav">
@@ -111,12 +113,12 @@
 
 
                                 <li class="">
-                                <a href="/pages/newsuser">News
+                                    <a href="/pages/newsuser">News
                                     </a>
 
                                 </li>
                                 <li class="">
-                                <a href="/pages/contact">Contact
+                                    <a href="/pages/contact">Contact
                                     </a>
 
                                 </li>
@@ -242,34 +244,34 @@
                             <div class="header-panel-top">
                                 <div class="customer_account text-left">
                                     <ul class="list-unstyled">
-                                    <li>
+                                        <li>
                                             <a href="{{url('/myaccount')}}" title="Create Account">
-                                            <?php
-          $name_user = Session::get('username') ;
-                  if($name_user) {
-                    echo $name_user;
-                  }
-                ?>
-        </p>
-        </a>
+                                                <?php
+                                                $name_user = Session::get('username');
+                                                if ($name_user) {
+                                                    echo $name_user;
+                                                }
+                                                ?>
+                                                </p>
+                                            </a>
 
                                         </li>
                                         <li>
                                             <a href="{{url('/logoutuser')}}">Log out</a>
                                         </li>
-                                       
 
 
-                                       
+
+
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="cart-header">
-                      
+
                         <div class="" id="">
-                            <div class="collscart" tabindex="0" >
+                            <div class="collscart" tabindex="0">
                                 <a href="/cart">
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17" fill="none">
@@ -279,7 +281,7 @@
                                     <span class="icon-lable">View <span class=wbcur>CART</span></span>
                                 </a>
                             </div>
-                           
+
                         </div>
                     </li>
                 </ul>
